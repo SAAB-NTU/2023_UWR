@@ -1,0 +1,5 @@
+train: /home/abubakr/Desktop/marus-example/marus-example/Assets/camera_detection/run0/images/train
+val: /home/abubakr/Desktop/marus-example/marus-example/Assets/camera_detection/run0/images/val
+test: /home/abubakr/Desktop/marus-example/marus-example/Assets/camera_detection/run0/images/test
+nc: 2
+names: ['type1','type2']
