@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find nlink_parser)/launch/tofsense.launch"/>
+    <node name="logger" pkg="logger" type="logger.py" output="screen">
+        <param name="csv_path" value="/home/zejie/Desktop/tof_log_"/>
+        <param name="mode" value="tof"/>
+    </node>
+</launch>

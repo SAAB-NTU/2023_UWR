@@ -1,0 +1,8 @@
+prefix=/home/saab/Desktop/marus_sim/ros_ws/install
+
+Name: grpc_ros_adapter
+Description: Description of grpc_ros_adapter
+Version: 0.0.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

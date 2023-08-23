@@ -1,0 +1,8 @@
+prefix=/home/saab/Desktop/marus_sim/ros_ws/install
+
+Name: kalman_filter
+Description: Description of kalman_filter
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp rospy sensor_msgs std_msgs sonar

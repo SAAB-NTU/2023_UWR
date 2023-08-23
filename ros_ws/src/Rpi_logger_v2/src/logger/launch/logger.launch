@@ -1,0 +1,24 @@
+<launch>
+    <!-- imu >
+    <include file="$(find witmotion_ros)/launch/wt901.launch"/>
+    <param name="port" value="/dev/ttyUSB0"/-->
+    
+    <node pkg="ros1-driver" type="ros1-driver" name="an_device_node" output="screen"/>
+
+    
+    <!-- sonar -->
+    <arg name="sonar_start_delay" default="2.0" /> 
+    <node name="sonar" pkg="sonar" type="sonar_node" launch-prefix="bash -c 'sleep $(arg sonar_start_delay); $0 $@' ">
+        <param name="sonar_port" value="/dev/ttyUSB1"/>
+        <param name="mode" value="distance"/>
+        <param name="ping_interval" value="100"/>
+    </node>
+
+    <!-- logger -->
+    <arg name="logger_start_delay" default="5.0" /> 
+    <!-- cpp logger -->
+    <node name="logger" pkg="logger" type="logger_node" launch-prefix="bash -c 'sleep $(arg logger_start_delay); $0 $@' " output="screen">
+        <param name="csv_path" value="/home/abubakr/Desktop/all_log_"/>
+    </node>
+
+</launch>

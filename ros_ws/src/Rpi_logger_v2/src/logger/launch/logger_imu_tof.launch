@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find nlink_parser)/launch/tofsense.launch"/>
+    <include file="$(find witmotion_ros)/launch/wt901.launch"/>
+    <arg name="logger_start_delay" default="7.0" />
+    <node name="logger" pkg="logger" type="logger.py" launch-prefix="bash -c 'sleep $(arg logger_start_delay); $0 $@' " output="screen">
+        <param name="csv_path" value="/home/zejie/Desktop/imu_tof_log_"/>
+        <param name="mode" value="imu_tof"/>
+    </node>
+</launch>

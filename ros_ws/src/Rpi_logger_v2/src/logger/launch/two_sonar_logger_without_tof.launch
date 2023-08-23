@@ -1,0 +1,23 @@
+<launch>
+    
+    <!-- imu old
+    <include file="$(find witmotion_ros)/launch/wt901.launch"/>
+    <param name="port" value="/dev/ttyUSB0"/-->
+    
+    <node pkg="ros1-driver" type="ros1-driver" name="my_ros1_driver_node" output="screen"/>
+
+    <!-- sonar -->
+    <node name="rosserial" pkg="rosserial_arduino" type="serial_node.py" output="screen">
+        <param name="port" value="/dev/ttyUSB1"/>
+        <param name="baud" value="115200"/>
+    </node>
+
+    <!-- logger -->
+    <arg name="logger_start_delay" default="21.0"/> 
+    <!-- cpp logger -->
+    <node name="logger" pkg="logger" type="two_sonar_logger_2" launch-prefix="bash -c 'sleep $(arg logger_start_delay); $0 $@' " output="screen">
+        <param name="csv_path" value="/home/abubakr/Desktop/two_sonar_"/>
+        <param name="tof_value" value="false" type="bool"/>
+    </node>
+    
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+    <node name="sonar" pkg="sonar" type="sonar_node.py">
+        <param name="sonar_port" value="/dev/ttyUSB1"/>
+        <param name="mode" value="profile"/>
+    </node>
+    <node name="logger" pkg="logger" type="logger.py" output="screen">
+        <param name="csv_path" value="/home/ubuntu/data/sonar_log_"/>
+        <param name="mode" value="sonar"/>
+    </node>
+</launch>
