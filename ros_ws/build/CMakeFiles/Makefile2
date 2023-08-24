@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/marus_sim/ros_ws/src
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/marus_sim/ros_ws/build
+CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -62,6 +62,7 @@ all: Rpi_logger_v2/src/sonar/all
 all: Rpi_logger_v2/src/kalman_filter/all
 all: Rpi_logger_v2/src/imu_complementary_filter/all
 all: Rpi_logger_v2/src/logger/all
+all: uwr_comms/all
 
 .PHONY : all
 
@@ -75,6 +76,7 @@ preinstall: Rpi_logger_v2/src/sonar/preinstall
 preinstall: Rpi_logger_v2/src/kalman_filter/preinstall
 preinstall: Rpi_logger_v2/src/imu_complementary_filter/preinstall
 preinstall: Rpi_logger_v2/src/logger/preinstall
+preinstall: uwr_comms/preinstall
 
 .PHONY : preinstall
 
@@ -93,6 +95,7 @@ clean: Rpi_logger_v2/src/sonar/clean
 clean: Rpi_logger_v2/src/kalman_filter/clean
 clean: Rpi_logger_v2/src/imu_complementary_filter/clean
 clean: Rpi_logger_v2/src/logger/clean
+clean: uwr_comms/clean
 
 .PHONY : clean
 
@@ -385,20 +388,49 @@ uuv_sensor_msgs/clean:
 .PHONY : uuv_sensor_msgs/clean
 
 #=============================================================================
+# Directory level rules for directory uwr_comms
+
+# Recursive "all" directory target.
+uwr_comms/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/all
+
+.PHONY : uwr_comms/all
+
+# Recursive "preinstall" directory target.
+uwr_comms/preinstall:
+
+.PHONY : uwr_comms/preinstall
+
+# Recursive "clean" directory target.
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_geneus.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_genpy.dir/clean
+uwr_comms/clean: uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/clean
+
+.PHONY : uwr_comms/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
 
 # All Build rule for target.
 CMakeFiles/doxygen.dir/all:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target doxygen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target doxygen"
 .PHONY : CMakeFiles/doxygen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/doxygen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/doxygen.dir/rule
 
 # Convenience name for target.
@@ -418,14 +450,14 @@ CMakeFiles/doxygen.dir/clean:
 CMakeFiles/run_tests.dir/all:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target run_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target run_tests"
 .PHONY : CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_tests.dir/rule
 
 # Convenience name for target.
@@ -445,14 +477,14 @@ CMakeFiles/run_tests.dir/clean:
 CMakeFiles/clean_test_results.dir/all:
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target clean_test_results"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target clean_test_results"
 .PHONY : CMakeFiles/clean_test_results.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/clean_test_results.dir/rule
 
 # Convenience name for target.
@@ -472,14 +504,14 @@ CMakeFiles/clean_test_results.dir/clean:
 CMakeFiles/tests.dir/all:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tests"
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -499,14 +531,14 @@ CMakeFiles/tests.dir/clean:
 CMakeFiles/download_extra_data.dir/all:
 	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
 	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target download_extra_data"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target download_extra_data"
 .PHONY : CMakeFiles/download_extra_data.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : CMakeFiles/download_extra_data.dir/rule
 
 # Convenience name for target.
@@ -527,14 +559,14 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=8,9 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=8,9 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -554,14 +586,14 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=6,7 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=6,7 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -581,14 +613,14 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=13,14 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=13,14 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -608,14 +640,14 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=11,12 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=11,12 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -635,14 +667,14 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/all:
 	$(MAKE) -f DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/build.make DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/depend
 	$(MAKE) -f DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/build.make DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
 .PHONY : DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
 DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -662,14 +694,14 @@ DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/clean:
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -689,14 +721,14 @@ grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -716,14 +748,14 @@ grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -743,14 +775,14 @@ grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -771,14 +803,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/all: grpc
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages_cpp"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -798,14 +830,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/clean:
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -825,14 +857,14 @@ grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -852,14 +884,14 @@ grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -879,14 +911,14 @@ grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -906,14 +938,14 @@ grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -933,14 +965,14 @@ grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -964,14 +996,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/all: grpc_ros
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/all: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -992,14 +1024,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/all: grpc_
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages_py"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1019,14 +1051,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/clean:
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1046,14 +1078,14 @@ grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/all: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_gencpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_gencpp"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/rule
 
 # Convenience name for target.
@@ -1073,14 +1105,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/clean:
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1101,14 +1133,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/all: grpc
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/all: grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=10 "Built target grpc_ros_adapter_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=10 "Built target grpc_ros_adapter_generate_messages_eus"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1128,14 +1160,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/clean:
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1155,14 +1187,14 @@ grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1182,14 +1214,14 @@ grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/all: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_geneus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_geneus"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/rule
 
 # Convenience name for target.
@@ -1209,14 +1241,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/clean:
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/all: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_genlisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_genlisp"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/rule
 
 # Convenience name for target.
@@ -1237,14 +1269,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/all: g
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages_nodejs"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1265,14 +1297,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/all: grp
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/all: grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_generate_messages_lisp"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1292,14 +1324,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/clean:
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/all: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_gennodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_gennodejs"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -1319,14 +1351,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/clean:
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1346,14 +1378,14 @@ grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/all: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/all
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/depend
 	$(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_genpy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target grpc_ros_adapter_genpy"
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/all
 
 # Build rule for subdir invocation for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/rule
 
 # Convenience name for target.
@@ -1373,14 +1405,14 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/clean:
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1400,14 +1432,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1427,14 +1459,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1454,14 +1486,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1481,14 +1513,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/clean:
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=28,29,30,31,32,33 "Built target ros1-driver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=28,29,30,31,32,33 "Built target ros1-driver"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/rule
 
 # Convenience name for target.
@@ -1508,14 +1540,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/clean:
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1535,14 +1567,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/cle
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1562,14 +1594,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1589,14 +1621,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1616,14 +1648,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.di
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1643,14 +1675,14 @@ Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -1689,14 +1721,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/all: Rpi_logger_v2/src/sonar/C
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=51,52,53,54,55,56,57,58 "Built target sonar_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=51,52,53,54,55,56,57,58 "Built target sonar_node"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 25
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/rule
 
 # Convenience name for target.
@@ -1716,14 +1748,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_node.dir/clean:
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_genpy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_genpy"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genpy.dir/rule
 
 # Convenience name for target.
@@ -1747,14 +1779,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/all: Rpi_logger_v
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_generate_messages"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_generate_messages"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -1774,14 +1806,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/clean:
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target _sonar_generate_messages_check_deps_Sonar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target _sonar_generate_messages_check_deps_Sonar"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/rule
 
 # Convenience name for target.
@@ -1801,14 +1833,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target _sonar_generate_messages_check_deps_TwoSonarDepth"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target _sonar_generate_messages_check_deps_TwoSonarDepth"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/rule
 
 # Convenience name for target.
@@ -1828,14 +1860,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarD
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_genlisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_genlisp"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/rule
 
 # Convenience name for target.
@@ -1855,14 +1887,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_genlisp.dir/clean:
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target _sonar_generate_messages_check_deps_TwoSonar"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target _sonar_generate_messages_check_deps_TwoSonar"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/rule
 
 # Convenience name for target.
@@ -1885,14 +1917,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/all: Rpi_logg
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=34,35,36 "Built target sonar_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=34,35,36 "Built target sonar_generate_messages_cpp"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -1912,14 +1944,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/clean:
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_cpp.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_gencpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_gencpp"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gencpp.dir/rule
 
 # Convenience name for target.
@@ -1942,14 +1974,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/all: Rpi_logg
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=37,38,39,40 "Built target sonar_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=37,38,39,40 "Built target sonar_generate_messages_eus"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -1969,14 +2001,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/clean:
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_eus.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_geneus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_geneus"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/rule
 
 # Convenience name for target.
@@ -1996,14 +2028,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_geneus.dir/clean:
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_gennodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target sonar_gennodejs"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -2026,14 +2058,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/all: Rpi_log
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=41,42,43 "Built target sonar_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=41,42,43 "Built target sonar_generate_messages_lisp"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -2056,14 +2088,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/all: Rpi_l
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=44,45,46 "Built target sonar_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=44,45,46 "Built target sonar_generate_messages_nodejs"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -2086,14 +2118,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/all: Rpi_logge
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/all: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonar.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=47,48,49,50 "Built target sonar_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=47,48,49,50 "Built target sonar_generate_messages_py"
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -2113,14 +2145,14 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/clean:
 Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/build.make Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/build.make Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=15,16,17,18 "Built target kalman_filter_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=15,16,17,18 "Built target kalman_filter_node"
 .PHONY : Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/rule
 
 # Convenience name for target.
@@ -2140,14 +2172,14 @@ Rpi_logger_v2/src/kalman_filter/CMakeFiles/kalman_filter_node.dir/clean:
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=1,2,3 "Built target complementary_filter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=1,2,3 "Built target complementary_filter"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/rule
 
 # Convenience name for target.
@@ -2167,14 +2199,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/c
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_py"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -2194,14 +2226,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_nodejs"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -2221,14 +2253,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_cpp"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -2248,14 +2280,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_py"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -2275,14 +2307,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_me
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_nodejs"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -2302,14 +2334,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_me
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_cpp"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -2329,14 +2361,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_cpp.d
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_nodejs"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -2356,14 +2388,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodej
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_lisp"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -2383,14 +2415,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_message
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_eus"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -2410,14 +2442,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_cpp"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -2437,14 +2469,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_message
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/all: Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=4,5 "Built target complementary_filter_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=4,5 "Built target complementary_filter_node"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.dir/rule
 
 # Convenience name for target.
@@ -2464,14 +2496,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter_node.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_eus"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -2491,14 +2523,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_message
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_nodejs"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -2518,14 +2550,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_message
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_eus"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -2545,14 +2577,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_eus.d
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_py"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -2572,14 +2604,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_py.di
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_generate_messages_py"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -2599,14 +2631,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_generate_message
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_cpp"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -2626,14 +2658,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_me
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf2_msgs_generate_messages_lisp"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -2653,14 +2685,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf2_msgs_generate_messages
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target tf_generate_messages_lisp"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -2680,14 +2712,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_lisp.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_eus"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -2707,14 +2739,14 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_me
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target actionlib_msgs_generate_messages_lisp"
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -2788,14 +2820,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/all: Rpi_logger_v2/sr
 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=59,60 "Built target two_sonar_logger_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=59,60 "Built target two_sonar_logger_2"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/rule
 
 # Convenience name for target.
@@ -2819,14 +2851,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/all: Rpi_logger
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target logger_generate_messages"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target logger_generate_messages"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -2847,14 +2879,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/all: grp
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=23 "Built target logger_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=23 "Built target logger_generate_messages_nodejs"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -2874,14 +2906,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/clean:
 Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/all:
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target _logger_generate_messages_check_deps_Motor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target _logger_generate_messages_check_deps_Motor"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/rule
 
 # Convenience name for target.
@@ -2902,14 +2934,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/all: grpc_r
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=19 "Built target logger_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=19 "Built target logger_generate_messages_cpp"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -2929,14 +2961,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/clean:
 Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target logger_geneus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target logger_geneus"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/rule
 
 # Convenience name for target.
@@ -3010,14 +3042,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/all: Rpi_logger_v2/src/logge
 Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=26,27 "Built target logger_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=26,27 "Built target logger_node"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/rule
 
 # Convenience name for target.
@@ -3038,14 +3070,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/all: grpc_
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=22 "Built target logger_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=22 "Built target logger_generate_messages_lisp"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -3065,14 +3097,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/clean:
 Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target logger_gencpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target logger_gencpp"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/rule
 
 # Convenience name for target.
@@ -3092,14 +3124,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/clean:
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target logger_genlisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target logger_genlisp"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/rule
 
 # Convenience name for target.
@@ -3120,14 +3152,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/all: grpc_r
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=20,21 "Built target logger_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=20,21 "Built target logger_generate_messages_eus"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -3147,14 +3179,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/clean:
 Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target logger_gennodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target logger_gennodejs"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -3175,14 +3207,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all: grpc_ro
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num=24,25 "Built target logger_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=24,25 "Built target logger_generate_messages_py"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -3202,14 +3234,14 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/clean:
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles --progress-num= "Built target logger_genpy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target logger_genpy"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/rule
 
 # Convenience name for target.
@@ -3221,6 +3253,339 @@ logger_genpy: Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/rule
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/clean:
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/clean
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/all: uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=61 "Built target uwr_comms_generate_messages_cpp"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+uwr_comms_generate_messages_cpp: uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/rule
+
+.PHONY : uwr_comms_generate_messages_cpp
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/all: uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=62,63 "Built target uwr_comms_generate_messages_eus"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+uwr_comms_generate_messages_eus: uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/rule
+
+.PHONY : uwr_comms_generate_messages_eus
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_geneus.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_geneus.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_geneus.dir/build.make uwr_comms/CMakeFiles/uwr_comms_geneus.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_geneus.dir/build.make uwr_comms/CMakeFiles/uwr_comms_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uwr_comms_geneus"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_geneus.dir/rule
+
+# Convenience name for target.
+uwr_comms_geneus: uwr_comms/CMakeFiles/uwr_comms_geneus.dir/rule
+
+.PHONY : uwr_comms_geneus
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_geneus.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_geneus.dir/build.make uwr_comms/CMakeFiles/uwr_comms_geneus.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_geneus.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_genlisp.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uwr_comms_genlisp"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/rule
+
+# Convenience name for target.
+uwr_comms_genlisp: uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/rule
+
+.PHONY : uwr_comms_genlisp
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/all: uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=64 "Built target uwr_comms_generate_messages_lisp"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+uwr_comms_generate_messages_lisp: uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/rule
+
+.PHONY : uwr_comms_generate_messages_lisp
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/all: uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=65 "Built target uwr_comms_generate_messages_nodejs"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+uwr_comms_generate_messages_nodejs: uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/rule
+
+.PHONY : uwr_comms_generate_messages_nodejs
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/all:
+	$(MAKE) -f uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/build.make uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/build.make uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target _uwr_comms_generate_messages_check_deps_comms1"
+.PHONY : uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/rule
+
+# Convenience name for target.
+_uwr_comms_generate_messages_check_deps_comms1: uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/rule
+
+.PHONY : _uwr_comms_generate_messages_check_deps_comms1
+
+# clean rule for target.
+uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/build.make uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/clean
+.PHONY : uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/all: uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=66,67 "Built target uwr_comms_generate_messages_py"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/rule
+
+# Convenience name for target.
+uwr_comms_generate_messages_py: uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/rule
+
+.PHONY : uwr_comms_generate_messages_py
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_gencpp.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uwr_comms_gencpp"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/rule
+
+# Convenience name for target.
+uwr_comms_gencpp: uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/rule
+
+.PHONY : uwr_comms_gencpp
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/build.make uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/build.make uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uwr_comms_gennodejs"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/rule
+
+# Convenience name for target.
+uwr_comms_gennodejs: uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/rule
+
+.PHONY : uwr_comms_gennodejs
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/build.make uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_genpy.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_genpy.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genpy.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genpy.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genpy.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genpy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uwr_comms_genpy"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_genpy.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_genpy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_genpy.dir/rule
+
+# Convenience name for target.
+uwr_comms_genpy: uwr_comms/CMakeFiles/uwr_comms_genpy.dir/rule
+
+.PHONY : uwr_comms_genpy
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_genpy.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genpy.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genpy.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_genpy.dir/clean
+
+#=============================================================================
+# Target rules for target uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir
+
+# All Build rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/all
+uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/all: uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/all
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/depend
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uwr_comms_generate_messages"
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/all
+
+# Build rule for subdir invocation for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/rule
+
+# Convenience name for target.
+uwr_comms_generate_messages: uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/rule
+
+.PHONY : uwr_comms_generate_messages
+
+# clean rule for target.
+uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/clean:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/clean
+.PHONY : uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

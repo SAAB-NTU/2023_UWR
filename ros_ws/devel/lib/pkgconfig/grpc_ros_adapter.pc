@@ -1,4 +1,4 @@
-prefix=/home/saab/Desktop/marus_sim/ros_ws/devel
+prefix=/home/saab/Desktop/2023_UWR/ros_ws/devel
 
 Name: grpc_ros_adapter
 Description: Description of grpc_ros_adapter

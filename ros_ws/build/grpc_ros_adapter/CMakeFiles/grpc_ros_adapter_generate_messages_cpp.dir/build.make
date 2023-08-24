@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/marus_sim/ros_ws/src
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/marus_sim/ros_ws/build
+CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for grpc_ros_adapter_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build: gr
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build
 
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/clean:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build/grpc_ros_adapter && $(CMAKE_COMMAND) -P CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && $(CMAKE_COMMAND) -P CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/clean
 
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/depend:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/marus_sim/ros_ws/src /home/saab/Desktop/marus_sim/ros_ws/src/grpc_ros_adapter /home/saab/Desktop/marus_sim/ros_ws/build /home/saab/Desktop/marus_sim/ros_ws/build/grpc_ros_adapter /home/saab/Desktop/marus_sim/ros_ws/build/grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2023_UWR/ros_ws/src /home/saab/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter /home/saab/Desktop/2023_UWR/ros_ws/build /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/depend
 

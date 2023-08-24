@@ -1,2 +1,2 @@
-DBSCAN_detect:Rpi_logger_v2/src/imu_complementary_filter:Rpi_logger_v2/src/kalman_filter:Rpi_logger_v2/src/logger:Rpi_logger_v2/src/ros1-driver:Rpi_logger_v2/src/sonar:grpc_ros_adapter:uuv_sensor_msgs
--DCATKIN_DEVEL_PREFIX=/home/saab/Desktop/marus_sim/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/saab/Desktop/marus_sim/ros_ws/install -G Unix Makefiles
+DBSCAN_detect:Rpi_logger_v2/src/imu_complementary_filter:Rpi_logger_v2/src/kalman_filter:Rpi_logger_v2/src/logger:Rpi_logger_v2/src/ros1-driver:Rpi_logger_v2/src/sonar:grpc_ros_adapter:uuv_sensor_msgs:uwr_comms
+-DCATKIN_DEVEL_PREFIX=/home/saab/Desktop/2023_UWR/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/saab/Desktop/2023_UWR/ros_ws/install -G Unix Makefiles

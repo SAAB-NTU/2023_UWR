@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/marus_sim/ros_ws/src
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/marus_sim/ros_ws/build
+CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for logger_genpy.
 
@@ -63,10 +63,10 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build: logger_genpy
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build
 
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/clean:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/logger && $(CMAKE_COMMAND) -P CMakeFiles/logger_genpy.dir/cmake_clean.cmake
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && $(CMAKE_COMMAND) -P CMakeFiles/logger_genpy.dir/cmake_clean.cmake
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/clean
 
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/depend:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/marus_sim/ros_ws/src /home/saab/Desktop/marus_sim/ros_ws/src/Rpi_logger_v2/src/logger /home/saab/Desktop/marus_sim/ros_ws/build /home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/logger /home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2023_UWR/ros_ws/src /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger /home/saab/Desktop/2023_UWR/ros_ws/build /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/depend
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/sonar/sonar_node"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/sonar/sonar_node.pdb"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/sonar/sonar_node"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/sonar/sonar_node.pdb"
   "CMakeFiles/sonar_node.dir/src/abstract-link.cpp.o"
   "CMakeFiles/sonar_node.dir/src/ping-device-ping1d.cpp.o"
   "CMakeFiles/sonar_node.dir/src/ping-device.cpp.o"

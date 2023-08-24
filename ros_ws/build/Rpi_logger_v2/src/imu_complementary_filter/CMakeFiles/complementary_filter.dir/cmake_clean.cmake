@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/libcomplementary_filter.pdb"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/libcomplementary_filter.so"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/libcomplementary_filter.pdb"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/libcomplementary_filter.so"
   "CMakeFiles/complementary_filter.dir/src/complementary_filter.cpp.o"
   "CMakeFiles/complementary_filter.dir/src/complementary_filter_ros.cpp.o"
 )

@@ -1,0 +1,8 @@
+prefix=/home/saab/Desktop/marus_sim/ros_ws/devel
+
+Name: logger
+Description: Description of logger
+Version: 0.0.0
+Cflags: -I/home/saab/Desktop/marus_sim/ros_ws/devel/include
+Libs: -L${prefix}/lib -llogger
+Requires: roscpp rospy sensor_msgs std_msgs sonar message_filters tf message_runtime

@@ -1,4 +1,4 @@
-prefix=/home/saab/Desktop/marus_sim/ros_ws/devel
+prefix=/home/saab/Desktop/2023_UWR/ros_ws/devel
 
 Name: ros1-driver
 Description: Description of ros1-driver

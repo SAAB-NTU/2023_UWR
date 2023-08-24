@@ -67,14 +67,14 @@ set(DBSCAN_detect_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(DBSCAN_detect_SOURCE_PREFIX /home/saab/Desktop/marus_sim/ros_ws/src/DBSCAN_detect)
-  set(DBSCAN_detect_DEVEL_PREFIX /home/saab/Desktop/marus_sim/ros_ws/devel)
+  set(DBSCAN_detect_SOURCE_PREFIX /home/saab/Desktop/2023_UWR/ros_ws/src/DBSCAN_detect)
+  set(DBSCAN_detect_DEVEL_PREFIX /home/saab/Desktop/2023_UWR/ros_ws/devel)
   set(DBSCAN_detect_INSTALL_PREFIX "")
   set(DBSCAN_detect_PREFIX ${DBSCAN_detect_DEVEL_PREFIX})
 else()
   set(DBSCAN_detect_SOURCE_PREFIX "")
   set(DBSCAN_detect_DEVEL_PREFIX "")
-  set(DBSCAN_detect_INSTALL_PREFIX /home/saab/Desktop/marus_sim/ros_ws/install)
+  set(DBSCAN_detect_INSTALL_PREFIX /home/saab/Desktop/2023_UWR/ros_ws/install)
   set(DBSCAN_detect_PREFIX ${DBSCAN_detect_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/saab/Desktop/marus_sim/ros_ws/install/lib;/home/saab/Desktop/marus_sim/ros_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/saab/Desktop/2023_UWR/ros_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

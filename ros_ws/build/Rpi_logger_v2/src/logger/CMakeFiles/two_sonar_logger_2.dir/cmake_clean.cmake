@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/logger/two_sonar_logger_2"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/logger/two_sonar_logger_2.pdb"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/logger/two_sonar_logger_2"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/logger/two_sonar_logger_2.pdb"
   "CMakeFiles/two_sonar_logger_2.dir/src/two_sonar_logger_without_tof.cpp.o"
 )
 

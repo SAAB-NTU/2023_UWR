@@ -1,8 +1,8 @@
-# Install script for directory: /home/saab/Desktop/marus_sim/ros_ws/src/Rpi_logger_v2/src/ros1-driver
+# Install script for directory: /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/ros1-driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/marus_sim/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/2023_UWR/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/ros1-driver/catkin_generated/installspace/ros1-driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/ros1-driver/catkin_generated/installspace/ros1-driver.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros1-driver/cmake" TYPE FILE FILES
-    "/home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/ros1-driver/catkin_generated/installspace/ros1-driverConfig.cmake"
-    "/home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/ros1-driver/catkin_generated/installspace/ros1-driverConfig-version.cmake"
+    "/home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/ros1-driver/catkin_generated/installspace/ros1-driverConfig.cmake"
+    "/home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/ros1-driver/catkin_generated/installspace/ros1-driverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros1-driver" TYPE FILE FILES "/home/saab/Desktop/marus_sim/ros_ws/src/Rpi_logger_v2/src/ros1-driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros1-driver" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/ros1-driver/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros1-driver/ros1-driver"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ros1-driver" TYPE EXECUTABLE FILES "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/ros1-driver/ros1-driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ros1-driver" TYPE EXECUTABLE FILES "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/ros1-driver/ros1-driver")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros1-driver/ros1-driver" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros1-driver/ros1-driver")
     file(RPATH_CHANGE
@@ -79,7 +79,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros1-driver/ros1-driver"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ros1-driver" TYPE EXECUTABLE FILES "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/ros1-driver/ros1-driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ros1-driver" TYPE EXECUTABLE FILES "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/ros1-driver/ros1-driver")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros1-driver/ros1-driver" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ros1-driver/ros1-driver")
     file(RPATH_CHANGE

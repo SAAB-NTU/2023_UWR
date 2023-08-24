@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "uuv_sensor_msgs"
-PROJECT_SPACE_DIR = "/home/saab/Desktop/marus_sim/ros_ws/devel"
+PROJECT_SPACE_DIR = "/home/saab/Desktop/2023_UWR/ros_ws/devel"
 PROJECT_VERSION = "0.0.0"

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/share/gennodejs/ros/sonar/msg/Sonar.js"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/share/gennodejs/ros/sonar/msg/TwoSonar.js"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/share/gennodejs/ros/sonar/msg/TwoSonarDepth.js"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/share/gennodejs/ros/sonar/msg/Sonar.js"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/share/gennodejs/ros/sonar/msg/TwoSonar.js"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/share/gennodejs/ros/sonar/msg/TwoSonarDepth.js"
   "CMakeFiles/sonar_generate_messages_nodejs"
 )
 

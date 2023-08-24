@@ -67,14 +67,14 @@ set(grpc_ros_adapter_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(grpc_ros_adapter_SOURCE_PREFIX /home/saab/Desktop/marus_sim/ros_ws/src/grpc_ros_adapter)
-  set(grpc_ros_adapter_DEVEL_PREFIX /home/saab/Desktop/marus_sim/ros_ws/devel)
+  set(grpc_ros_adapter_SOURCE_PREFIX /home/saab/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter)
+  set(grpc_ros_adapter_DEVEL_PREFIX /home/saab/Desktop/2023_UWR/ros_ws/devel)
   set(grpc_ros_adapter_INSTALL_PREFIX "")
   set(grpc_ros_adapter_PREFIX ${grpc_ros_adapter_DEVEL_PREFIX})
 else()
   set(grpc_ros_adapter_SOURCE_PREFIX "")
   set(grpc_ros_adapter_DEVEL_PREFIX "")
-  set(grpc_ros_adapter_INSTALL_PREFIX /home/saab/Desktop/marus_sim/ros_ws/install)
+  set(grpc_ros_adapter_INSTALL_PREFIX /home/saab/Desktop/2023_UWR/ros_ws/install)
   set(grpc_ros_adapter_PREFIX ${grpc_ros_adapter_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/saab/Desktop/marus_sim/ros_ws/install/lib;/home/saab/Desktop/marus_sim/ros_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/saab/Desktop/2023_UWR/ros_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

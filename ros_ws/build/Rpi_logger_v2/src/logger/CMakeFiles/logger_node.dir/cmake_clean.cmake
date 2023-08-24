@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/logger/logger_node"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/logger/logger_node.pdb"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/logger/logger_node"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/logger/logger_node.pdb"
   "CMakeFiles/logger_node.dir/src/logger_node.cpp.o"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/ros1-driver/ros1-driver"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/lib/ros1-driver/ros1-driver.pdb"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/ros1-driver/ros1-driver"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/ros1-driver/ros1-driver.pdb"
   "CMakeFiles/ros1-driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.o"
   "CMakeFiles/ros1-driver.dir/src/an_driver.cpp.o"
   "CMakeFiles/ros1-driver.dir/src/an_packet_protocol.c.o"

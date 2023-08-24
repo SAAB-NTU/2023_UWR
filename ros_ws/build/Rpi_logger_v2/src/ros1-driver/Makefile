@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/marus_sim/ros_ws/src
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/marus_sim/ros_ws/build
+CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles /home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/ros1-driver/CMakeFiles/progress.marks
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/ros1-driver/CMakeFiles/progress.marks
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/clean
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/preinstall
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/preinstall
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ roscpp_generate_messages_cpp: Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_ge
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ roscpp_generate_messages_eus: Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_ge
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ rosgraph_msgs_generate_messages_nodejs: Rpi_logger_v2/src/ros1-driver/CMakeFiles
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ roscpp_generate_messages_py: Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_gen
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ ros1-driver: Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/rule
 
 # fast build rule for target.
 ros1-driver/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build
 .PHONY : ros1-driver/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ roscpp_generate_messages_nodejs: Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ rosgraph_msgs_generate_messages_cpp: Rpi_logger_v2/src/ros1-driver/CMakeFiles/ro
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ rosgraph_msgs_generate_messages_eus: Rpi_logger_v2/src/ros1-driver/CMakeFiles/ro
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ rosgraph_msgs_generate_messages_lisp: Rpi_logger_v2/src/ros1-driver/CMakeFiles/r
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ roscpp_generate_messages_lisp: Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_g
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -329,7 +329,7 @@ rosgraph_msgs_generate_messages_py: Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 src/NTRIP_Client/NTRIP/ntripclient.o: src/NTRIP_Client/NTRIP/ntripclient.c.o
@@ -338,7 +338,7 @@ src/NTRIP_Client/NTRIP/ntripclient.o: src/NTRIP_Client/NTRIP/ntripclient.c.o
 
 # target to build an object file
 src/NTRIP_Client/NTRIP/ntripclient.c.o:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.o
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.o
 .PHONY : src/NTRIP_Client/NTRIP/ntripclient.c.o
 
 src/NTRIP_Client/NTRIP/ntripclient.i: src/NTRIP_Client/NTRIP/ntripclient.c.i
@@ -347,7 +347,7 @@ src/NTRIP_Client/NTRIP/ntripclient.i: src/NTRIP_Client/NTRIP/ntripclient.c.i
 
 # target to preprocess a source file
 src/NTRIP_Client/NTRIP/ntripclient.c.i:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.i
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.i
 .PHONY : src/NTRIP_Client/NTRIP/ntripclient.c.i
 
 src/NTRIP_Client/NTRIP/ntripclient.s: src/NTRIP_Client/NTRIP/ntripclient.c.s
@@ -356,7 +356,7 @@ src/NTRIP_Client/NTRIP/ntripclient.s: src/NTRIP_Client/NTRIP/ntripclient.c.s
 
 # target to generate assembly for a file
 src/NTRIP_Client/NTRIP/ntripclient.c.s:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.s
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.s
 .PHONY : src/NTRIP_Client/NTRIP/ntripclient.c.s
 
 src/an_driver.o: src/an_driver.cpp.o
@@ -365,7 +365,7 @@ src/an_driver.o: src/an_driver.cpp.o
 
 # target to build an object file
 src/an_driver.cpp.o:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_driver.cpp.o
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_driver.cpp.o
 .PHONY : src/an_driver.cpp.o
 
 src/an_driver.i: src/an_driver.cpp.i
@@ -374,7 +374,7 @@ src/an_driver.i: src/an_driver.cpp.i
 
 # target to preprocess a source file
 src/an_driver.cpp.i:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_driver.cpp.i
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_driver.cpp.i
 .PHONY : src/an_driver.cpp.i
 
 src/an_driver.s: src/an_driver.cpp.s
@@ -383,7 +383,7 @@ src/an_driver.s: src/an_driver.cpp.s
 
 # target to generate assembly for a file
 src/an_driver.cpp.s:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_driver.cpp.s
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_driver.cpp.s
 .PHONY : src/an_driver.cpp.s
 
 src/an_packet_protocol.o: src/an_packet_protocol.c.o
@@ -392,7 +392,7 @@ src/an_packet_protocol.o: src/an_packet_protocol.c.o
 
 # target to build an object file
 src/an_packet_protocol.c.o:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_packet_protocol.c.o
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_packet_protocol.c.o
 .PHONY : src/an_packet_protocol.c.o
 
 src/an_packet_protocol.i: src/an_packet_protocol.c.i
@@ -401,7 +401,7 @@ src/an_packet_protocol.i: src/an_packet_protocol.c.i
 
 # target to preprocess a source file
 src/an_packet_protocol.c.i:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_packet_protocol.c.i
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_packet_protocol.c.i
 .PHONY : src/an_packet_protocol.c.i
 
 src/an_packet_protocol.s: src/an_packet_protocol.c.s
@@ -410,7 +410,7 @@ src/an_packet_protocol.s: src/an_packet_protocol.c.s
 
 # target to generate assembly for a file
 src/an_packet_protocol.c.s:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_packet_protocol.c.s
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/an_packet_protocol.c.s
 .PHONY : src/an_packet_protocol.c.s
 
 src/rs232/rs232.o: src/rs232/rs232.c.o
@@ -419,7 +419,7 @@ src/rs232/rs232.o: src/rs232/rs232.c.o
 
 # target to build an object file
 src/rs232/rs232.c.o:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/rs232/rs232.c.o
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/rs232/rs232.c.o
 .PHONY : src/rs232/rs232.c.o
 
 src/rs232/rs232.i: src/rs232/rs232.c.i
@@ -428,7 +428,7 @@ src/rs232/rs232.i: src/rs232/rs232.c.i
 
 # target to preprocess a source file
 src/rs232/rs232.c.i:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/rs232/rs232.c.i
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/rs232/rs232.c.i
 .PHONY : src/rs232/rs232.c.i
 
 src/rs232/rs232.s: src/rs232/rs232.c.s
@@ -437,7 +437,7 @@ src/rs232/rs232.s: src/rs232/rs232.c.s
 
 # target to generate assembly for a file
 src/rs232/rs232.c.s:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/rs232/rs232.c.s
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/rs232/rs232.c.s
 .PHONY : src/rs232/rs232.c.s
 
 src/spatial_packets.o: src/spatial_packets.c.o
@@ -446,7 +446,7 @@ src/spatial_packets.o: src/spatial_packets.c.o
 
 # target to build an object file
 src/spatial_packets.c.o:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/spatial_packets.c.o
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/spatial_packets.c.o
 .PHONY : src/spatial_packets.c.o
 
 src/spatial_packets.i: src/spatial_packets.c.i
@@ -455,7 +455,7 @@ src/spatial_packets.i: src/spatial_packets.c.i
 
 # target to preprocess a source file
 src/spatial_packets.c.i:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/spatial_packets.c.i
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/spatial_packets.c.i
 .PHONY : src/spatial_packets.c.i
 
 src/spatial_packets.s: src/spatial_packets.c.s
@@ -464,7 +464,7 @@ src/spatial_packets.s: src/spatial_packets.c.s
 
 # target to generate assembly for a file
 src/spatial_packets.c.s:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/spatial_packets.c.s
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/build.make Rpi_logger_v2/src/ros1-driver/CMakeFiles/ros1-driver.dir/src/spatial_packets.c.s
 .PHONY : src/spatial_packets.c.s
 
 # Help Target
@@ -517,6 +517,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

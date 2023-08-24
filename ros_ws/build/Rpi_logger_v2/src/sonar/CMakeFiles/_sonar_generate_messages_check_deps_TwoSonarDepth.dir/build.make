@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/marus_sim/ros_ws/src
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/marus_sim/ros_ws/build
+CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for _sonar_generate_messages_check_deps_TwoSonarDepth.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/saab/Desktop/marus_sim/ros_ws/build
 include Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/progress.make
 
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/sonar && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py sonar /home/saab/Desktop/marus_sim/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg std_msgs/Header
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py sonar /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg std_msgs/Header
 
 _sonar_generate_messages_check_deps_TwoSonarDepth: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth
 _sonar_generate_messages_check_deps_TwoSonarDepth: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/build.make
@@ -67,10 +67,10 @@ Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarD
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/build
 
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/clean:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/sonar && $(CMAKE_COMMAND) -P CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/cmake_clean.cmake
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar && $(CMAKE_COMMAND) -P CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/cmake_clean.cmake
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/clean
 
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/depend:
-	cd /home/saab/Desktop/marus_sim/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/marus_sim/ros_ws/src /home/saab/Desktop/marus_sim/ros_ws/src/Rpi_logger_v2/src/sonar /home/saab/Desktop/marus_sim/ros_ws/build /home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/sonar /home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2023_UWR/ros_ws/src /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar /home/saab/Desktop/2023_UWR/ros_ws/build /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/depend
 

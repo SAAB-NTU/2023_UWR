@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/marus_sim/ros_ws/src
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/marus_sim/ros_ws/build
+CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/marus_sim/ros_ws/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1454,6 +1454,162 @@ logger_genpy/fast:
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build
 .PHONY : logger_genpy/fast
 
+#=============================================================================
+# Target rules for targets named uwr_comms_generate_messages_cpp
+
+# Build rule for target.
+uwr_comms_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_generate_messages_cpp
+.PHONY : uwr_comms_generate_messages_cpp
+
+# fast build rule for target.
+uwr_comms_generate_messages_cpp/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_cpp.dir/build
+.PHONY : uwr_comms_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_generate_messages_eus
+
+# Build rule for target.
+uwr_comms_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_generate_messages_eus
+.PHONY : uwr_comms_generate_messages_eus
+
+# fast build rule for target.
+uwr_comms_generate_messages_eus/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_eus.dir/build
+.PHONY : uwr_comms_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_geneus
+
+# Build rule for target.
+uwr_comms_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_geneus
+.PHONY : uwr_comms_geneus
+
+# fast build rule for target.
+uwr_comms_geneus/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_geneus.dir/build.make uwr_comms/CMakeFiles/uwr_comms_geneus.dir/build
+.PHONY : uwr_comms_geneus/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_genlisp
+
+# Build rule for target.
+uwr_comms_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_genlisp
+.PHONY : uwr_comms_genlisp
+
+# fast build rule for target.
+uwr_comms_genlisp/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genlisp.dir/build
+.PHONY : uwr_comms_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_generate_messages_lisp
+
+# Build rule for target.
+uwr_comms_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_generate_messages_lisp
+.PHONY : uwr_comms_generate_messages_lisp
+
+# fast build rule for target.
+uwr_comms_generate_messages_lisp/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_lisp.dir/build
+.PHONY : uwr_comms_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_generate_messages_nodejs
+
+# Build rule for target.
+uwr_comms_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_generate_messages_nodejs
+.PHONY : uwr_comms_generate_messages_nodejs
+
+# fast build rule for target.
+uwr_comms_generate_messages_nodejs/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_nodejs.dir/build
+.PHONY : uwr_comms_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named _uwr_comms_generate_messages_check_deps_comms1
+
+# Build rule for target.
+_uwr_comms_generate_messages_check_deps_comms1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _uwr_comms_generate_messages_check_deps_comms1
+.PHONY : _uwr_comms_generate_messages_check_deps_comms1
+
+# fast build rule for target.
+_uwr_comms_generate_messages_check_deps_comms1/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/build.make uwr_comms/CMakeFiles/_uwr_comms_generate_messages_check_deps_comms1.dir/build
+.PHONY : _uwr_comms_generate_messages_check_deps_comms1/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_generate_messages_py
+
+# Build rule for target.
+uwr_comms_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_generate_messages_py
+.PHONY : uwr_comms_generate_messages_py
+
+# fast build rule for target.
+uwr_comms_generate_messages_py/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages_py.dir/build
+.PHONY : uwr_comms_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_gencpp
+
+# Build rule for target.
+uwr_comms_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_gencpp
+.PHONY : uwr_comms_gencpp
+
+# fast build rule for target.
+uwr_comms_gencpp/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/build.make uwr_comms/CMakeFiles/uwr_comms_gencpp.dir/build
+.PHONY : uwr_comms_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_gennodejs
+
+# Build rule for target.
+uwr_comms_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_gennodejs
+.PHONY : uwr_comms_gennodejs
+
+# fast build rule for target.
+uwr_comms_gennodejs/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/build.make uwr_comms/CMakeFiles/uwr_comms_gennodejs.dir/build
+.PHONY : uwr_comms_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_genpy
+
+# Build rule for target.
+uwr_comms_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_genpy
+.PHONY : uwr_comms_genpy
+
+# fast build rule for target.
+uwr_comms_genpy/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genpy.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genpy.dir/build
+.PHONY : uwr_comms_genpy/fast
+
+#=============================================================================
+# Target rules for targets named uwr_comms_generate_messages
+
+# Build rule for target.
+uwr_comms_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_generate_messages
+.PHONY : uwr_comms_generate_messages
+
+# fast build rule for target.
+uwr_comms_generate_messages/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build
+.PHONY : uwr_comms_generate_messages/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1566,6 +1722,18 @@ help:
 	@echo "... logger_gennodejs"
 	@echo "... logger_generate_messages_py"
 	@echo "... logger_genpy"
+	@echo "... uwr_comms_generate_messages_cpp"
+	@echo "... uwr_comms_generate_messages_eus"
+	@echo "... uwr_comms_geneus"
+	@echo "... uwr_comms_genlisp"
+	@echo "... uwr_comms_generate_messages_lisp"
+	@echo "... uwr_comms_generate_messages_nodejs"
+	@echo "... _uwr_comms_generate_messages_check_deps_comms1"
+	@echo "... uwr_comms_generate_messages_py"
+	@echo "... uwr_comms_gencpp"
+	@echo "... uwr_comms_gennodejs"
+	@echo "... uwr_comms_genpy"
+	@echo "... uwr_comms_generate_messages"
 .PHONY : help
 
 

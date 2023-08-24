@@ -1,4 +1,4 @@
-prefix=/home/saab/Desktop/marus_sim/ros_ws/install
+prefix=/home/saab/Desktop/2023_UWR/ros_ws/install
 
 Name: kalman_filter
 Description: Description of kalman_filter

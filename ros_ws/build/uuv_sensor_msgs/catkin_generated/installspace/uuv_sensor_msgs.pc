@@ -1,4 +1,4 @@
-prefix=/home/saab/Desktop/marus_sim/ros_ws/install
+prefix=/home/saab/Desktop/2023_UWR/ros_ws/install
 
 Name: uuv_sensor_msgs
 Description: Description of uuv_sensor_msgs

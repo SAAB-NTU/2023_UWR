@@ -1,8 +1,8 @@
-# Install script for directory: /home/saab/Desktop/marus_sim/ros_ws/src/Rpi_logger_v2/src/kalman_filter
+# Install script for directory: /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/kalman_filter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/marus_sim/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/2023_UWR/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/kalman_filter/catkin_generated/installspace/kalman_filter.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/kalman_filter/catkin_generated/installspace/kalman_filter.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kalman_filter/cmake" TYPE FILE FILES
-    "/home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/kalman_filter/catkin_generated/installspace/kalman_filterConfig.cmake"
-    "/home/saab/Desktop/marus_sim/ros_ws/build/Rpi_logger_v2/src/kalman_filter/catkin_generated/installspace/kalman_filterConfig-version.cmake"
+    "/home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/kalman_filter/catkin_generated/installspace/kalman_filterConfig.cmake"
+    "/home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/kalman_filter/catkin_generated/installspace/kalman_filterConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kalman_filter" TYPE FILE FILES "/home/saab/Desktop/marus_sim/ros_ws/src/Rpi_logger_v2/src/kalman_filter/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kalman_filter" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/kalman_filter/package.xml")
 endif()
 

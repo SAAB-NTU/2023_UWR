@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/include/sonar/Sonar.h"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/include/sonar/TwoSonar.h"
-  "/home/saab/Desktop/marus_sim/ros_ws/devel/include/sonar/TwoSonarDepth.h"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/include/sonar/Sonar.h"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/include/sonar/TwoSonar.h"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/include/sonar/TwoSonarDepth.h"
   "CMakeFiles/sonar_generate_messages_cpp"
 )
 
