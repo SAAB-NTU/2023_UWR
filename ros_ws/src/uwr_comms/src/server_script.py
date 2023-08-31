@@ -2,34 +2,35 @@
 
 import rospy
 from uwr_comms.srv import comms1
-import json
+import numpy as np
+import serial
 
 def str_service_callback(request):
     # Process the received JSON message
-    message = request.str
-    # Perform necessary operations with the JSON data
-    # ...
+    data=(np.array(request.data)+181)/255
+    serial_port = "/dev/ttyACM0"  # Replace with your serial port name
+    baud_rate = 9600
+    ser = serial.Serial(serial_port, baud_rate)
 
-    # Prepare the response message
-    response = {
-        "result": "Success",
-        "data": message
-    }
+    # Send data over UART
+    data_to_send = '{"A":10,"B":10}'
+    ser.write(data_to_send.encode())
 
+    # Close the UART port
+    ser.close()
+    response="success"
+    return response,data
 
-
-    return message
-
-def json_service_server():
-    rospy.init_node('json_service_server')
+def uwr_service_server():
+    rospy.init_node('uwr_service_server')
 
     # Create the service
-    rospy.Service('json_service', comms1, str_service_callback)
+    rospy.Service('uwr_comms_service', comms1, str_service_callback)
 
     rospy.spin()
 
 if __name__ == '__main__':
     try:
-        json_service_server()
+        uwr_service_server()
     except rospy.ROSInterruptException:
         pass

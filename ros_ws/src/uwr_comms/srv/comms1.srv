@@ -1,3 +1,4 @@
-string str
+float32[] data
 ---
-string str
+string response
+float32[] data

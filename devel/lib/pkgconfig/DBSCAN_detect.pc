@@ -1,8 +1,0 @@
-prefix=/home/saab/Desktop/marus_sim/ros_ws/devel
-
-Name: DBSCAN_detect
-Description: Description of DBSCAN_detect
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
