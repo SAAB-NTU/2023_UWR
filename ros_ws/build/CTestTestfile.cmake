@@ -6,7 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("DBSCAN_detect")
-subdirs("rtcm_msgs")
 subdirs("ublox/ublox")
 subdirs("uuv_sensor_msgs")
 subdirs("grpc_ros_adapter")
