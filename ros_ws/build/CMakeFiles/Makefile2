@@ -406,9 +406,9 @@ ublox/ublox/clean:
 # Directory level rules for directory ublox/ublox_gps
 
 # Recursive "all" directory target.
-ublox/ublox_gps/all: ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all
 ublox/ublox_gps/all: ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all
 ublox/ublox_gps/all: ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/all
+ublox/ublox_gps/all: ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all
 
 .PHONY : ublox/ublox_gps/all
 
@@ -418,24 +418,34 @@ ublox/ublox_gps/preinstall:
 .PHONY : ublox/ublox_gps/preinstall
 
 # Recursive "clean" directory target.
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/clean
 ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/ublox_gps.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/clean
 ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_eus.dir/clean
-ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/clean
 ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_eus.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/clean
+ublox/ublox_gps/clean: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/clean
 
 .PHONY : ublox/ublox_gps/clean
 
@@ -6421,31 +6431,58 @@ ublox/ublox_msgs/CMakeFiles/_ublox_msgs_generate_messages_check_deps_NavSOL.dir/
 .PHONY : ublox/ublox_msgs/CMakeFiles/_ublox_msgs_generate_messages_check_deps_NavSOL.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all: ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/all
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=14 "Built target ublox_logger_node"
-.PHONY : ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_cpp"
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 84
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-ublox_logger_node: ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/rule
+geographic_msgs_generate_messages_cpp: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : ublox_logger_node
+.PHONY : geographic_msgs_generate_messages_cpp
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/clean
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_nodejs"
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+mavros_msgs_generate_messages_nodejs: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : mavros_msgs_generate_messages_nodejs
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
 # Target rules for target ublox/ublox_gps/CMakeFiles/ublox_gps.dir
@@ -6503,21 +6540,31 @@ ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_msgs/CMakeFiles/ublox_
 ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_lisp.dir/all
 ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_eus.dir/all
 ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/all
 ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_eus.dir/all
-ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/all
 ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_eus.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_gps.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_gps.dir/depend
 	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_gps.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_gps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target ublox_gps"
@@ -6541,112 +6588,274 @@ ublox/ublox_gps/CMakeFiles/ublox_gps.dir/clean:
 .PHONY : ublox/ublox_gps/CMakeFiles/ublox_gps.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target nmea_msgs_generate_messages_py"
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/all
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_lisp"
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/rule
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-nmea_msgs_generate_messages_py: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/rule
+geographic_msgs_generate_messages_lisp: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : nmea_msgs_generate_messages_py
+.PHONY : geographic_msgs_generate_messages_lisp
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/clean
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target nmea_msgs_generate_messages_nodejs"
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/all
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_eus"
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/rule
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-nmea_msgs_generate_messages_nodejs: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/rule
+geographic_msgs_generate_messages_eus: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule
 
-.PHONY : nmea_msgs_generate_messages_nodejs
+.PHONY : geographic_msgs_generate_messages_eus
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/clean
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_cpp"
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_py"
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-diagnostic_msgs_generate_messages_cpp: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+mavros_msgs_generate_messages_py: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
 
-.PHONY : diagnostic_msgs_generate_messages_cpp
+.PHONY : mavros_msgs_generate_messages_py
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rtcm_msgs_generate_messages_lisp"
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/all
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_eus"
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/rule
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-rtcm_msgs_generate_messages_lisp: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/rule
+uuid_msgs_generate_messages_eus: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule
 
-.PHONY : rtcm_msgs_generate_messages_lisp
+.PHONY : uuid_msgs_generate_messages_eus
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/clean
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_py"
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_py: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_lisp"
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_lisp: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_lisp
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_lisp"
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+mavros_msgs_generate_messages_lisp: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : mavros_msgs_generate_messages_lisp
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_eus"
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_eus: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_eus
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_eus"
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+mavros_msgs_generate_messages_eus: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+
+.PHONY : mavros_msgs_generate_messages_eus
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_nodejs"
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_nodejs: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_nodejs
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
 # Target rules for target ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir
@@ -6677,31 +6886,247 @@ ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/clean:
 .PHONY : ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_eus"
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target mavros_msgs_generate_messages_cpp"
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-diagnostic_msgs_generate_messages_eus: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+mavros_msgs_generate_messages_cpp: ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : diagnostic_msgs_generate_messages_eus
+.PHONY : mavros_msgs_generate_messages_cpp
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
+ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_cpp"
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_cpp: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_cpp
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_nodejs"
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geographic_msgs_generate_messages_nodejs: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geographic_msgs_generate_messages_nodejs
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_nodejs"
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+uuid_msgs_generate_messages_nodejs: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : uuid_msgs_generate_messages_nodejs
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target nmea_msgs_generate_messages_py"
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nmea_msgs_generate_messages_py: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/rule
+
+.PHONY : nmea_msgs_generate_messages_py
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target geographic_msgs_generate_messages_py"
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geographic_msgs_generate_messages_py: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
+
+.PHONY : geographic_msgs_generate_messages_py
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target nmea_msgs_generate_messages_lisp"
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nmea_msgs_generate_messages_lisp: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : nmea_msgs_generate_messages_lisp
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_cpp"
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+uuid_msgs_generate_messages_cpp: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : uuid_msgs_generate_messages_cpp
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_py"
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+uuid_msgs_generate_messages_py: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule
+
+.PHONY : uuid_msgs_generate_messages_py
+
+# clean rule for target.
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Target rules for target ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir
@@ -6731,166 +7156,31 @@ ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/clean:
 .PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rtcm_msgs_generate_messages_py"
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/all
+ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all: ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/all
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=14 "Built target ublox_logger_node"
+.PHONY : ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 84
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/rule
+.PHONY : ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/rule
 
 # Convenience name for target.
-rtcm_msgs_generate_messages_py: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/rule
+ublox_logger_node: ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/rule
 
-.PHONY : rtcm_msgs_generate_messages_py
-
-# clean rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_nodejs"
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_nodejs: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_nodejs
+.PHONY : ublox_logger_node
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rtcm_msgs_generate_messages_cpp"
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rtcm_msgs_generate_messages_cpp: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rtcm_msgs_generate_messages_cpp
-
-# clean rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_lisp"
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_lisp: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_lisp
-
-# clean rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_py"
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_py: ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_py
-
-# clean rule for target.
-ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rtcm_msgs_generate_messages_eus"
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rtcm_msgs_generate_messages_eus: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rtcm_msgs_generate_messages_eus
-
-# clean rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/clean
+ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/clean
 
 #=============================================================================
 # Target rules for target ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_eus.dir
@@ -6920,58 +7210,58 @@ ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_eus.dir/clean:
 .PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rtcm_msgs_generate_messages_nodejs"
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/all
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target uuid_msgs_generate_messages_lisp"
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/rule
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-rtcm_msgs_generate_messages_nodejs: ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/rule
+uuid_msgs_generate_messages_lisp: ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : rtcm_msgs_generate_messages_nodejs
+.PHONY : uuid_msgs_generate_messages_lisp
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/clean
+ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir
+# Target rules for target ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target nmea_msgs_generate_messages_lisp"
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/all
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target nmea_msgs_generate_messages_nodejs"
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/rule
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-nmea_msgs_generate_messages_lisp: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/rule
+nmea_msgs_generate_messages_nodejs: ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : nmea_msgs_generate_messages_lisp
+.PHONY : nmea_msgs_generate_messages_nodejs
 
 # clean rule for target.
-ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/clean
-.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/clean
+ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/clean
+.PHONY : ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
 # Target rules for target ublox/ublox_msg_filters/CMakeFiles/ublox_msg_filters_example.dir

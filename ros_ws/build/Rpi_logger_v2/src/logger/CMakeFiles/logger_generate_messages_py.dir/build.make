@@ -61,12 +61,12 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py: /home/saab/Desk
 /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/_Motor.py: /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg
 /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/_Motor.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG logger/Motor"
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg -Ilogger:/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p logger -o /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg -Ilogger:/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p logger -o /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg
 
 /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/__init__.py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/_Motor.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for logger"
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg --initpy
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg --initpy
 
 logger_generate_messages_py: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py
 logger_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/_Motor.py

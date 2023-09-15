@@ -1898,8 +1898,8 @@ void TimProduct::initializeRosDiagnostics() {
   updater->force_update();
 }
 
-void rtcmCallback(const rtcm_msgs::Message::ConstPtr &msg) {
-  gps.sendRtcm(msg->message);
+void rtcmCallback(const mavros_msgs::RTCM::ConstPtr &msg) {
+  gps.sendRtcm(msg->data);
 }
 
 int main(int argc, char** argv) {

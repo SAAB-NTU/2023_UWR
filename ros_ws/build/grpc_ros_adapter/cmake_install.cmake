@@ -46,7 +46,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/grpc_ros_adapter")
+  execute_process(COMMAND "/home/saab/anaconda3/bin/python3" -m compileall "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/grpc_ros_adapter")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

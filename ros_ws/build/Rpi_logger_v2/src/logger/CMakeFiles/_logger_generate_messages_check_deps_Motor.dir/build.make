@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 include Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/progress.make
 
 Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py logger /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg std_msgs/Header
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py logger /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg std_msgs/Header
 
 _logger_generate_messages_check_deps_Motor: Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor
 _logger_generate_messages_check_deps_Motor: Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/build.make

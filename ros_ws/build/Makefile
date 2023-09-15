@@ -2651,17 +2651,30 @@ _ublox_msgs_generate_messages_check_deps_NavSOL/fast:
 .PHONY : _ublox_msgs_generate_messages_check_deps_NavSOL/fast
 
 #=============================================================================
-# Target rules for targets named ublox_logger_node
+# Target rules for targets named geographic_msgs_generate_messages_cpp
 
 # Build rule for target.
-ublox_logger_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ublox_logger_node
-.PHONY : ublox_logger_node
+geographic_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_cpp
+.PHONY : geographic_msgs_generate_messages_cpp
 
 # fast build rule for target.
-ublox_logger_node/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build
-.PHONY : ublox_logger_node/fast
+geographic_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
+.PHONY : geographic_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named mavros_msgs_generate_messages_nodejs
+
+# Build rule for target.
+mavros_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_nodejs
+.PHONY : mavros_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+mavros_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build
+.PHONY : mavros_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named ublox_gps
@@ -2677,147 +2690,56 @@ ublox_gps/fast:
 .PHONY : ublox_gps/fast
 
 #=============================================================================
-# Target rules for targets named nmea_msgs_generate_messages_py
+# Target rules for targets named geographic_msgs_generate_messages_lisp
 
 # Build rule for target.
-nmea_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nmea_msgs_generate_messages_py
-.PHONY : nmea_msgs_generate_messages_py
+geographic_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_lisp
+.PHONY : geographic_msgs_generate_messages_lisp
 
 # fast build rule for target.
-nmea_msgs_generate_messages_py/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build
-.PHONY : nmea_msgs_generate_messages_py/fast
+geographic_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build
+.PHONY : geographic_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named nmea_msgs_generate_messages_nodejs
+# Target rules for targets named geographic_msgs_generate_messages_eus
 
 # Build rule for target.
-nmea_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nmea_msgs_generate_messages_nodejs
-.PHONY : nmea_msgs_generate_messages_nodejs
+geographic_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_eus
+.PHONY : geographic_msgs_generate_messages_eus
 
 # fast build rule for target.
-nmea_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build
-.PHONY : nmea_msgs_generate_messages_nodejs/fast
+geographic_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_eus.dir/build
+.PHONY : geographic_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_cpp
+# Target rules for targets named mavros_msgs_generate_messages_py
 
 # Build rule for target.
-diagnostic_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_cpp
-.PHONY : diagnostic_msgs_generate_messages_cpp
+mavros_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_py
+.PHONY : mavros_msgs_generate_messages_py
 
 # fast build rule for target.
-diagnostic_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_cpp/fast
+mavros_msgs_generate_messages_py/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_py.dir/build
+.PHONY : mavros_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named rtcm_msgs_generate_messages_lisp
+# Target rules for targets named uuid_msgs_generate_messages_eus
 
 # Build rule for target.
-rtcm_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rtcm_msgs_generate_messages_lisp
-.PHONY : rtcm_msgs_generate_messages_lisp
+uuid_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uuid_msgs_generate_messages_eus
+.PHONY : uuid_msgs_generate_messages_eus
 
 # fast build rule for target.
-rtcm_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_lisp.dir/build
-.PHONY : rtcm_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named ublox_gps_node
-
-# Build rule for target.
-ublox_gps_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ublox_gps_node
-.PHONY : ublox_gps_node
-
-# fast build rule for target.
-ublox_gps_node/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/build
-.PHONY : ublox_gps_node/fast
-
-#=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_eus
-
-# Build rule for target.
-diagnostic_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_eus
-.PHONY : diagnostic_msgs_generate_messages_eus
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_eus/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
-.PHONY : diagnostic_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named nmea_msgs_generate_messages_cpp
-
-# Build rule for target.
-nmea_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nmea_msgs_generate_messages_cpp
-.PHONY : nmea_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nmea_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/build
-.PHONY : nmea_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rtcm_msgs_generate_messages_py
-
-# Build rule for target.
-rtcm_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rtcm_msgs_generate_messages_py
-.PHONY : rtcm_msgs_generate_messages_py
-
-# fast build rule for target.
-rtcm_msgs_generate_messages_py/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_py.dir/build
-.PHONY : rtcm_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_nodejs
-
-# Build rule for target.
-diagnostic_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_nodejs
-.PHONY : diagnostic_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
-.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named rtcm_msgs_generate_messages_cpp
-
-# Build rule for target.
-rtcm_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rtcm_msgs_generate_messages_cpp
-.PHONY : rtcm_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rtcm_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_cpp.dir/build
-.PHONY : rtcm_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named diagnostic_msgs_generate_messages_lisp
-
-# Build rule for target.
-diagnostic_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_lisp
-.PHONY : diagnostic_msgs_generate_messages_lisp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_lisp/fast
+uuid_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build
+.PHONY : uuid_msgs_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named diagnostic_msgs_generate_messages_py
@@ -2833,17 +2755,225 @@ diagnostic_msgs_generate_messages_py/fast:
 .PHONY : diagnostic_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named rtcm_msgs_generate_messages_eus
+# Target rules for targets named diagnostic_msgs_generate_messages_lisp
 
 # Build rule for target.
-rtcm_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rtcm_msgs_generate_messages_eus
-.PHONY : rtcm_msgs_generate_messages_eus
+diagnostic_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_lisp
+.PHONY : diagnostic_msgs_generate_messages_lisp
 
 # fast build rule for target.
-rtcm_msgs_generate_messages_eus/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_eus.dir/build
-.PHONY : rtcm_msgs_generate_messages_eus/fast
+diagnostic_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named mavros_msgs_generate_messages_lisp
+
+# Build rule for target.
+mavros_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_lisp
+.PHONY : mavros_msgs_generate_messages_lisp
+
+# fast build rule for target.
+mavros_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
+.PHONY : mavros_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_eus
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_eus
+.PHONY : diagnostic_msgs_generate_messages_eus
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+.PHONY : diagnostic_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named mavros_msgs_generate_messages_eus
+
+# Build rule for target.
+mavros_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_eus
+.PHONY : mavros_msgs_generate_messages_eus
+
+# fast build rule for target.
+mavros_msgs_generate_messages_eus/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
+.PHONY : mavros_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_nodejs
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_nodejs
+.PHONY : diagnostic_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named ublox_gps_node
+
+# Build rule for target.
+ublox_gps_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ublox_gps_node
+.PHONY : ublox_gps_node
+
+# fast build rule for target.
+ublox_gps_node/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/build
+.PHONY : ublox_gps_node/fast
+
+#=============================================================================
+# Target rules for targets named mavros_msgs_generate_messages_cpp
+
+# Build rule for target.
+mavros_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_cpp
+.PHONY : mavros_msgs_generate_messages_cpp
+
+# fast build rule for target.
+mavros_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build
+.PHONY : mavros_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_cpp
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_cpp
+.PHONY : diagnostic_msgs_generate_messages_cpp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named geographic_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geographic_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_nodejs
+.PHONY : geographic_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geographic_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
+.PHONY : geographic_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named uuid_msgs_generate_messages_nodejs
+
+# Build rule for target.
+uuid_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uuid_msgs_generate_messages_nodejs
+.PHONY : uuid_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+uuid_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build
+.PHONY : uuid_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named nmea_msgs_generate_messages_py
+
+# Build rule for target.
+nmea_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nmea_msgs_generate_messages_py
+.PHONY : nmea_msgs_generate_messages_py
+
+# fast build rule for target.
+nmea_msgs_generate_messages_py/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_py.dir/build
+.PHONY : nmea_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geographic_msgs_generate_messages_py
+
+# Build rule for target.
+geographic_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_py
+.PHONY : geographic_msgs_generate_messages_py
+
+# fast build rule for target.
+geographic_msgs_generate_messages_py/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_py.dir/build
+.PHONY : geographic_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named nmea_msgs_generate_messages_lisp
+
+# Build rule for target.
+nmea_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nmea_msgs_generate_messages_lisp
+.PHONY : nmea_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nmea_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build
+.PHONY : nmea_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named uuid_msgs_generate_messages_cpp
+
+# Build rule for target.
+uuid_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uuid_msgs_generate_messages_cpp
+.PHONY : uuid_msgs_generate_messages_cpp
+
+# fast build rule for target.
+uuid_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build
+.PHONY : uuid_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named uuid_msgs_generate_messages_py
+
+# Build rule for target.
+uuid_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uuid_msgs_generate_messages_py
+.PHONY : uuid_msgs_generate_messages_py
+
+# fast build rule for target.
+uuid_msgs_generate_messages_py/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_py.dir/build
+.PHONY : uuid_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named nmea_msgs_generate_messages_cpp
+
+# Build rule for target.
+nmea_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nmea_msgs_generate_messages_cpp
+.PHONY : nmea_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nmea_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/build
+.PHONY : nmea_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named ublox_logger_node
+
+# Build rule for target.
+ublox_logger_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ublox_logger_node
+.PHONY : ublox_logger_node
+
+# fast build rule for target.
+ublox_logger_node/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build
+.PHONY : ublox_logger_node/fast
 
 #=============================================================================
 # Target rules for targets named nmea_msgs_generate_messages_eus
@@ -2859,30 +2989,30 @@ nmea_msgs_generate_messages_eus/fast:
 .PHONY : nmea_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named rtcm_msgs_generate_messages_nodejs
+# Target rules for targets named uuid_msgs_generate_messages_lisp
 
 # Build rule for target.
-rtcm_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rtcm_msgs_generate_messages_nodejs
-.PHONY : rtcm_msgs_generate_messages_nodejs
+uuid_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uuid_msgs_generate_messages_lisp
+.PHONY : uuid_msgs_generate_messages_lisp
 
 # fast build rule for target.
-rtcm_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/rtcm_msgs_generate_messages_nodejs.dir/build
-.PHONY : rtcm_msgs_generate_messages_nodejs/fast
+uuid_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build
+.PHONY : uuid_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named nmea_msgs_generate_messages_lisp
+# Target rules for targets named nmea_msgs_generate_messages_nodejs
 
 # Build rule for target.
-nmea_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nmea_msgs_generate_messages_lisp
-.PHONY : nmea_msgs_generate_messages_lisp
+nmea_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nmea_msgs_generate_messages_nodejs
+.PHONY : nmea_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-nmea_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_lisp.dir/build
-.PHONY : nmea_msgs_generate_messages_lisp/fast
+nmea_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_nodejs.dir/build
+.PHONY : nmea_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named ublox_msg_filters_example
@@ -3361,24 +3491,34 @@ help:
 	@echo "... _ublox_msgs_generate_messages_check_deps_RxmRAWX"
 	@echo "... _ublox_msgs_generate_messages_check_deps_NavSAT"
 	@echo "... _ublox_msgs_generate_messages_check_deps_NavSOL"
-	@echo "... ublox_logger_node"
+	@echo "... geographic_msgs_generate_messages_cpp"
+	@echo "... mavros_msgs_generate_messages_nodejs"
 	@echo "... ublox_gps"
-	@echo "... nmea_msgs_generate_messages_py"
-	@echo "... nmea_msgs_generate_messages_nodejs"
-	@echo "... diagnostic_msgs_generate_messages_cpp"
-	@echo "... rtcm_msgs_generate_messages_lisp"
-	@echo "... ublox_gps_node"
-	@echo "... diagnostic_msgs_generate_messages_eus"
-	@echo "... nmea_msgs_generate_messages_cpp"
-	@echo "... rtcm_msgs_generate_messages_py"
-	@echo "... diagnostic_msgs_generate_messages_nodejs"
-	@echo "... rtcm_msgs_generate_messages_cpp"
-	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... geographic_msgs_generate_messages_lisp"
+	@echo "... geographic_msgs_generate_messages_eus"
+	@echo "... mavros_msgs_generate_messages_py"
+	@echo "... uuid_msgs_generate_messages_eus"
 	@echo "... diagnostic_msgs_generate_messages_py"
-	@echo "... rtcm_msgs_generate_messages_eus"
-	@echo "... nmea_msgs_generate_messages_eus"
-	@echo "... rtcm_msgs_generate_messages_nodejs"
+	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... mavros_msgs_generate_messages_lisp"
+	@echo "... diagnostic_msgs_generate_messages_eus"
+	@echo "... mavros_msgs_generate_messages_eus"
+	@echo "... diagnostic_msgs_generate_messages_nodejs"
+	@echo "... ublox_gps_node"
+	@echo "... mavros_msgs_generate_messages_cpp"
+	@echo "... diagnostic_msgs_generate_messages_cpp"
+	@echo "... geographic_msgs_generate_messages_nodejs"
+	@echo "... uuid_msgs_generate_messages_nodejs"
+	@echo "... nmea_msgs_generate_messages_py"
+	@echo "... geographic_msgs_generate_messages_py"
 	@echo "... nmea_msgs_generate_messages_lisp"
+	@echo "... uuid_msgs_generate_messages_cpp"
+	@echo "... uuid_msgs_generate_messages_py"
+	@echo "... nmea_msgs_generate_messages_cpp"
+	@echo "... ublox_logger_node"
+	@echo "... nmea_msgs_generate_messages_eus"
+	@echo "... uuid_msgs_generate_messages_lisp"
+	@echo "... nmea_msgs_generate_messages_nodejs"
 	@echo "... ublox_msg_filters_example"
 	@echo "... ublox_msg_filters_test"
 	@echo "... run_tests_ublox_msg_filters"
