@@ -124,17 +124,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/progress.marks
@@ -611,7 +600,6 @@ help:
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_eus"
-	@echo "... test"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... src/complementary_filter.o"
 	@echo "... src/complementary_filter.i"

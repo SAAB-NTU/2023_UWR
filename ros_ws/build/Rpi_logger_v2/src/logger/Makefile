@@ -124,17 +124,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/progress.marks
@@ -453,7 +442,6 @@ help:
 	@echo "... logger_generate_messages_lisp"
 	@echo "... logger_gencpp"
 	@echo "... logger_genlisp"
-	@echo "... test"
 	@echo "... logger_generate_messages_eus"
 	@echo "... logger_gennodejs"
 	@echo "... logger_generate_messages_py"

@@ -78,3 +78,9 @@ install(DIRECTORY launch/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
   PATTERN ".svn" EXCLUDE
 )
+
+add_executable(gps_custom_logger_node src/datalogging.cpp)
+set_target_properties(gps_custom_logger_node PROPERTIES OUTPUT_NAME gps_custom_logger)
+target_link_libraries(gps_custom_logger_node
+  ${catkin_LIBRARIES}
+)

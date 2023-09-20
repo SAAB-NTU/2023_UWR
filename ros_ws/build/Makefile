@@ -124,17 +124,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles/progress.marks
@@ -181,45 +170,6 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
-# Target rules for targets named run_tests
-
-# Build rule for target.
-run_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests
-.PHONY : run_tests
-
-# fast build rule for target.
-run_tests/fast:
-	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-.PHONY : run_tests/fast
-
-#=============================================================================
-# Target rules for targets named clean_test_results
-
-# Build rule for target.
-clean_test_results: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results
-.PHONY : clean_test_results
-
-# fast build rule for target.
-clean_test_results/fast:
-	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
-.PHONY : clean_test_results/fast
-
-#=============================================================================
-# Target rules for targets named tests
-
-# Build rule for target.
-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests
-.PHONY : tests
-
-# fast build rule for target.
-tests/fast:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-.PHONY : tests/fast
-
-#=============================================================================
 # Target rules for targets named download_extra_data
 
 # Build rule for target.
@@ -231,58 +181,6 @@ download_extra_data: cmake_check_build_system
 download_extra_data/fast:
 	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
 .PHONY : download_extra_data/fast
-
-#=============================================================================
-# Target rules for targets named gmock_main
-
-# Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
-
-# fast build rule for target.
-gmock_main/fast:
-	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
-
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock/fast:
-	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
 
 #=============================================================================
 # Target rules for targets named _catkin_empty_exported_target
@@ -2859,19 +2757,6 @@ diagnostic_msgs_generate_messages_cpp/fast:
 .PHONY : diagnostic_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named geographic_msgs_generate_messages_nodejs
-
-# Build rule for target.
-geographic_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_nodejs
-.PHONY : geographic_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geographic_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
-.PHONY : geographic_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
 # Target rules for targets named uuid_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -3015,6 +2900,32 @@ nmea_msgs_generate_messages_nodejs/fast:
 .PHONY : nmea_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named geographic_msgs_generate_messages_nodejs
+
+# Build rule for target.
+geographic_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_nodejs
+.PHONY : geographic_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geographic_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
+.PHONY : geographic_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named gps_custom_logger_node
+
+# Build rule for target.
+gps_custom_logger_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gps_custom_logger_node
+.PHONY : gps_custom_logger_node
+
+# fast build rule for target.
+gps_custom_logger_node/fast:
+	$(MAKE) -f ublox/ublox_gps/CMakeFiles/gps_custom_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/gps_custom_logger_node.dir/build
+.PHONY : gps_custom_logger_node/fast
+
+#=============================================================================
 # Target rules for targets named ublox_msg_filters_example
 
 # Build rule for target.
@@ -3028,108 +2939,17 @@ ublox_msg_filters_example/fast:
 .PHONY : ublox_msg_filters_example/fast
 
 #=============================================================================
-# Target rules for targets named ublox_msg_filters_test
+# Target rules for targets named uwr_comms_generate_messages
 
 # Build rule for target.
-ublox_msg_filters_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ublox_msg_filters_test
-.PHONY : ublox_msg_filters_test
+uwr_comms_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_generate_messages
+.PHONY : uwr_comms_generate_messages
 
 # fast build rule for target.
-ublox_msg_filters_test/fast:
-	$(MAKE) -f ublox/ublox_msg_filters/tests/CMakeFiles/ublox_msg_filters_test.dir/build.make ublox/ublox_msg_filters/tests/CMakeFiles/ublox_msg_filters_test.dir/build
-.PHONY : ublox_msg_filters_test/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ublox_msg_filters
-
-# Build rule for target.
-run_tests_ublox_msg_filters: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ublox_msg_filters
-.PHONY : run_tests_ublox_msg_filters
-
-# fast build rule for target.
-run_tests_ublox_msg_filters/fast:
-	$(MAKE) -f ublox/ublox_msg_filters/tests/CMakeFiles/run_tests_ublox_msg_filters.dir/build.make ublox/ublox_msg_filters/tests/CMakeFiles/run_tests_ublox_msg_filters.dir/build
-.PHONY : run_tests_ublox_msg_filters/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_ublox_msg_filters
-
-# Build rule for target.
-_run_tests_ublox_msg_filters: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ublox_msg_filters
-.PHONY : _run_tests_ublox_msg_filters
-
-# fast build rule for target.
-_run_tests_ublox_msg_filters/fast:
-	$(MAKE) -f ublox/ublox_msg_filters/tests/CMakeFiles/_run_tests_ublox_msg_filters.dir/build.make ublox/ublox_msg_filters/tests/CMakeFiles/_run_tests_ublox_msg_filters.dir/build
-.PHONY : _run_tests_ublox_msg_filters/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_ublox_msg_filters_gtest
-
-# Build rule for target.
-_run_tests_ublox_msg_filters_gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ublox_msg_filters_gtest
-.PHONY : _run_tests_ublox_msg_filters_gtest
-
-# fast build rule for target.
-_run_tests_ublox_msg_filters_gtest/fast:
-	$(MAKE) -f ublox/ublox_msg_filters/tests/CMakeFiles/_run_tests_ublox_msg_filters_gtest.dir/build.make ublox/ublox_msg_filters/tests/CMakeFiles/_run_tests_ublox_msg_filters_gtest.dir/build
-.PHONY : _run_tests_ublox_msg_filters_gtest/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test
-
-# Build rule for target.
-run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test
-.PHONY : run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test
-
-# fast build rule for target.
-run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test/fast:
-	$(MAKE) -f ublox/ublox_msg_filters/tests/CMakeFiles/run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test.dir/build.make ublox/ublox_msg_filters/tests/CMakeFiles/run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test.dir/build
-.PHONY : run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test
-
-# Build rule for target.
-_run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test
-.PHONY : _run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test
-
-# fast build rule for target.
-_run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test/fast:
-	$(MAKE) -f ublox/ublox_msg_filters/tests/CMakeFiles/_run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test.dir/build.make ublox/ublox_msg_filters/tests/CMakeFiles/_run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test.dir/build
-.PHONY : _run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test/fast
-
-#=============================================================================
-# Target rules for targets named clean_test_results_ublox_msg_filters
-
-# Build rule for target.
-clean_test_results_ublox_msg_filters: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_ublox_msg_filters
-.PHONY : clean_test_results_ublox_msg_filters
-
-# fast build rule for target.
-clean_test_results_ublox_msg_filters/fast:
-	$(MAKE) -f ublox/ublox_msg_filters/tests/CMakeFiles/clean_test_results_ublox_msg_filters.dir/build.make ublox/ublox_msg_filters/tests/CMakeFiles/clean_test_results_ublox_msg_filters.dir/build
-.PHONY : clean_test_results_ublox_msg_filters/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ublox_msg_filters_gtest
-
-# Build rule for target.
-run_tests_ublox_msg_filters_gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ublox_msg_filters_gtest
-.PHONY : run_tests_ublox_msg_filters_gtest
-
-# fast build rule for target.
-run_tests_ublox_msg_filters_gtest/fast:
-	$(MAKE) -f ublox/ublox_msg_filters/tests/CMakeFiles/run_tests_ublox_msg_filters_gtest.dir/build.make ublox/ublox_msg_filters/tests/CMakeFiles/run_tests_ublox_msg_filters_gtest.dir/build
-.PHONY : run_tests_ublox_msg_filters_gtest/fast
+uwr_comms_generate_messages/fast:
+	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build
+.PHONY : uwr_comms_generate_messages/fast
 
 #=============================================================================
 # Target rules for targets named uwr_comms_generate_messages_cpp
@@ -3274,19 +3094,6 @@ uwr_comms_genpy/fast:
 	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_genpy.dir/build.make uwr_comms/CMakeFiles/uwr_comms_genpy.dir/build
 .PHONY : uwr_comms_genpy/fast
 
-#=============================================================================
-# Target rules for targets named uwr_comms_generate_messages
-
-# Build rule for target.
-uwr_comms_generate_messages: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 uwr_comms_generate_messages
-.PHONY : uwr_comms_generate_messages
-
-# fast build rule for target.
-uwr_comms_generate_messages/fast:
-	$(MAKE) -f uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build.make uwr_comms/CMakeFiles/uwr_comms_generate_messages.dir/build
-.PHONY : uwr_comms_generate_messages/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -3299,16 +3106,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... doxygen"
-	@echo "... run_tests"
-	@echo "... clean_test_results"
-	@echo "... tests"
 	@echo "... download_extra_data"
-	@echo "... gmock_main"
-	@echo "... gmock"
-	@echo "... gtest_main"
-	@echo "... gtest"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
@@ -3507,7 +3306,6 @@ help:
 	@echo "... ublox_gps_node"
 	@echo "... mavros_msgs_generate_messages_cpp"
 	@echo "... diagnostic_msgs_generate_messages_cpp"
-	@echo "... geographic_msgs_generate_messages_nodejs"
 	@echo "... uuid_msgs_generate_messages_nodejs"
 	@echo "... nmea_msgs_generate_messages_py"
 	@echo "... geographic_msgs_generate_messages_py"
@@ -3519,15 +3317,10 @@ help:
 	@echo "... nmea_msgs_generate_messages_eus"
 	@echo "... uuid_msgs_generate_messages_lisp"
 	@echo "... nmea_msgs_generate_messages_nodejs"
+	@echo "... geographic_msgs_generate_messages_nodejs"
+	@echo "... gps_custom_logger_node"
 	@echo "... ublox_msg_filters_example"
-	@echo "... ublox_msg_filters_test"
-	@echo "... run_tests_ublox_msg_filters"
-	@echo "... _run_tests_ublox_msg_filters"
-	@echo "... _run_tests_ublox_msg_filters_gtest"
-	@echo "... run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test"
-	@echo "... _run_tests_ublox_msg_filters_gtest_ublox_msg_filters_test"
-	@echo "... clean_test_results_ublox_msg_filters"
-	@echo "... run_tests_ublox_msg_filters_gtest"
+	@echo "... uwr_comms_generate_messages"
 	@echo "... uwr_comms_generate_messages_cpp"
 	@echo "... uwr_comms_generate_messages_eus"
 	@echo "... uwr_comms_geneus"
@@ -3539,7 +3332,6 @@ help:
 	@echo "... uwr_comms_gencpp"
 	@echo "... uwr_comms_gennodejs"
 	@echo "... uwr_comms_genpy"
-	@echo "... uwr_comms_generate_messages"
 .PHONY : help
 
 
