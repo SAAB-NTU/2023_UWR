@@ -39,9 +39,12 @@ void motor(int steps,int directions,int delay_time)
 
 void step_calculator(float distance)
 {
-  float rotate_angle = (distance/(2*PI*0.0315))*360;
-  float pulse_angle = (1.8/8);
-  steps = rotate_angle/pulse_angle;
+  Serial.println("In");
+  double constant= 360/(2*PI*31.5); //0.0315 m -->31.5 mm
+  double rotate_angle = (distance)*constant;
+  double pulse_angle = (1.8/8);
+  steps = int(rotate_angle/pulse_angle);
+  Serial.println("Out");
 }
 
 void setup()
@@ -57,9 +60,10 @@ void loop()
 {
   if(steps==0)
   {
-    Serial.println("Please input distance to travel");
+    Serial.println("Please input distance to travel (in mm)");
     while(Serial.available()== 0){}
-    distance = Serial.parseFloat();
+    distance = Serial.parseInt();
+    Serial.println(distance);
     step_calculator(distance);
     Serial.print("Steps : ");Serial.print(steps);Serial.println();
   }
@@ -68,7 +72,10 @@ void loop()
     Serial.println("Please input delay time(microsec) e.g. 1000,800");
     while(Serial.available()== 0){}
     delay_time = Serial.parseInt(); //1000,800,500 (500 used in first exp,1000 in most recent)
-    Serial.print("Delay time : ");Serial.print(delay_time);Serial.println();
+    Serial.print("Delay time : ");Serial.println(delay_time);
+
+    Serial.println("Ready to operate (f- forward, b- backward) ");
+
   }
   while (Serial.available() > 0)
   {
@@ -76,13 +83,21 @@ void loop()
     switch (c)
     {
       case 'f': //forward
-        motor(steps,LOW,delay_time);
+        {
+          Serial.println("Going forward");
+          motor(steps,LOW,delay_time);
+          Serial.println("Complete");
+        }
         //delay(5000); //motor stop time 5s
         //motor(steps,LOW,delay_time);
         break; 
         
       case 'b': //go back to original position
-        motor(1*steps,HIGH,delay_time);
+        {
+          Serial.println("Going back");
+          motor(steps,HIGH,delay_time);
+          Serial.println("Complete");
+        }
         break; 
     }
   }

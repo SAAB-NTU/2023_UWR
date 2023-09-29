@@ -1,0 +1,7 @@
+bool dir    
+int32 distance
+int32 delay
+int32 stops
+int32 stop_duration
+---
+int32 steps

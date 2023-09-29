@@ -63,6 +63,7 @@ all: Rpi_logger_v2/src/sonar/all
 all: Rpi_logger_v2/src/kalman_filter/all
 all: Rpi_logger_v2/src/imu_complementary_filter/all
 all: Rpi_logger_v2/src/logger/all
+all: stepper_motor_control/all
 all: ublox/ublox_serialization/all
 all: ublox/ublox_msgs/all
 all: ublox/ublox_gps/all
@@ -82,6 +83,7 @@ preinstall: Rpi_logger_v2/src/sonar/preinstall
 preinstall: Rpi_logger_v2/src/kalman_filter/preinstall
 preinstall: Rpi_logger_v2/src/imu_complementary_filter/preinstall
 preinstall: Rpi_logger_v2/src/logger/preinstall
+preinstall: stepper_motor_control/preinstall
 preinstall: ublox/ublox_serialization/preinstall
 preinstall: ublox/ublox_msgs/preinstall
 preinstall: ublox/ublox_gps/preinstall
@@ -103,6 +105,7 @@ clean: Rpi_logger_v2/src/sonar/clean
 clean: Rpi_logger_v2/src/kalman_filter/clean
 clean: Rpi_logger_v2/src/imu_complementary_filter/clean
 clean: Rpi_logger_v2/src/logger/clean
+clean: stepper_motor_control/clean
 clean: ublox/ublox_serialization/clean
 clean: ublox/ublox_msgs/clean
 clean: ublox/ublox_gps/clean
@@ -341,6 +344,40 @@ realsense_cam/preinstall:
 realsense_cam/clean:
 
 .PHONY : realsense_cam/clean
+
+#=============================================================================
+# Directory level rules for directory stepper_motor_control
+
+# Recursive "all" directory target.
+stepper_motor_control/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/all
+
+.PHONY : stepper_motor_control/all
+
+# Recursive "preinstall" directory target.
+stepper_motor_control/preinstall:
+
+.PHONY : stepper_motor_control/preinstall
+
+# Recursive "clean" directory target.
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/clean
+stepper_motor_control/clean: stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/clean
+
+.PHONY : stepper_motor_control/clean
 
 #=============================================================================
 # Directory level rules for directory ublox/ublox
@@ -2816,12 +2853,12 @@ Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/all: Rpi_logger_v2/sr
 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/all: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/all
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/depend
 	$(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=11 "Built target two_sonar_logger_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target two_sonar_logger_2"
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/all
 
 # Build rule for subdir invocation for target.
 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/rule
@@ -3251,6 +3288,474 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/clean:
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/clean
 
 #=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_genpy"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_genpy: stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/rule
+
+.PHONY : stepper_motor_control_genpy
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_genpy.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_gennodejs"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_gennodejs: stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/rule
+
+.PHONY : stepper_motor_control_gennodejs
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_gennodejs.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/all: stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=12 "Built target stepper_motor_control_generate_messages_py"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_generate_messages_py: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/rule
+
+.PHONY : stepper_motor_control_generate_messages_py
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/all: stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_generate_messages_nodejs"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_generate_messages_nodejs: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/rule
+
+.PHONY : stepper_motor_control_generate_messages_nodejs
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/all:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosserial_arduino_generate_messages_eus"
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosserial_arduino_generate_messages_eus: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/rule
+
+.PHONY : rosserial_arduino_generate_messages_eus
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosserial_arduino_generate_messages_lisp"
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosserial_arduino_generate_messages_lisp: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/rule
+
+.PHONY : rosserial_arduino_generate_messages_lisp
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/all:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosserial_arduino_generate_messages_nodejs"
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosserial_arduino_generate_messages_nodejs: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/rule
+
+.PHONY : rosserial_arduino_generate_messages_nodejs
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosserial_arduino_generate_messages_cpp"
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosserial_arduino_generate_messages_cpp: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/rule
+
+.PHONY : rosserial_arduino_generate_messages_cpp
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/all: stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_generate_messages_lisp"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_generate_messages_lisp: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/rule
+
+.PHONY : stepper_motor_control_generate_messages_lisp
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_py.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_nodejs.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_generate_messages"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_generate_messages: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/rule
+
+.PHONY : stepper_motor_control_generate_messages
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/all: stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=11 "Built target stepper_motor_control_generate_messages_eus"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_generate_messages_eus: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/rule
+
+.PHONY : stepper_motor_control_generate_messages_eus
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target rosserial_arduino_generate_messages_py"
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosserial_arduino_generate_messages_py: stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/rule
+
+.PHONY : rosserial_arduino_generate_messages_py
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build.make stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/rosserial_arduino_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/all:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/build.make stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/build.make stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target _stepper_motor_control_generate_messages_check_deps_comms1"
+.PHONY : stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/rule
+
+# Convenience name for target.
+_stepper_motor_control_generate_messages_check_deps_comms1: stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/rule
+
+.PHONY : _stepper_motor_control_generate_messages_check_deps_comms1
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/build.make stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/all: grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/all: stepper_motor_control/CMakeFiles/_stepper_motor_control_generate_messages_check_deps_comms1.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_generate_messages_cpp"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_generate_messages_cpp: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/rule
+
+.PHONY : stepper_motor_control_generate_messages_cpp
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_cpp.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_gencpp"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_gencpp: stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/rule
+
+.PHONY : stepper_motor_control_gencpp
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_gencpp.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_eus.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_geneus"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_geneus: stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/rule
+
+.PHONY : stepper_motor_control_geneus
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_geneus.dir/clean
+
+#=============================================================================
+# Target rules for target stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir
+
+# All Build rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/all: stepper_motor_control/CMakeFiles/stepper_motor_control_generate_messages_lisp.dir/all
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/depend
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target stepper_motor_control_genlisp"
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/rule
+
+# Convenience name for target.
+stepper_motor_control_genlisp: stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/rule
+
+.PHONY : stepper_motor_control_genlisp
+
+# clean rule for target.
+stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/clean:
+	$(MAKE) -f stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/build.make stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/clean
+.PHONY : stepper_motor_control/CMakeFiles/stepper_motor_control_genlisp.dir/clean
+
+#=============================================================================
 # Target rules for target ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir
 
 # All Build rule for target.
@@ -3287,12 +3792,12 @@ ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/all: ublox/ublox_msgs/CMakeFiles/ublo
 ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/all: ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/depend
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=14 "Built target ublox_msgs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=15 "Built target ublox_msgs"
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/all
 
 # Build rule for subdir invocation for target.
 ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 85
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 84
 	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/rule
@@ -3454,7 +3959,7 @@ ublox/ublox_msgs/CMakeFiles/ublox_msgs_gennodejs.dir/all: ublox/ublox_msgs/CMake
 
 # Build rule for subdir invocation for target.
 ublox/ublox_msgs/CMakeFiles/ublox_msgs_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_msgs/CMakeFiles/ublox_msgs_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs_gennodejs.dir/rule
@@ -3557,12 +4062,12 @@ ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/all: ublox/u
 ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/all: ublox/ublox_msgs/CMakeFiles/_ublox_msgs_generate_messages_check_deps_NavSOL.dir/all
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/depend
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81 "Built target ublox_msgs_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81 "Built target ublox_msgs_generate_messages_nodejs"
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_nodejs.dir/rule
@@ -3692,7 +4197,7 @@ ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_lisp.dir/all: ublox/ubl
 ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_lisp.dir/all: ublox/ublox_msgs/CMakeFiles/_ublox_msgs_generate_messages_check_deps_NavSOL.dir/all
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_lisp.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_lisp.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64 "Built target ublox_msgs_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65 "Built target ublox_msgs_generate_messages_lisp"
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4124,7 +4629,7 @@ ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_eus.dir/all: ublox/ublo
 ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_eus.dir/all: ublox/ublox_msgs/CMakeFiles/_ublox_msgs_generate_messages_check_deps_NavSOL.dir/all
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_eus.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_eus.dir/depend
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_eus.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47 "Built target ublox_msgs_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48 "Built target ublox_msgs_generate_messages_eus"
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4727,7 +5232,7 @@ ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages.dir/all: ublox/ublox_ms
 
 # Build rule for subdir invocation for target.
 ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 84
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 83
 	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages.dir/rule
@@ -5910,7 +6415,7 @@ ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/all: ublox/ublo
 ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/all: ublox/ublox_msgs/CMakeFiles/_ublox_msgs_generate_messages_check_deps_NavSOL.dir/all
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/build.make ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30 "Built target ublox_msgs_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31 "Built target ublox_msgs_generate_messages_cpp"
 .PHONY : ublox/ublox_msgs/CMakeFiles/ublox_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6310,7 +6815,7 @@ ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/nmea_ms
 ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all: ublox/ublox_gps/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_gps.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_gps.dir/depend
 	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_gps.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_gps.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target ublox_gps"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=13 "Built target ublox_gps"
 .PHONY : ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all
 
 # Build rule for subdir invocation for target.
@@ -6608,12 +7113,12 @@ ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/all: ublox/ublox_msgs/CMakeFiles/u
 ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/all: ublox/ublox_gps/CMakeFiles/ublox_gps.dir/all
 	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/depend
 	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=12 "Built target ublox_gps_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target ublox_gps_node"
 .PHONY : ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/all
 
 # Build rule for subdir invocation for target.
 ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 85
 	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : ublox/ublox_gps/CMakeFiles/ublox_gps_node.dir/rule
@@ -6878,12 +7383,12 @@ ublox/ublox_gps/CMakeFiles/nmea_msgs_generate_messages_cpp.dir/clean:
 ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all: ublox/ublox_msgs/CMakeFiles/ublox_msgs.dir/all
 	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/depend
 	$(MAKE) -f ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build.make ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=13 "Built target ublox_logger_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=14 "Built target ublox_logger_node"
 .PHONY : ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all
 
 # Build rule for subdir invocation for target.
 ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 86
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 85
 	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : ublox/ublox_gps/CMakeFiles/ublox_logger_node.dir/rule
@@ -7018,7 +7523,7 @@ ublox/ublox_gps/CMakeFiles/gps_custom_logger_node.dir/all: ublox/ublox_msgs/CMak
 
 # Build rule for subdir invocation for target.
 ublox/ublox_gps/CMakeFiles/gps_custom_logger_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 85
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 84
 	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_gps/CMakeFiles/gps_custom_logger_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : ublox/ublox_gps/CMakeFiles/gps_custom_logger_node.dir/rule
@@ -7075,7 +7580,7 @@ ublox/ublox_msg_filters/CMakeFiles/ublox_msg_filters_example.dir/all: ublox/ublo
 
 # Build rule for subdir invocation for target.
 ublox/ublox_msg_filters/CMakeFiles/ublox_msg_filters_example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 85
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 84
 	$(MAKE) -f CMakeFiles/Makefile2 ublox/ublox_msg_filters/CMakeFiles/ublox_msg_filters_example.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : ublox/ublox_msg_filters/CMakeFiles/ublox_msg_filters_example.dir/rule
