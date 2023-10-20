@@ -56,6 +56,7 @@ include Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/progre
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_Sonar.py
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_TwoSonar.py
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_TwoSonarDepth.py
+Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_ThreeSonarDepth.py
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/__init__.py
 
 
@@ -77,17 +78,25 @@ Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py: /home/saab/Deskto
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG sonar/TwoSonarDepth"
 	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg -Isonar:/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p sonar -o /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg
 
+/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_ThreeSonarDepth.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_ThreeSonarDepth.py: /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg
+/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_ThreeSonarDepth.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG sonar/ThreeSonarDepth"
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg -Isonar:/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p sonar -o /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg
+
 /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/__init__.py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_Sonar.py
 /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/__init__.py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_TwoSonar.py
 /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/__init__.py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_TwoSonarDepth.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for sonar"
+/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/__init__.py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_ThreeSonarDepth.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for sonar"
 	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg --initpy
 
 sonar_generate_messages_py: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py
 sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_Sonar.py
 sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_TwoSonar.py
 sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_TwoSonarDepth.py
+sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/_ThreeSonarDepth.py
 sonar_generate_messages_py: /home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar/msg/__init__.py
 sonar_generate_messages_py: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build.make
 

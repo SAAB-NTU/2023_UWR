@@ -74,9 +74,9 @@ class DiscreteKalmanFilter:public KalmanFilter
 
             //To change to advanced navigation spatial imu  
 
-            imu_sub = nh_.subscribe("/an_device/Imu",1,&DiscreteKalmanFilter::imu_callback,this);
+            imu_sub = nh_.subscribe("/camera/accel/sample",1,&DiscreteKalmanFilter::imu_callback,this);
             sonar_sub = nh_.subscribe("/sonar",1,&DiscreteKalmanFilter::sonar_callback,this);
-            gps_sub=nh_.subscribe("/an_device/NavSatFix",1,&DiscreteKalmanFilter::gps_callback,this);
+            //gps_sub=nh_.subscribe("/an_device/NavSatFix",1,&DiscreteKalmanFilter::gps_callback,this);
             //tof_sub = nh_.subscribe("/nlink_tofsense_frame0",1,&DiscreteKalmanFilter::tof_callback,this);
             SonarProcess sonar_filter(3);
         };

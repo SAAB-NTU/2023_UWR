@@ -14,6 +14,10 @@ namespace mavros_msgs
     public:
       enum { AIRFRAME_CONFIGURATION =  2520 };
       enum { ARM_AUTHORIZATION_REQUEST =  3001             };
+      enum { CAMERA_TRACK_POINT =  2004                    };
+      enum { CAMERA_TRACK_RECTANGLE =  2005                };
+      enum { CAMERA_STOP_TRACKING =  2010                  };
+      enum { CAN_FORWARD =  32000                          };
       enum { COMPONENT_ARM_DISARM =  400                   };
       enum { CONDITION_DELAY =  112                        };
       enum { CONDITION_CHANGE_ALT =  113                   };
@@ -65,6 +69,8 @@ namespace mavros_msgs
       enum { DO_SET_MISSION_CURRENT =  224                 };
       enum { DO_LAST =  240                                };
       enum { DO_JUMP_TAG =  601                            };
+      enum { DO_GIMBAL_MANAGER_PITCHYAW =  1000            };
+      enum { DO_GIMBAL_MANAGER_CONFIGURE =  1001           };
       enum { DO_TRIGGER_CONTROL =  2003                    };
       enum { DO_VTOL_TRANSITION =  3000                    };
       enum { DO_ADSB_OUT_IDENT =  10001                    };
@@ -130,6 +136,8 @@ namespace mavros_msgs
       enum { RUN_PREARM_CHECKS =  401                      };
       enum { SET_MESSAGE_INTERVAL =  511                   };
       enum { SET_CAMERA_MODE =  530                        };
+      enum { SET_CAMERA_ZOOM =  531                        };
+      enum { SET_CAMERA_FOCUS =  532                       };
       enum { SET_GUIDED_SUBMODE_STANDARD =  4000           };
       enum { SET_GUIDED_SUBMODE_CIRCLE =  4001             };
       enum { START_RX_PAIR =  500                          };
@@ -157,7 +165,7 @@ namespace mavros_msgs
     }
 
     virtual const char * getType() override { return "mavros_msgs/CommandCode"; };
-    virtual const char * getMD5() override { return "ca752c43f2b771d01f4565fb87c197e3"; };
+    virtual const char * getMD5() override { return "059d72cceadaa0abca57de773508431c"; };
 
   };
 

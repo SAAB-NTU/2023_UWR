@@ -13,6 +13,9 @@
 #define dirPin 2
 #define stepPin 3
 
+#include <ros.h>
+#include <std_msgs/String.h>
+
 int delay_time = 0;//microseconds
 int steps = 0;
 float distance;
@@ -42,7 +45,7 @@ void step_calculator(float distance)
   Serial.println("In");
   double constant= 360/(2*PI*31.5); //0.0315 m -->31.5 mm
   double rotate_angle = (distance)*constant;
-  double pulse_angle = (1.8/8);
+  double pulse_angle = (1.8/32);
   steps = int(rotate_angle/pulse_angle);
   Serial.println("Out");
 }

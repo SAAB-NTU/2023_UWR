@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "sonar: 3 messages, 0 services")
+message(STATUS "sonar: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Isonar:/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -32,6 +32,11 @@ add_custom_target(_sonar_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sonar" "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg" "std_msgs/Header"
 )
 
+get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg" NAME_WE)
+add_custom_target(_sonar_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sonar" "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg" "std_msgs/Header"
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -56,6 +61,12 @@ _generate_msg_cpp(sonar
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/sonar
 )
+_generate_msg_cpp(sonar
+  "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/sonar
+)
 
 ### Generating Services
 
@@ -76,6 +87,8 @@ add_dependencies(sonar_generate_messages_cpp _sonar_generate_messages_check_deps
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonar.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_cpp _sonar_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg" NAME_WE)
+add_dependencies(sonar_generate_messages_cpp _sonar_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_cpp _sonar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -105,6 +118,12 @@ _generate_msg_eus(sonar
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/sonar
 )
+_generate_msg_eus(sonar
+  "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/sonar
+)
 
 ### Generating Services
 
@@ -125,6 +144,8 @@ add_dependencies(sonar_generate_messages_eus _sonar_generate_messages_check_deps
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonar.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_eus _sonar_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg" NAME_WE)
+add_dependencies(sonar_generate_messages_eus _sonar_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_eus _sonar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -154,6 +175,12 @@ _generate_msg_lisp(sonar
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/sonar
 )
+_generate_msg_lisp(sonar
+  "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/sonar
+)
 
 ### Generating Services
 
@@ -174,6 +201,8 @@ add_dependencies(sonar_generate_messages_lisp _sonar_generate_messages_check_dep
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonar.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_lisp _sonar_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg" NAME_WE)
+add_dependencies(sonar_generate_messages_lisp _sonar_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_lisp _sonar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -203,6 +232,12 @@ _generate_msg_nodejs(sonar
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/sonar
 )
+_generate_msg_nodejs(sonar
+  "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/sonar
+)
 
 ### Generating Services
 
@@ -223,6 +258,8 @@ add_dependencies(sonar_generate_messages_nodejs _sonar_generate_messages_check_d
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonar.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_nodejs _sonar_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg" NAME_WE)
+add_dependencies(sonar_generate_messages_nodejs _sonar_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_nodejs _sonar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -252,6 +289,12 @@ _generate_msg_py(sonar
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/sonar
 )
+_generate_msg_py(sonar
+  "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/sonar
+)
 
 ### Generating Services
 
@@ -272,6 +315,8 @@ add_dependencies(sonar_generate_messages_py _sonar_generate_messages_check_deps_
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonar.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_py _sonar_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg" NAME_WE)
+add_dependencies(sonar_generate_messages_py _sonar_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg" NAME_WE)
 add_dependencies(sonar_generate_messages_py _sonar_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

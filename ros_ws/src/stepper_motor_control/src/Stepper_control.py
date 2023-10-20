@@ -7,34 +7,36 @@ import serial
 
 pulse_val=1.8/8
 const_val=360/(2*np.pi*0.0315)
-pub=rospy.Publisher('toggle_led',Bool,queue_size=1)
-
+pub1=rospy.Publisher('motor_operate',Bool,queue_size=10)
+pub2=rospy.Publisher('motor_direction',Bool,queue_size=10)
 
 def move_motor(steps,direction,delay_time,no_stops,stop_steps,stop_duration):
     
+    pub2.publish(direction)
+
     rospy.loginfo("hello")
-    rate=rospy.Rate(1000/delay_time)
-    
+    rate=rospy.Rate((delay_time))
+    rospy.loginfo(delay_time)
     if no_stops==0:
         rospy.loginfo("in")
         for step in range(steps):
             #rospy.loginfo("loop")
-            pub.publish(direction)
-            rospy.loginfo(direction)
+            pub1.publish(True)
+            #rospy.loginfo(True)
             rate.sleep()
-            pub.publish(not direction)
-            rospy.loginfo(not direction)
+            pub1.publish(False)
+            #rospy.loginfo(False)
             rate.sleep()
     else:
 
         for stops in range(no_stops):
             for step in range(stop_steps):
                 rospy.loginfo("loop")
-                pub.publish(direction)
-                #rospy.loginfo(ser.readline())
+                pub1.publish(True)
+                rospy.loginfo(True)
                 rate.sleep()
-                pub.publish(not direction)
-                #rospy.loginfo(ser.readline())
+                pub1.publish(False)
+                rospy.loginfo(False)
                 rate.sleep()
 
         rospy.sleep(stop_duration)        

@@ -703,6 +703,19 @@ sonar_genpy/fast:
 .PHONY : sonar_genpy/fast
 
 #=============================================================================
+# Target rules for targets named sonar_generate_messages_py
+
+# Build rule for target.
+sonar_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sonar_generate_messages_py
+.PHONY : sonar_generate_messages_py
+
+# fast build rule for target.
+sonar_generate_messages_py/fast:
+	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build
+.PHONY : sonar_generate_messages_py/fast
+
+#=============================================================================
 # Target rules for targets named sonar_generate_messages
 
 # Build rule for target.
@@ -727,6 +740,19 @@ _sonar_generate_messages_check_deps_Sonar: cmake_check_build_system
 _sonar_generate_messages_check_deps_Sonar/fast:
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/build
 .PHONY : _sonar_generate_messages_check_deps_Sonar/fast
+
+#=============================================================================
+# Target rules for targets named _sonar_generate_messages_check_deps_ThreeSonarDepth
+
+# Build rule for target.
+_sonar_generate_messages_check_deps_ThreeSonarDepth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _sonar_generate_messages_check_deps_ThreeSonarDepth
+.PHONY : _sonar_generate_messages_check_deps_ThreeSonarDepth
+
+# fast build rule for target.
+_sonar_generate_messages_check_deps_ThreeSonarDepth/fast:
+	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_ThreeSonarDepth.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_ThreeSonarDepth.dir/build
+.PHONY : _sonar_generate_messages_check_deps_ThreeSonarDepth/fast
 
 #=============================================================================
 # Target rules for targets named _sonar_generate_messages_check_deps_TwoSonarDepth
@@ -857,19 +883,6 @@ sonar_generate_messages_nodejs: cmake_check_build_system
 sonar_generate_messages_nodejs/fast:
 	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/build
 .PHONY : sonar_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named sonar_generate_messages_py
-
-# Build rule for target.
-sonar_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sonar_generate_messages_py
-.PHONY : sonar_generate_messages_py
-
-# fast build rule for target.
-sonar_generate_messages_py/fast:
-	$(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build
-.PHONY : sonar_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named kalman_filter_node
@@ -3369,8 +3382,10 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... sonar_node"
 	@echo "... sonar_genpy"
+	@echo "... sonar_generate_messages_py"
 	@echo "... sonar_generate_messages"
 	@echo "... _sonar_generate_messages_check_deps_Sonar"
+	@echo "... _sonar_generate_messages_check_deps_ThreeSonarDepth"
 	@echo "... _sonar_generate_messages_check_deps_TwoSonarDepth"
 	@echo "... sonar_genlisp"
 	@echo "... _sonar_generate_messages_check_deps_TwoSonar"
@@ -3381,7 +3396,6 @@ help:
 	@echo "... sonar_gennodejs"
 	@echo "... sonar_generate_messages_lisp"
 	@echo "... sonar_generate_messages_nodejs"
-	@echo "... sonar_generate_messages_py"
 	@echo "... kalman_filter_node"
 	@echo "... complementary_filter"
 	@echo "... tf2_msgs_generate_messages_py"
