@@ -14,14 +14,13 @@ ser = serial.Serial(serial_port, baudrate=9600, bytesize=8, stopbits=1, write_ti
 thruster_ctrl = ThrusterControl()
 
 
-# Transform PWM-Signal in for PWM-Transceiver usabale data and send it in JSON format
+# Transform PWM-Signal in for PWM-Transceiver readable JSON format.
 def send_pwm():
 
     json_pwmsignals = json.dumps(thruster_ctrl.pwmsignals)
     try:
         ser.write(json_pwmsignals.encode('utf-8'))
-        return print(f"""PWM sent succsessfully: \n
-                 {thruster_ctrl.pwmsignals}""")
+        return print(f"""PWM sent successfully""")
     
     except serial.SerialException as e:
         print(f"Failed to send PWM signal due to signal error: {e}")
@@ -30,7 +29,8 @@ def send_pwm():
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-
+# Subscribes to /cmd_vel topic and safes the velocity values in arguments surge,
+# sway and yaw and transforms and send them to the PWM transceiver.
 def callback(twist_msg):
     # Extracting relevant fields from the message
     surge = twist_msg.linear.x
@@ -43,11 +43,11 @@ def callback(twist_msg):
     send_pwm()
 
     # Log the duty cycle values
-    rospy.loginfo(f"""Thruster 1: {thruster_ctrl.thruster_1}, Thruster 2: {thruster_ctrl.thruster_2},
-                  Thruster 3: {thruster_ctrl.thruster_3}, Thruster 4: {thruster_ctrl.thruster_4}""")
+    rospy.loginfo(f"""{time.asctime()}
+                   {thruster_ctrl.pwmsignals}""")
 
 
-# Main function to initialize node and subscriber
+# Main function to initialize node and subscribe until it is shut down. 
 def listener():
 
     rospy.init_node("thruster_keyb_ctrl")
@@ -58,9 +58,10 @@ def listener():
 
 if __name__ == '__main__':
     try:
-        rospy.loginfo(f"{time.asctime()}")
+        rospy.loginfo(f"")
         listener()
-        ser.write(json.dumps({"R": 1}))
+        # Set all thrusters to no movement and reset the thrusters
+        ser.write(json.dumps({"A": 0, "B": 0, "C": 0,"D": 0,"E": 0,"F": 0,"G": 0,"H": 0,"R": 1}))
         ser.close
 
     except rospy.ROSInterruptException:
