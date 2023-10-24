@@ -2,7 +2,7 @@
 
 This package is to control the movement of the UWR remotely through a notebook or similar, ssh connected to a raspberry pi in the UWR, with keyboard commands with ROS noetic. It is designed to execute single surge, sway and yaw 2D-Movements with the UWR for positioning reasons in a Pool. Two packages are used for this motion control. The ROS BCD-licensed telelop_twist_keyboard package and the self developed thruster_keyb_ctrl package.
 
-![Alt text](rqt_graph.png)
+![Alt text](png/rqt_graph.png)
 
 ## Prerequisites
 - [Ubuntu 20.04](https://releases.ubuntu.com/focal/)
@@ -23,8 +23,9 @@ Teleop_twist_keyboard is a on ROS Wiki published and BSD-licensed generic keyboa
 
 Installation:
 - Thruster_keyb_ctrl is part of the 2023_UWR respo. Download this repo with:
-    git clone git@github.com:SAAB-NTU/2023_UWR.git
-
+```
+git clone git@github.com:SAAB-NTU/2023_UWR.git
+```
 Thruster_keyb_ctrl is a ROS package, which translates twist_msgs into pwm signals to control the UWR thruster for 2D-movement of surge, sway and yaw. When the Thruster_keyb_ctrl.py is run the serial port is opened and configured. The PWM transceiver has the following parameters:
 - Bauderate: 9600
 - Bytesize: 8
@@ -37,7 +38,7 @@ The thruster_control_class sets all bit values to be sent of the eight thrusters
 ```
 This dictionary is  transformed into JSON format and send to the pwm transceiver board through the serial port by the send_pwm function. The formula which calculates the pwm duty cycle is shown in the picture below.
 
-![Alt text](pwm_dutycycle_formula.png)
+![Alt text](png/pwm_dutycycle_formula.png)
 
 The listener function initializes the node "thruster_keyb_ctrl" and subscribes to the /cmd_vel topic through the callback function and keeps running until the node is shut down.
 
@@ -47,6 +48,9 @@ The listener function initializes the node "thruster_keyb_ctrl" and subscribes t
  ```
  roscore
  cd 2023_UWR/ros_ws
+ rm -r devel # Just run during the first time setting up. Deletes devel folder in rs_ws because of device specific symbolic links.
+ rm -r build # Just run during the first time setting up. Deletes build folder in rs_ws because of device specific symbolic links.
+ catkin_make
  source devel/setup.bash
  roslaunch thruster_keyb_ctrl thruster_keyb_ctrl.launch
  ```

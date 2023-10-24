@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>thruster_keyb_ctrl</name>
-  <version>.0.0</version>
+  <version>1.0.2</version>
   <description>The thruster_ctrl package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
