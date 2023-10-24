@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -42,6 +42,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/Sonar.msg"
     "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonar.msg"
     "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg"
+    "/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/ThreeSonarDepth.msg"
     )
 endif()
 
@@ -66,7 +67,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar")
+  execute_process(COMMAND "/home/saab/anaconda3/bin/python3" -m compileall "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/sonar")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

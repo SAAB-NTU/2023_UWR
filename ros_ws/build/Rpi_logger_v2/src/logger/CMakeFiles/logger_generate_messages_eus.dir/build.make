@@ -61,11 +61,11 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus: /home/saab/Des
 /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger/msg/Motor.l: /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg
 /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger/msg/Motor.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from logger/Motor.msg"
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg -Ilogger:/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p logger -o /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger/msg
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg -Ilogger:/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p logger -o /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger/msg
 
 /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for logger"
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger logger std_msgs
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger logger std_msgs
 
 logger_generate_messages_eus: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus
 logger_generate_messages_eus: /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger/msg/Motor.l

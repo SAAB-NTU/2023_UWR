@@ -58,7 +58,7 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus: /home/saab/D
 
 /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for grpc_ros_adapter"
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter grpc_ros_adapter std_msgs sensor_msgs
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && ../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter grpc_ros_adapter std_msgs sensor_msgs
 
 grpc_ros_adapter_generate_messages_eus: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus
 grpc_ros_adapter_generate_messages_eus: /home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l

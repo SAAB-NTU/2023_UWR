@@ -53,6 +53,7 @@ add_message_files(
   Sonar.msg
   TwoSonar.msg
   TwoSonarDepth.msg
+  ThreeSonarDepth.msg
 )
 
 ## Generate services in the 'srv' folder

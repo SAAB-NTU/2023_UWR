@@ -3,6 +3,8 @@
   (:export
    "<SONAR>"
    "SONAR"
+   "<THREESONARDEPTH>"
+   "THREESONARDEPTH"
    "<TWOSONAR>"
    "TWOSONAR"
    "<TWOSONARDEPTH>"

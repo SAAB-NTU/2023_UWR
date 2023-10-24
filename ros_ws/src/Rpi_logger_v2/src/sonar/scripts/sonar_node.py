@@ -6,7 +6,7 @@ from brping import Ping1D
 
 def publish_sonar_profile():
     sonar_driver = Ping1D()
-    sonar_port = rospy.get_param("/sonar/sonar_port","/dev/ttyUSB1")
+    sonar_port = rospy.get_param("/sonar/sonar_port","/dev/ttyUSB0")
     sonar_driver.connect_serial(device_name=sonar_port)
     rospy.init_node("single_beam_sonar_node")
     pub_sonar = rospy.Publisher("sonar", Sonar, queue_size=1)
@@ -29,7 +29,7 @@ def publish_sonar_profile():
 
 def publish_sonar_distance():
     sonar_driver = Ping1D()
-    sonar_port = rospy.get_param("/sonar/sonar_port","/dev/ttyUSB1")
+    sonar_port = rospy.get_param("/sonar/sonar_port","/dev/ttyUSB0")
     ping_interval = rospy.get_param("/sonar/ping_interval",100)
     sonar_driver.connect_serial(device_name=sonar_port)
     sonar_driver.set_ping_interval(ping_interval) #default is 250ms

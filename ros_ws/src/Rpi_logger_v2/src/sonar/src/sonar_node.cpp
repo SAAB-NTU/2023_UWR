@@ -13,7 +13,7 @@ int main(int argc,char* argv[])
     ros::init(argc,argv,"sonar");
     ros::NodeHandle n;
 
-    n.getParam("/sonar/port",port="/dev/ttyUSB1");
+    n.getParam("/sonar/port",port="/dev/ttyUSB0");
     ROS_INFO("%s",port.c_str());
 
     n.getParam("/sonar/ping_interval",ping_interval=250);

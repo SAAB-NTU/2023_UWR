@@ -90,17 +90,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -565,7 +554,6 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... list_install_components"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_lisp"
@@ -575,11 +563,11 @@ help:
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... list_install_components"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... grpc_ros_adapter_generate_messages"
 	@echo "... grpc_ros_adapter_generate_messages_py"
-	@echo "... test"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... grpc_ros_adapter_gencpp"
 	@echo "... sensor_msgs_generate_messages_nodejs"

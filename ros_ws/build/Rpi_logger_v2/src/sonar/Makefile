@@ -90,16 +90,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -122,18 +123,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -198,6 +187,21 @@ sonar_genpy/fast:
 .PHONY : sonar_genpy/fast
 
 # Convenience name for target.
+Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule:
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule
+.PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sonar_generate_messages_py: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule
+
+.PHONY : sonar_generate_messages_py
+
+# fast build rule for target.
+sonar_generate_messages_py/fast:
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build
+.PHONY : sonar_generate_messages_py/fast
+
+# Convenience name for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/rule:
 	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/rule
 .PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages.dir/rule
@@ -226,6 +230,21 @@ _sonar_generate_messages_check_deps_Sonar: Rpi_logger_v2/src/sonar/CMakeFiles/_s
 _sonar_generate_messages_check_deps_Sonar/fast:
 	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_Sonar.dir/build
 .PHONY : _sonar_generate_messages_check_deps_Sonar/fast
+
+# Convenience name for target.
+Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_ThreeSonarDepth.dir/rule:
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_ThreeSonarDepth.dir/rule
+.PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_ThreeSonarDepth.dir/rule
+
+# Convenience name for target.
+_sonar_generate_messages_check_deps_ThreeSonarDepth: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_ThreeSonarDepth.dir/rule
+
+.PHONY : _sonar_generate_messages_check_deps_ThreeSonarDepth
+
+# fast build rule for target.
+_sonar_generate_messages_check_deps_ThreeSonarDepth/fast:
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_ThreeSonarDepth.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_ThreeSonarDepth.dir/build
+.PHONY : _sonar_generate_messages_check_deps_ThreeSonarDepth/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/rule:
@@ -376,21 +395,6 @@ sonar_generate_messages_nodejs: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generat
 sonar_generate_messages_nodejs/fast:
 	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_nodejs.dir/build
 .PHONY : sonar_generate_messages_nodejs/fast
-
-# Convenience name for target.
-Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule
-.PHONY : Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sonar_generate_messages_py: Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/rule
-
-.PHONY : sonar_generate_messages_py
-
-# fast build rule for target.
-sonar_generate_messages_py/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build.make Rpi_logger_v2/src/sonar/CMakeFiles/sonar_generate_messages_py.dir/build
-.PHONY : sonar_generate_messages_py/fast
 
 src/abstract-link.o: src/abstract-link.cpp.o
 
@@ -590,11 +594,13 @@ help:
 	@echo "... install/strip"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
 	@echo "... sonar_node"
 	@echo "... sonar_genpy"
+	@echo "... install/local"
+	@echo "... sonar_generate_messages_py"
 	@echo "... sonar_generate_messages"
 	@echo "... _sonar_generate_messages_check_deps_Sonar"
+	@echo "... _sonar_generate_messages_check_deps_ThreeSonarDepth"
 	@echo "... list_install_components"
 	@echo "... _sonar_generate_messages_check_deps_TwoSonarDepth"
 	@echo "... sonar_genlisp"
@@ -607,8 +613,6 @@ help:
 	@echo "... sonar_generate_messages_lisp"
 	@echo "... install"
 	@echo "... sonar_generate_messages_nodejs"
-	@echo "... install/local"
-	@echo "... sonar_generate_messages_py"
 	@echo "... src/abstract-link.o"
 	@echo "... src/abstract-link.i"
 	@echo "... src/abstract-link.s"

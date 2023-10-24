@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 include Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/progress.make
 
 Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py sonar /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg std_msgs/Header
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/sonar && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py sonar /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/sonar/msg/TwoSonarDepth.msg std_msgs/Header
 
 _sonar_generate_messages_check_deps_TwoSonarDepth: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth
 _sonar_generate_messages_check_deps_TwoSonarDepth: Rpi_logger_v2/src/sonar/CMakeFiles/_sonar_generate_messages_check_deps_TwoSonarDepth.dir/build.make

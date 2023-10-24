@@ -1,0 +1,22 @@
+<launch>
+
+  <include file="$(find ublox_gps)/launch/ntrip_wo_ns.launch">
+  <arg name="host"                   value = "199.184.151.36" />
+  <arg name="port"                   value = "2101" />
+  <arg name="mountpoint"             value = "RTK_SNYU_32" />
+  <arg name="username"               value = "MHUART01" />
+  <arg name="password"               value = "1P9WTPJKZANK" />
+
+  </include>
+  
+  <include file="$(find ublox_gps)/launch/ublox_device.launch">
+<arg name="param_file_name" value="zed_f9p"/>
+
+  </include>
+  
+  <node name="ublox_gps" pkg="ublox_gps" type="gps_custom_logger" output="screen">
+    <param name="csv_path" value="/home/saab/Desktop/all_log_"/>
+    </node>
+
+</launch>
+
