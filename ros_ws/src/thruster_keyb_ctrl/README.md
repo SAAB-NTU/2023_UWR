@@ -15,7 +15,9 @@ In order to run the thruster keyboard control the teleop_twist_keyboard package 
 
 ### teleop_twist_keyboard
 Installation:
-- sudo apt-get install ros-noetic-teleop-twist-keyboard
+```
+sudo apt-get install ros-noetic-teleop-twist-keyboard
+```
 
 Teleop_twist_keyboard is a on ROS Wiki published and BSD-licensed generic keyboard teleop package. It reads keyboard inputs and publishes them in twist_msg format to the /cmd_vel topic. The default values for linear and angular velocity are 1 and 0.5. If necessary custom values can be defined in the rosrun command to start the node. For further information about the code of the package, please consult the [ROS-Wiki-teleop_twist_keyboard](https://wiki.ros.org/action/fullsearch/teleop_twist_keyboard?action=fullsearch&context=180&value=linkto%3A%22teleop_twist_keyboard%22).
 
