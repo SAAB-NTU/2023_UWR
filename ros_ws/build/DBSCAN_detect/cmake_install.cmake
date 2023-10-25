@@ -1,8 +1,8 @@
-# Install script for directory: /home/saab/Desktop/2023_UWR/ros_ws/src/DBSCAN_detect
+# Install script for directory: /home/uwr/Desktop/2023_UWR/ros_ws/src/DBSCAN_detect
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/2023_UWR/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uwr/Desktop/2023_UWR/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect/catkin_generated/installspace/DBSCAN_detect.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uwr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect/catkin_generated/installspace/DBSCAN_detect.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/DBSCAN_detect/cmake" TYPE FILE FILES
-    "/home/saab/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect/catkin_generated/installspace/DBSCAN_detectConfig.cmake"
-    "/home/saab/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect/catkin_generated/installspace/DBSCAN_detectConfig-version.cmake"
+    "/home/uwr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect/catkin_generated/installspace/DBSCAN_detectConfig.cmake"
+    "/home/uwr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect/catkin_generated/installspace/DBSCAN_detectConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/DBSCAN_detect" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/src/DBSCAN_detect/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/DBSCAN_detect" TYPE FILE FILES "/home/uwr/Desktop/2023_UWR/ros_ws/src/DBSCAN_detect/package.xml")
 endif()
 

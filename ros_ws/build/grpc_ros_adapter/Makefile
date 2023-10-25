@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,6 +90,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -126,14 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/CMakeFiles/progress.marks
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/CMakeFiles/progress.marks
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/clean
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/preinstall
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/preinstall
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -168,12 +179,12 @@ geometry_msgs_generate_messages_cpp: grpc_ros_adapter/CMakeFiles/geometry_msgs_g
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -183,12 +194,12 @@ geometry_msgs_generate_messages_nodejs: grpc_ros_adapter/CMakeFiles/geometry_msg
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -198,12 +209,12 @@ geometry_msgs_generate_messages_lisp: grpc_ros_adapter/CMakeFiles/geometry_msgs_
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -213,12 +224,12 @@ std_msgs_generate_messages_eus: grpc_ros_adapter/CMakeFiles/std_msgs_generate_me
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -228,12 +239,12 @@ grpc_ros_adapter_generate_messages_cpp: grpc_ros_adapter/CMakeFiles/grpc_ros_ada
 
 # fast build rule for target.
 grpc_ros_adapter_generate_messages_cpp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_cpp.dir/build
 .PHONY : grpc_ros_adapter_generate_messages_cpp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -243,12 +254,12 @@ sensor_msgs_generate_messages_py: grpc_ros_adapter/CMakeFiles/sensor_msgs_genera
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -258,12 +269,12 @@ geometry_msgs_generate_messages_py: grpc_ros_adapter/CMakeFiles/geometry_msgs_ge
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -273,12 +284,12 @@ std_msgs_generate_messages_py: grpc_ros_adapter/CMakeFiles/std_msgs_generate_mes
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -288,12 +299,12 @@ sensor_msgs_generate_messages_cpp: grpc_ros_adapter/CMakeFiles/sensor_msgs_gener
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -303,12 +314,12 @@ sensor_msgs_generate_messages_eus: grpc_ros_adapter/CMakeFiles/sensor_msgs_gener
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -318,12 +329,12 @@ std_msgs_generate_messages_cpp: grpc_ros_adapter/CMakeFiles/std_msgs_generate_me
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -333,12 +344,12 @@ grpc_ros_adapter_generate_messages: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter
 
 # fast build rule for target.
 grpc_ros_adapter_generate_messages/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages.dir/build
 .PHONY : grpc_ros_adapter_generate_messages/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -348,12 +359,12 @@ grpc_ros_adapter_generate_messages_py: grpc_ros_adapter/CMakeFiles/grpc_ros_adap
 
 # fast build rule for target.
 grpc_ros_adapter_generate_messages_py/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_py.dir/build
 .PHONY : grpc_ros_adapter_generate_messages_py/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -363,12 +374,12 @@ std_msgs_generate_messages_lisp: grpc_ros_adapter/CMakeFiles/std_msgs_generate_m
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/rule
 
 # Convenience name for target.
@@ -378,12 +389,12 @@ grpc_ros_adapter_gencpp: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir
 
 # fast build rule for target.
 grpc_ros_adapter_gencpp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gencpp.dir/build
 .PHONY : grpc_ros_adapter_gencpp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -393,12 +404,12 @@ sensor_msgs_generate_messages_nodejs: grpc_ros_adapter/CMakeFiles/sensor_msgs_ge
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -408,12 +419,12 @@ grpc_ros_adapter_generate_messages_eus: grpc_ros_adapter/CMakeFiles/grpc_ros_ada
 
 # fast build rule for target.
 grpc_ros_adapter_generate_messages_eus/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build
 .PHONY : grpc_ros_adapter_generate_messages_eus/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -423,12 +434,12 @@ geometry_msgs_generate_messages_eus: grpc_ros_adapter/CMakeFiles/geometry_msgs_g
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -438,12 +449,12 @@ std_msgs_generate_messages_nodejs: grpc_ros_adapter/CMakeFiles/std_msgs_generate
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/rule
 
 # Convenience name for target.
@@ -453,12 +464,12 @@ grpc_ros_adapter_geneus: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir
 
 # fast build rule for target.
 grpc_ros_adapter_geneus/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_geneus.dir/build
 .PHONY : grpc_ros_adapter_geneus/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/rule
 
 # Convenience name for target.
@@ -468,12 +479,12 @@ grpc_ros_adapter_genlisp: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.d
 
 # fast build rule for target.
 grpc_ros_adapter_genlisp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genlisp.dir/build
 .PHONY : grpc_ros_adapter_genlisp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -483,12 +494,12 @@ grpc_ros_adapter_generate_messages_nodejs: grpc_ros_adapter/CMakeFiles/grpc_ros_
 
 # fast build rule for target.
 grpc_ros_adapter_generate_messages_nodejs/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_nodejs.dir/build
 .PHONY : grpc_ros_adapter_generate_messages_nodejs/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -498,12 +509,12 @@ grpc_ros_adapter_generate_messages_lisp: grpc_ros_adapter/CMakeFiles/grpc_ros_ad
 
 # fast build rule for target.
 grpc_ros_adapter_generate_messages_lisp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_lisp.dir/build
 .PHONY : grpc_ros_adapter_generate_messages_lisp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -513,12 +524,12 @@ grpc_ros_adapter_gennodejs: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennode
 
 # fast build rule for target.
 grpc_ros_adapter_gennodejs/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_gennodejs.dir/build
 .PHONY : grpc_ros_adapter_gennodejs/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -528,12 +539,12 @@ sensor_msgs_generate_messages_lisp: grpc_ros_adapter/CMakeFiles/sensor_msgs_gene
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make grpc_ros_adapter/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/rule
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/rule
 
 # Convenience name for target.
@@ -543,7 +554,7 @@ grpc_ros_adapter_genpy: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/r
 
 # fast build rule for target.
 grpc_ros_adapter_genpy/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/build.make grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_genpy.dir/build
 .PHONY : grpc_ros_adapter_genpy/fast
 
 # Help Target
@@ -554,6 +565,7 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... list_install_components"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_lisp"
@@ -563,11 +575,11 @@ help:
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... list_install_components"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... grpc_ros_adapter_generate_messages"
 	@echo "... grpc_ros_adapter_generate_messages_py"
+	@echo "... test"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... grpc_ros_adapter_gencpp"
 	@echo "... sensor_msgs_generate_messages_nodejs"
@@ -595,6 +607,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

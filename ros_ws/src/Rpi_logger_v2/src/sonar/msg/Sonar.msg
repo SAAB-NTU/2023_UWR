@@ -1,9 +1,0 @@
-Header header 
-float32 distance 
-float32 confidence
-float32 transmit_duration
-float32 ping_number
-float32 scan_start
-float32 scan_length
-float32 gain_setting
-uint8[] profile_data

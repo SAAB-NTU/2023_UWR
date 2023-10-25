@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,16 +124,27 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/progress.marks
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/progress.marks
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/clean
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/preinstall
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/preinstall
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/rule
 
 # Convenience name for target.
@@ -168,12 +179,12 @@ two_sonar_logger_2: Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/r
 
 # fast build rule for target.
 two_sonar_logger_2/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build
 .PHONY : two_sonar_logger_2/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -183,12 +194,12 @@ logger_generate_messages: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_me
 
 # fast build rule for target.
 logger_generate_messages/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages.dir/build
 .PHONY : logger_generate_messages/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -198,12 +209,12 @@ logger_generate_messages_nodejs: Rpi_logger_v2/src/logger/CMakeFiles/logger_gene
 
 # fast build rule for target.
 logger_generate_messages_nodejs/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_nodejs.dir/build
 .PHONY : logger_generate_messages_nodejs/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/rule
 
 # Convenience name for target.
@@ -213,12 +224,12 @@ _logger_generate_messages_check_deps_Motor: Rpi_logger_v2/src/logger/CMakeFiles/
 
 # fast build rule for target.
 _logger_generate_messages_check_deps_Motor/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/_logger_generate_messages_check_deps_Motor.dir/build
 .PHONY : _logger_generate_messages_check_deps_Motor/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -228,12 +239,12 @@ logger_generate_messages_cpp: Rpi_logger_v2/src/logger/CMakeFiles/logger_generat
 
 # fast build rule for target.
 logger_generate_messages_cpp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build
 .PHONY : logger_generate_messages_cpp/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/rule
 
 # Convenience name for target.
@@ -243,12 +254,12 @@ logger_geneus: Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/rule
 
 # fast build rule for target.
 logger_geneus/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_geneus.dir/build
 .PHONY : logger_geneus/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/rule
 
 # Convenience name for target.
@@ -258,12 +269,12 @@ logger_node: Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/rule
 
 # fast build rule for target.
 logger_node/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build
 .PHONY : logger_node/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -273,12 +284,12 @@ logger_generate_messages_lisp: Rpi_logger_v2/src/logger/CMakeFiles/logger_genera
 
 # fast build rule for target.
 logger_generate_messages_lisp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build
 .PHONY : logger_generate_messages_lisp/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/rule
 
 # Convenience name for target.
@@ -288,12 +299,12 @@ logger_gencpp: Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/rule
 
 # fast build rule for target.
 logger_gencpp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build
 .PHONY : logger_gencpp/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/rule
 
 # Convenience name for target.
@@ -303,12 +314,12 @@ logger_genlisp: Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/rule
 
 # fast build rule for target.
 logger_genlisp/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genlisp.dir/build
 .PHONY : logger_genlisp/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -318,12 +329,12 @@ logger_generate_messages_eus: Rpi_logger_v2/src/logger/CMakeFiles/logger_generat
 
 # fast build rule for target.
 logger_generate_messages_eus/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_eus.dir/build
 .PHONY : logger_generate_messages_eus/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -333,12 +344,12 @@ logger_gennodejs: Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/rule
 
 # fast build rule for target.
 logger_gennodejs/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_gennodejs.dir/build
 .PHONY : logger_gennodejs/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -348,12 +359,12 @@ logger_generate_messages_py: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate
 
 # fast build rule for target.
 logger_generate_messages_py/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_py.dir/build
 .PHONY : logger_generate_messages_py/fast
 
 # Convenience name for target.
 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/rule:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/rule
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/rule
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/rule
 
 # Convenience name for target.
@@ -363,7 +374,7 @@ logger_genpy: Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/rule
 
 # fast build rule for target.
 logger_genpy/fast:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_genpy.dir/build
 .PHONY : logger_genpy/fast
 
 src/logger_node.o: src/logger_node.cpp.o
@@ -372,7 +383,7 @@ src/logger_node.o: src/logger_node.cpp.o
 
 # target to build an object file
 src/logger_node.cpp.o:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/src/logger_node.cpp.o
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/src/logger_node.cpp.o
 .PHONY : src/logger_node.cpp.o
 
 src/logger_node.i: src/logger_node.cpp.i
@@ -381,7 +392,7 @@ src/logger_node.i: src/logger_node.cpp.i
 
 # target to preprocess a source file
 src/logger_node.cpp.i:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/src/logger_node.cpp.i
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/src/logger_node.cpp.i
 .PHONY : src/logger_node.cpp.i
 
 src/logger_node.s: src/logger_node.cpp.s
@@ -390,7 +401,7 @@ src/logger_node.s: src/logger_node.cpp.s
 
 # target to generate assembly for a file
 src/logger_node.cpp.s:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/src/logger_node.cpp.s
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/src/logger_node.cpp.s
 .PHONY : src/logger_node.cpp.s
 
 src/two_sonar_logger_without_tof.o: src/two_sonar_logger_without_tof.cpp.o
@@ -399,7 +410,7 @@ src/two_sonar_logger_without_tof.o: src/two_sonar_logger_without_tof.cpp.o
 
 # target to build an object file
 src/two_sonar_logger_without_tof.cpp.o:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/src/two_sonar_logger_without_tof.cpp.o
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/src/two_sonar_logger_without_tof.cpp.o
 .PHONY : src/two_sonar_logger_without_tof.cpp.o
 
 src/two_sonar_logger_without_tof.i: src/two_sonar_logger_without_tof.cpp.i
@@ -408,7 +419,7 @@ src/two_sonar_logger_without_tof.i: src/two_sonar_logger_without_tof.cpp.i
 
 # target to preprocess a source file
 src/two_sonar_logger_without_tof.cpp.i:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/src/two_sonar_logger_without_tof.cpp.i
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/src/two_sonar_logger_without_tof.cpp.i
 .PHONY : src/two_sonar_logger_without_tof.cpp.i
 
 src/two_sonar_logger_without_tof.s: src/two_sonar_logger_without_tof.cpp.s
@@ -417,7 +428,7 @@ src/two_sonar_logger_without_tof.s: src/two_sonar_logger_without_tof.cpp.s
 
 # target to generate assembly for a file
 src/two_sonar_logger_without_tof.cpp.s:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/src/two_sonar_logger_without_tof.cpp.s
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(MAKE) -f Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/build.make Rpi_logger_v2/src/logger/CMakeFiles/two_sonar_logger_2.dir/src/two_sonar_logger_without_tof.cpp.s
 .PHONY : src/two_sonar_logger_without_tof.cpp.s
 
 # Help Target
@@ -442,6 +453,7 @@ help:
 	@echo "... logger_generate_messages_lisp"
 	@echo "... logger_gencpp"
 	@echo "... logger_genlisp"
+	@echo "... test"
 	@echo "... logger_generate_messages_eus"
 	@echo "... logger_gennodejs"
 	@echo "... logger_generate_messages_py"
@@ -463,6 +475,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

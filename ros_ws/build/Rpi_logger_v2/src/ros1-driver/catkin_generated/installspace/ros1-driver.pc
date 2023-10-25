@@ -1,8 +1,0 @@
-prefix=/home/saab/Desktop/2023_UWR/ros_ws/install
-
-Name: ros1-driver
-Description: Description of ros1-driver
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
