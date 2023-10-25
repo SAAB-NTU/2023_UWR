@@ -53,8 +53,7 @@ Eigen::VectorXf KalmanFilter_6dof::prediction(const Eigen::VectorXf& u,const flo
 
 Eigen::VectorXf KalmanFilter_6dof::update(const Eigen::VectorXf& z) //z = SONAR output
 {
-    Eigen::Matrix<double, 6, 6> identityMatrix = Eigen::Matrix<double, 6, 6>::Identity();
-
+Eigen::MatrixXf identityMatrix = Eigen::MatrixXf::Identity(6, 6);
     Eigen::VectorXf y = z-H*x; //y = residual error
     Eigen::MatrixXf K = P*H.transpose() * (H*P*H.transpose()+R).inverse(); //Kalman weighting matrix
 
@@ -62,6 +61,7 @@ Eigen::VectorXf KalmanFilter_6dof::update(const Eigen::VectorXf& z) //z = SONAR
     //joseph equation for stable computation
     //P = (Eigen::Matrix2f::Identity()-K*H)*P*(Eigen::Matrix2f::Identity()-K*H).transpose() + K*R*K.transpose(); //check again !!
     //P = (identityMatrix-K*H)*P-(identityMatrix-K*H).transpose() + K*R*K.transpose(); //check again !!
+    P = (identityMatrix-K*H)*P-(identityMatrix-K*H).transpose() + K*R*K.transpose(); //check again !!
     return x;
 }
 

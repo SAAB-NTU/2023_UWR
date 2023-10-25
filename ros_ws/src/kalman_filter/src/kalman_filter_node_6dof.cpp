@@ -19,7 +19,7 @@
         std::mutex mtx;
 
         std::string csv_create_file(std::string path_param) 
-        {/*
+        {
             //check for file name to use
                 // Get the current time
     ros::Time current_time = ros::Time::now();
@@ -53,7 +53,7 @@
                // n += 1;
             //}
             file_path = file_path + filename + file_format;
-            return file_path; */
+            return file_path; 
         } 
 
         void csv_writer(const std::string &data) 

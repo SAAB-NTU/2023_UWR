@@ -320,7 +320,6 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 # Recursive "all" directory target.
 kalman_filter/all: kalman_filter/CMakeFiles/kalman_filter_node_6dof.dir/all
 kalman_filter/all: kalman_filter/CMakeFiles/kalman_filter_node.dir/all
-kalman_filter/all: kalman_filter/CMakeFiles/kalman_filter.dir/all
 
 .PHONY : kalman_filter/all
 
@@ -332,7 +331,6 @@ kalman_filter/preinstall:
 # Recursive "clean" directory target.
 kalman_filter/clean: kalman_filter/CMakeFiles/kalman_filter_node_6dof.dir/clean
 kalman_filter/clean: kalman_filter/CMakeFiles/kalman_filter_node.dir/clean
-kalman_filter/clean: kalman_filter/CMakeFiles/kalman_filter.dir/clean
 
 .PHONY : kalman_filter/clean
 
@@ -2535,33 +2533,6 @@ kalman_filter_node: kalman_filter/CMakeFiles/kalman_filter_node.dir/rule
 kalman_filter/CMakeFiles/kalman_filter_node.dir/clean:
 	$(MAKE) -f kalman_filter/CMakeFiles/kalman_filter_node.dir/build.make kalman_filter/CMakeFiles/kalman_filter_node.dir/clean
 .PHONY : kalman_filter/CMakeFiles/kalman_filter_node.dir/clean
-
-#=============================================================================
-# Target rules for target kalman_filter/CMakeFiles/kalman_filter.dir
-
-# All Build rule for target.
-kalman_filter/CMakeFiles/kalman_filter.dir/all:
-	$(MAKE) -f kalman_filter/CMakeFiles/kalman_filter.dir/build.make kalman_filter/CMakeFiles/kalman_filter.dir/depend
-	$(MAKE) -f kalman_filter/CMakeFiles/kalman_filter.dir/build.make kalman_filter/CMakeFiles/kalman_filter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num= "Built target kalman_filter"
-.PHONY : kalman_filter/CMakeFiles/kalman_filter.dir/all
-
-# Build rule for subdir invocation for target.
-kalman_filter/CMakeFiles/kalman_filter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 kalman_filter/CMakeFiles/kalman_filter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles 0
-.PHONY : kalman_filter/CMakeFiles/kalman_filter.dir/rule
-
-# Convenience name for target.
-kalman_filter: kalman_filter/CMakeFiles/kalman_filter.dir/rule
-
-.PHONY : kalman_filter
-
-# clean rule for target.
-kalman_filter/CMakeFiles/kalman_filter.dir/clean:
-	$(MAKE) -f kalman_filter/CMakeFiles/kalman_filter.dir/build.make kalman_filter/CMakeFiles/kalman_filter.dir/clean
-.PHONY : kalman_filter/CMakeFiles/kalman_filter.dir/clean
 
 #=============================================================================
 # Target rules for target Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/complementary_filter.dir

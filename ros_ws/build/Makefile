@@ -1000,19 +1000,6 @@ kalman_filter_node/fast:
 .PHONY : kalman_filter_node/fast
 
 #=============================================================================
-# Target rules for targets named kalman_filter
-
-# Build rule for target.
-kalman_filter: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 kalman_filter
-.PHONY : kalman_filter
-
-# fast build rule for target.
-kalman_filter/fast:
-	$(MAKE) -f kalman_filter/CMakeFiles/kalman_filter.dir/build.make kalman_filter/CMakeFiles/kalman_filter.dir/build
-.PHONY : kalman_filter/fast
-
-#=============================================================================
 # Target rules for targets named complementary_filter
 
 # Build rule for target.
@@ -3624,7 +3611,6 @@ help:
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... kalman_filter_node_6dof"
 	@echo "... kalman_filter_node"
-	@echo "... kalman_filter"
 	@echo "... complementary_filter"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_nodejs"
