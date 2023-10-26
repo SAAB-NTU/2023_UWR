@@ -1,0 +1,17 @@
+<launch>
+
+
+    <!-- imu -->
+    <include file="$(find realsense_cam)/launch/rs_camera.launch"/>
+
+    <!-- sonar -->
+    <!-- sonar -->
+    <node name="rosserial" pkg="rosserial_arduino" type="serial_node.py" output="screen">
+        <param name="port" value="/dev/ttyACM0"/>
+        <param name="baud" value="115200"/>
+    </node>
+    <node name="kalman_filter" pkg="kalman_filter" type="kalman_filter_node_6dof" output="screen">
+    <param name="csv_path" value="/home/uwr/Desktop/all_log_"/>
+    </node>
+
+</launch>

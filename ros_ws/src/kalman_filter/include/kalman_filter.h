@@ -22,13 +22,14 @@ class KalmanFilter_6dof
 {
     public:
         KalmanFilter_6dof();
-        Eigen::VectorXf prediction(const Eigen::VectorXf& u, const float& dt);
-        Eigen::VectorXf update(const Eigen::VectorXf& z);
-        Eigen::VectorXf residual(const Eigen::VectorXf& z);
-        Eigen::MatrixXf Q,R;
+        Eigen::Matrix<double,6,1> prediction(const Eigen::Matrix<double,3,1>& u, const float& dt);
+        Eigen::Matrix<double,6,1> update(const Eigen::Matrix<double,6,1>& z);
+        Eigen::Matrix<double,6,1> residual(const Eigen::Matrix<double,6,1>& z);
+        Eigen::Matrix<double, 6, 6>  Q,R;
     protected:
-        Eigen::MatrixXf F,P,H;
-        Eigen::VectorXf x,B;
+        Eigen::Matrix<double, 6, 6> F,P,H;
+        Eigen::Matrix<double, 6, 1> x;
+        Eigen::Matrix<double,6,3> B;
        
 };
 

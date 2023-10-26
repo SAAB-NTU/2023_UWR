@@ -70,6 +70,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
 
         DiscreteKalmanFilter():KalmanFilter_6dof()
         {
+            
             this->pub = nh_.advertise<geometry_msgs::PoseStamped>("/pose",1);
             //this->ground_truth = nh_.advertise<geometry_msgs::PoseStamped>("/ground_truth",1);
 
@@ -85,7 +86,8 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             
             //gps_sub=nh_.subscribe("/an_device/NavSatFix",1,&DiscreteKalmanFilter::gps_callback,this);
             
-            SonarProcess sonar_filter(3);
+            SonarProcess sonar_filter(3); 
+            ROS_INFO("Initialization done, waiting to subscribe to topics");
         };
 
         void imu_callback(const sensor_msgs::ImuConstPtr& msg)
@@ -108,8 +110,8 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                         float dt = time.toSec() - previous_state_time;
                         //Added y and z acceleration
                         float u_x = previous_accel_x,u_y = previous_accel_y,u_z = previous_accel_z;
-                        Eigen::VectorXf u_final(6);
-                        u_final<<u_x,dt,u_y,dt,u_z,dt;
+                        Eigen::Matrix<double,3,1> u_final;
+                        u_final<<u_x,u_y,u_z;
                         this->prediction(u_final,dt);
                     }
                     	 this->previous_state_time = time.toSec();
@@ -210,11 +212,11 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 float v_z = (measurement_z-previous_depth_distance_z)/(time.toSec()-previous_sonar_time);
                 
                 
-                Eigen::VectorXf measurement_residual(6); // Assuming you want a 6-dimensional vector
+                Eigen::Matrix<double,6,1> measurement_residual; // Assuming you want a 6-dimensional vector
 
                 measurement_residual << measurement_x, v_x, measurement_y, v_y, measurement_z, v_z;
 
-                Eigen::VectorXf measurement_final = this->residual(measurement_residual);
+                Eigen::Matrix<double,6,1> measurement_final = this->residual(measurement_residual);
                 
                 
                 if(v_x>-0.01 && v_x < 0.1) //x-axis
@@ -356,9 +358,12 @@ int main(int argc,char* argv[])
     std::string path_param;
     if(ros::param::get("~csv_path",path_param))
     {
+        
         std::string file_path = csv_create_file(path_param);
         myfile.open(file_path);
-        myfile << "time,sensor,KF_pose_x,KF_pose_y,KF_pose_z,sonar_distance_x,sonar_distance_y,depth_z,sonar_confidence_x,sonar_confidence_y,accel x,accel_y,accel_z,gps_long,gps_lat,gps_status\n";
+        myfile<<"Hello";
+        myfile << "time,sensor,KF_pose_x,KF_pose_y,KF_pose_z,sonar_distance_x,sonar_distance_y,depth_z,sonar_confidence_x,sonar_confidence_y,accel_x,accel_y,accel_z,gps_long,gps_lat,gps_status\n";
+        ROS_INFO("Got path");
         //ros::Subscriber imu_sub = nodeHandle.subscribe("/an_device/Imu",1,imu_callback);
 	//ros::Subscriber sonar_sub = nodeHandle.subscribe("/sonar",1,sonar_callback);
 
