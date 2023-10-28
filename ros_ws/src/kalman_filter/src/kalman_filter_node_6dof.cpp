@@ -101,6 +101,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 //Included y and z acceleration 
                 float accel_y = msg->linear_acceleration.y;
                 float accel_z = msg->linear_acceleration.z;
+                //start=true;
                 if(start == true)
                 {
                     
@@ -113,6 +114,18 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                         Eigen::Matrix<double,3,1> u_final;
                         u_final<<u_x,u_y,u_z;
                         this->prediction(u_final,dt);
+                        ROS_INFO("linear_x_a: %f",this->x(0));
+                        ROS_INFO("linear_y_a: %f",this->x(2));
+                        ROS_INFO("linear_z_a: %f",this->x(4));
+                            std::ostringstream stream;
+                            stream << this->K;
+
+    // Get the string representation of the Eigen matrix
+                    std::string eigenMatrixString = stream.str();
+
+    // Print the string with ROS_INFO
+                 ROS_INFO("Eigen Matrix:\n%s", eigenMatrixString.c_str());
+
                     }
                     	 this->previous_state_time = time.toSec();
                         this->previous_accel_x = accel_x;
@@ -132,11 +145,11 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
     std::stringstream ss2;
     ss2.precision(15);
     ss1 << time.sec << "." << std::setw(9) << std::setfill('0') << time.nsec;
-    ss2 << msg->linear_acceleration.x<<msg->linear_acceleration.y<<msg->linear_acceleration.z;
+    ss2 << msg->linear_acceleration.x<<","<<msg->linear_acceleration.y<<","<<msg->linear_acceleration.z;
 
-    ROS_INFO("linear_x: %f",msg->linear_acceleration.x);
-    ROS_INFO("linear_y: %f",msg->linear_acceleration.y);
-    ROS_INFO("linear_z: %f",msg->linear_acceleration.z);
+    //ROS_INFO("linear_x: %f",msg->linear_acceleration.x);
+   // ROS_INFO("linear_y: %f",msg->linear_acceleration.y);
+    //ROS_INFO("linear_z: %f",msg->linear_acceleration.z);
     csv_writer(ss1.str()+ ",imu,,,,"+ ss2.str()+"\n");
            
         }
@@ -197,7 +210,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 //Check time assignment
                 this->previous_sonar_time = time.toSec();
                 this->start = true;
-
+                ROS_INFO("Entered Sonar_callback initially");
             }
             else
             {
@@ -211,29 +224,34 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 float measurement_z = first_depth_distance_z - distance_z;
                 float v_z = (measurement_z-previous_depth_distance_z)/(time.toSec()-previous_sonar_time);
                 
-                
+                ROS_INFO("first measurements");
                 Eigen::Matrix<double,6,1> measurement_residual; // Assuming you want a 6-dimensional vector
 
                 measurement_residual << measurement_x, v_x, measurement_y, v_y, measurement_z, v_z;
 
                 Eigen::Matrix<double,6,1> measurement_final = this->residual(measurement_residual);
+                ROS_INFO("matrix initialization");
+
                 
-                
-                if(v_x>-0.01 && v_x < 0.1) //x-axis
+                if(v_x>-1 && v_x < 1) //x-axis
                 {
                     if(measurement_final(0) < 0.5)
-                    {
+                    {  
+                        ROS_INFO("condtn1");
                         this->R(0,0)=0.001;//Distance is more accurate than velocity
                         this->R(1,1)=0.01;
+                        
                     }
                     else
                     {
+                        ROS_INFO("condtn2");
                         this->R(0,0)=10;//Distance is more accurate than velocity
                         this->R(1,1)=20;
-                        measurement_final(0) = this->x(0,0);  //KF distance taken if too inaccurate
+                        measurement_final(0) = this->x(0);  //KF distance taken if too inaccurate
+                        
                     }
                 }
-                if(v_y>-0.01 && v_y < 0.1) //y-axis
+                if(v_y>-1 && v_y < 1) //y-axis
                 {
                     if(measurement_final(2) < 0.5)
                     {
@@ -243,12 +261,12 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                     }
                     else
                     {
-                        this->R(2,2)=10;//Distance is more accurate than velocity
-                        this->R(3,3)=20;
-                        measurement_final(2) = this->x(2,2);  //KF distance taken if too inaccurate
+                        this->R(2,2)=20;//Distance is more accurate than velocity
+                        this->R(3,3)=10;
+                        measurement_final(2) = this->x(2);  //KF distance taken if too inaccurate
                     }
                 }
-                 if(v_z>-0.01 && v_z < 0.1) //z-axis
+                 if(v_z>-1 && v_z < 1) //z-axis
                 {
                     if(measurement_final(5) < 0.5)
                     {
@@ -257,29 +275,29 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                     }
                     else
                     {
-                        this->R(5,5)=10;//Distance is more accurate than velocity
-                        this->R(5,5)=20;
-                        measurement_final(4) = this->x(4,4);  //KF distance taken if too inaccurate
+                        this->R(5,5)=20;//Distance is more accurate than velocity
+                        this->R(5,5)=10;
+                        measurement_final(4) = this->x(4);  //KF distance taken if too inaccurate
                     }
                 }
+                ROS_INFO("here");
+     
                 this->update(measurement_residual);
                 this->previous_sonar_distance_x = measurement_x;
                 this->previous_sonar_distance_y = measurement_y;
                 this->previous_depth_distance_z = measurement_z;
                 this->previous_sonar_time = time.toSec();
+                ROS_INFO("KF pose: %f",this->x(0));
 
-                //ROS_INFO("KF pose: %f",this->x(0,0));
-                //ROS_INFO("RMS Error: %f",this->ground_truth_pose-this->x(0,0));
                 geometry_msgs::PoseStamped pose_msg;
                 pose_msg.header.frame_id = "odom";
                 pose_msg.header.stamp = ros::Time::now();
-                pose_msg.pose.position.x = this->x(0,0);
-                pose_msg.pose.position.y = this->x(2,2);
-                pose_msg.pose.position.z = this->x(4,4);
-                pub.publish(pose_msg);
-            }
+                pose_msg.pose.position.x = this->x(0);
+                pose_msg.pose.position.y = this->x(2);
+                pose_msg.pose.position.z = this->x(4);
+               pub.publish(pose_msg);
 
-            //ros::Time time = ros::Time::now();
+                            //ros::Time time = ros::Time::now();
             std::stringstream ss_time;
             
             std::stringstream ss_x_KF;
@@ -304,27 +322,36 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             
             depth_z_KF.precision(15);
             depth_z_dist.precision(15);
-
-            
-            ss_time << time.sec << "." << std::setw(9) << std::setfill('0') << time.nsec;
-            
-            ss_x_KF<<this->x(0,0);
+            ss_x_KF<<this->x(0);
             ss_x_dist << msg->distance_1;
             ss_x_conf << msg->confidence_1;
             
             
             //TO put average distance to improve Sway
-            ss_y_KF<<this->x(2,2);
+            ss_y_KF<<this->x(2);
             ss_y_dist << msg->distance_2;
             ss_y_conf << msg->confidence_2;
             
-            depth_z_KF<<this->x(4,4);
+            depth_z_KF<<this->x(4);
             depth_z_dist << msg->depth;
             
    
             //ROS_INFO("sonar_time: %s",ss0.str().c_str());
             //ROS_INFO("tof_tim: %s",ss6.str().c_str());
             csv_writer(ss_time.str()+","+"sonar_depth" + ","+ss_x_KF.str()+"," + ss_y_KF.str()+"," + depth_z_KF.str()+ ","+ss_x_dist.str()+"," + ss_y_dist.str()+"," + depth_z_dist.str()+"," + ss_x_conf.str()+"," + ss_y_conf.str()+"\n");
+            
+            ss_time << time.sec << "." << std::setw(9) << std::setfill('0') << time.nsec;
+
+               /*
+                
+                //ROS_INFO("RMS Error: %f",this->ground_truth_pose-this->x(0,0));
+
+            
+            
+            */
+            }
+
+
             }
             catch (const std::exception& e)
             {
@@ -332,7 +359,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             }
 
         }
-   
+  
         
     private:
         ros::NodeHandle nh_;

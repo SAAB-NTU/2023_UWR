@@ -3,10 +3,10 @@
 KalmanFilter_6dof::KalmanFilter_6dof()
 {
      
-     Eigen::Matrix<double,6,6> identityMatrix = Eigen::Matrix<double,6,6>::Identity();
+     H = Eigen::Matrix<double,6,6>::Identity();
 x << 0,0,0,0,0,0; //6x1 state variable
 
-     /* 
+
     
    P << 0.001, 0, 0, 0, 0, 0,
          0, 0.001, 0, 0, 0, 0,
@@ -27,7 +27,7 @@ x << 0,0,0,0,0,0; //6x1 state variable
          0, 0, 0, 0, 0.01, 0,
          0, 0, 0, 0, 0, 0.01; //6x6 measurement noise
     
-         */
+     
          
 }
 
@@ -36,7 +36,7 @@ Eigen::Matrix<double,6,1> KalmanFilter_6dof::prediction(const Eigen::Matrix<doub
     
     // x_k = F_k * x_k-1 + B_k*u_k
     // F << 1,dt,0,1;
-    F << 1, dt, 0, 1, 0, 0,
+    F << 1, dt, 0, 0, 0, 0,
          0, 1, 0, 0, 0, 0,
          0, 0, 1, dt, 0, 0,
          0, 0, 0, 1, 0, 0,
@@ -62,13 +62,14 @@ Eigen::Matrix<double,6,1> KalmanFilter_6dof::update(const Eigen::Matrix<double,6
     
     Eigen::Matrix<double,6,6> identityMatrix = Eigen::Matrix<double,6,6>::Identity();
     Eigen::Matrix<double,6,1> y = z-H*x; //y = residual error
-    Eigen::Matrix<double,6,6> K = P*H.transpose() * (H*P*H.transpose()+R).inverse(); //Kalman weighting matrix
+    K = P*H.transpose() * (H*P*H.transpose()+R).inverse(); //Kalman weighting matrix
 
     x = x + K*y;
     //joseph equation for stable computation
     //P = (Eigen::Matrix2f::Identity()-K*H)*P*(Eigen::Matrix2f::Identity()-K*H).transpose() + K*R*K.transpose(); //check again !!
     //P = (identityMatrix-K*H)*P-(identityMatrix-K*H).transpose() + K*R*K.transpose(); //check again !!
-    P = (identityMatrix-K*H)*P-(identityMatrix-K*H).transpose() + K*R*K.transpose(); //check again !!
+    //P = (identityMatrix-K*H)*P-(identityMatrix-K*H).transpose() + K*R*K.transpose(); //check again !!
+    P =(identityMatrix - K * H) * P;
     return x;
   
 }

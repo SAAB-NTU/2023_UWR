@@ -43,28 +43,28 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build
 
 # Utility rule file for logger_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/progress.make
 
-Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp: /home/uwr/Desktop/2023_UWR/ros_ws/devel/include/logger/Motor.h
+Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp: /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/include/logger/Motor.h
 
 
-/home/uwr/Desktop/2023_UWR/ros_ws/devel/include/logger/Motor.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/uwr/Desktop/2023_UWR/ros_ws/devel/include/logger/Motor.h: /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg
-/home/uwr/Desktop/2023_UWR/ros_ws/devel/include/logger/Motor.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/uwr/Desktop/2023_UWR/ros_ws/devel/include/logger/Motor.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from logger/Motor.msg"
-	cd /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger && /home/uwr/Desktop/2023_UWR/ros_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg -Ilogger:/home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p logger -o /home/uwr/Desktop/2023_UWR/ros_ws/devel/include/logger -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/include/logger/Motor.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/include/logger/Motor.h: /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg
+/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/include/logger/Motor.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/include/logger/Motor.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from logger/Motor.msg"
+	cd /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger && /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/catkin_generated/env_cached.sh /home/abubakr/miniconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg -Ilogger:/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p logger -o /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/include/logger -e /opt/ros/noetic/share/gencpp/cmake/..
 
 logger_generate_messages_cpp: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp
-logger_generate_messages_cpp: /home/uwr/Desktop/2023_UWR/ros_ws/devel/include/logger/Motor.h
+logger_generate_messages_cpp: /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/include/logger/Motor.h
 logger_generate_messages_cpp: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build.make
 
 .PHONY : logger_generate_messages_cpp
@@ -75,10 +75,10 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build: logg
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/build
 
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/clean:
-	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && $(CMAKE_COMMAND) -P CMakeFiles/logger_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && $(CMAKE_COMMAND) -P CMakeFiles/logger_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/clean
 
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/depend:
-	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2023_UWR/ros_ws/src /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger /home/uwr/Desktop/2023_UWR/ros_ws/build /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_cpp.dir/depend
 

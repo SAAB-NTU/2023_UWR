@@ -27,7 +27,7 @@ class KalmanFilter_6dof
         Eigen::Matrix<double,6,1> residual(const Eigen::Matrix<double,6,1>& z);
         Eigen::Matrix<double, 6, 6>  Q,R;
     protected:
-        Eigen::Matrix<double, 6, 6> F,P,H;
+        Eigen::Matrix<double, 6, 6> F,P,H,K;
         Eigen::Matrix<double, 6, 1> x;
         Eigen::Matrix<double,6,3> B;
        

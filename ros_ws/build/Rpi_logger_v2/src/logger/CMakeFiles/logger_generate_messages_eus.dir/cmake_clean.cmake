@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger/manifest.l"
-  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/logger/msg/Motor.l"
+  "/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/share/roseus/ros/logger/manifest.l"
+  "/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/share/roseus/ros/logger/msg/Motor.l"
   "CMakeFiles/logger_generate_messages_eus"
 )
 

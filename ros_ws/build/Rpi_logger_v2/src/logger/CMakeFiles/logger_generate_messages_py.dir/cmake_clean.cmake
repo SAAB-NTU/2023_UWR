@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/_Motor.py"
-  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/__init__.py"
+  "/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/_Motor.py"
+  "/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/lib/python3/dist-packages/logger/msg/__init__.py"
   "CMakeFiles/logger_generate_messages_py"
 )
 
