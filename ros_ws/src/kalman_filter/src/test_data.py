@@ -5,6 +5,7 @@ from sensor_msgs.msg import Imu
 from sonar.msg import ThreeSonarDepth
 from std_msgs.msg import Header
 from random import uniform
+from std_msgs.msg import Float64
 
 def imu_data_publisher(imu_pub):
     
@@ -19,7 +20,7 @@ def imu_data_publisher(imu_pub):
     imu_pub.publish(imu_msg)
     rate.sleep()
 
-def sonar_data_publisher(sonar_pub):
+def sonar_data_publisher(sonar_pub,depth_pub):
 
     rate = rospy.Rate(100)  # 1 Hz
 
@@ -32,10 +33,15 @@ def sonar_data_publisher(sonar_pub):
     sonar_msg.confidence_2 = 100.0
     sonar_msg.distance_3 = uniform(0.0, 2.0)
     sonar_msg.confidence_3 = 100.0
-    sonar_msg.depth = uniform(0.0, 2.0)
+    depth = uniform(0.0, 2.0)
+    sonar_msg.depth=depth
+    depth_msg=Float64()
+    
+    depth_msg.data=depth
     sonar_msg.altitude = uniform(0.0, 10.0)
     sonar_msg.pressure = uniform(0.0, 10.0)
     sonar_pub.publish(sonar_msg)
+    depth_pub.publish(depth_msg)
     rate.sleep()
 
 if __name__ == '__main__':
@@ -44,9 +50,10 @@ if __name__ == '__main__':
         imu_pub = rospy.Publisher('/camera/accel/sample', Imu, queue_size=10)
         #rospy.init_node('sonar_data_publisher', anonymous=True)
         sonar_pub = rospy.Publisher('/ThreeSonarDepth', ThreeSonarDepth, queue_size=10)
+        depth_pub = rospy.Publisher('/depth_msg', Float64, queue_size=10)
         while not rospy.is_shutdown():
             imu_data_publisher(imu_pub=imu_pub)
-            sonar_data_publisher(sonar_pub=sonar_pub)
+            sonar_data_publisher(sonar_pub=sonar_pub,depth_pub=depth_pub)
         #rospy.spin()
     except rospy.ROSInterruptException:
         pass

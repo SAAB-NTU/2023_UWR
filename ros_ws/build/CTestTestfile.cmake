@@ -6,6 +6,7 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("DBSCAN_detect")
+subdirs("pid_hovering")
 subdirs("realsense_cam")
 subdirs("ublox/ublox")
 subdirs("uuv_sensor_msgs")

@@ -55,6 +55,7 @@ CMAKE_BINARY_DIR = /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: DBSCAN_detect/all
+all: pid_hovering/all
 all: realsense_cam/all
 all: ublox/ublox/all
 all: uuv_sensor_msgs/all
@@ -77,6 +78,7 @@ all: uwr_comms/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: DBSCAN_detect/preinstall
+preinstall: pid_hovering/preinstall
 preinstall: realsense_cam/preinstall
 preinstall: ublox/ublox/preinstall
 preinstall: uuv_sensor_msgs/preinstall
@@ -104,6 +106,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: DBSCAN_detect/clean
+clean: pid_hovering/clean
 clean: realsense_cam/clean
 clean: ublox/ublox/clean
 clean: uuv_sensor_msgs/clean
@@ -333,6 +336,24 @@ kalman_filter/clean: kalman_filter/CMakeFiles/kalman_filter_node_6dof.dir/clean
 kalman_filter/clean: kalman_filter/CMakeFiles/kalman_filter_node.dir/clean
 
 .PHONY : kalman_filter/clean
+
+#=============================================================================
+# Directory level rules for directory pid_hovering
+
+# Recursive "all" directory target.
+pid_hovering/all:
+
+.PHONY : pid_hovering/all
+
+# Recursive "preinstall" directory target.
+pid_hovering/preinstall:
+
+.PHONY : pid_hovering/preinstall
+
+# Recursive "clean" directory target.
+pid_hovering/clean:
+
+.PHONY : pid_hovering/clean
 
 #=============================================================================
 # Directory level rules for directory realsense_cam

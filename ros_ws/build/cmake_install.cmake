@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/gtest/cmake_install.cmake")
   include("/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/DBSCAN_detect/cmake_install.cmake")
+  include("/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/pid_hovering/cmake_install.cmake")
   include("/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/realsense_cam/cmake_install.cmake")
   include("/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/ublox/ublox/cmake_install.cmake")
   include("/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/uuv_sensor_msgs/cmake_install.cmake")

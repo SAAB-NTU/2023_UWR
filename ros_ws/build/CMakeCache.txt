@@ -537,6 +537,12 @@ message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 nmea_msgs_DIR:PATH=/opt/ros/noetic/share/nmea_msgs/cmake
 
 //Value Computed by CMake
+pid_hovering_BINARY_DIR:STATIC=/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/pid_hovering
+
+//Value Computed by CMake
+pid_hovering_SOURCE_DIR:STATIC=/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/pid_hovering
+
+//Value Computed by CMake
 realsense_cam_BINARY_DIR:STATIC=/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/realsense_cam
 
 //Value Computed by CMake
@@ -830,7 +836,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
