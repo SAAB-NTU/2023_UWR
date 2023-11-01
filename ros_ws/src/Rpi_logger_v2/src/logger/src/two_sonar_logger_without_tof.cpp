@@ -1,6 +1,6 @@
 #include <ros/ros.h>
 #include <string>
-#include <sonar/TwoSonarDepth.h>
+#include <sonar/ThreeSonarDepth.h>
 #include <sensor_msgs/Imu.h>
 #include <experimental/filesystem>
 #include <mutex>
@@ -36,7 +36,7 @@ void csv_writer(const std::string &data)
     mtx.unlock();
 }
 
-void sonar_callback(const sonar::TwoSonarDepthConstPtr& sonar)
+void sonar_callback(const sonar::ThreeSonarDepthConstPtr& sonar)
 {
     // std::stringstream to preserve full precision of sensor measurements
     ros::Time time = ros::Time::now();
@@ -137,8 +137,8 @@ int main(int argc, char* argv[])
         std::string file_path = csv_create_file(path_param);
         myfile.open(file_path);
         myfile << "time,sensor,depth,altitude,pressure,sonar_distance_1,sonar_confidence_1,sonar_distance_2,sonar_confidence_2,accel x,accel y,accel z,angular_vel x,angular_vel y,angular_vel z\n";
-        ros::Subscriber imu_sub = nodeHandle.subscribe("/imu/data_raw",1,imu_callback);
-        ros::Subscriber sonar_sub = nodeHandle.subscribe("/sonar",1,sonar_callback);
+        ros::Subscriber imu_sub = nodeHandle.subscribe("/imu/data",1,imu_callback);
+        ros::Subscriber sonar_sub = nodeHandle.subscribe("/ThreeSonarDepth",1,sonar_callback);
         ros::spin();
         myfile.close();
     }

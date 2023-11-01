@@ -34,11 +34,11 @@
 
     // Format the date and time components as a string
     std::stringstream filename_stream;
-    filename_stream << std::setw(4) << std::setfill('0') << year
-                    << std::setw(2) << std::setfill('0') << month
-                    << std::setw(2) << std::setfill('0') << day
-                    << std::setw(2) << std::setfill('0') << hour
-                    << std::setw(2) << std::setfill('0') << minute
+    filename_stream << std::setw(4) << std::setfill('0') << year<<"_"
+                    << std::setw(2) << std::setfill('0') << month<<"_"
+                    << std::setw(2) << std::setfill('0') << day<<"_"
+                    << std::setw(2) << std::setfill('0') << hour<<"_"
+                    << std::setw(2) << std::setfill('0') << minute<<"_"
                     << std::setw(2) << std::setfill('0') << second;
     std::string filename = filename_stream.str();
             std::string file_path = path_param;
@@ -76,7 +76,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
 
             //To change to advanced navigation spatial imu  
 
-            imu_sub = nh_.subscribe("/camera/accel/sample",1,&DiscreteKalmanFilter::imu_callback,this);
+            imu_sub = nh_.subscribe("/imu/data",1,&DiscreteKalmanFilter::imu_callback,this);
             
             //Included Sonar depth message
             sonar_sub = nh_.subscribe("/ThreeSonarDepth",1,&DiscreteKalmanFilter::sonar_callback,this);
@@ -300,6 +300,8 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                             //ros::Time time = ros::Time::now();
             std::stringstream ss_time;
             
+            ss_time << time.sec << "." << std::setw(9) << std::setfill('0') << time.nsec;
+            
             std::stringstream ss_x_KF;
             std::stringstream ss_x_dist;
             std::stringstream ss_x_conf;
@@ -388,7 +390,7 @@ int main(int argc,char* argv[])
         
         std::string file_path = csv_create_file(path_param);
         myfile.open(file_path);
-        myfile<<"Hello";
+        //myfile<<"Hello";
         myfile << "time,sensor,KF_pose_x,KF_pose_y,KF_pose_z,sonar_distance_x,sonar_distance_y,depth_z,sonar_confidence_x,sonar_confidence_y,accel_x,accel_y,accel_z,gps_long,gps_lat,gps_status\n";
         ROS_INFO("Got path");
         //ros::Subscriber imu_sub = nodeHandle.subscribe("/an_device/Imu",1,imu_callback);

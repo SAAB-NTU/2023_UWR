@@ -1,24 +1,19 @@
 <launch>
-    <!-- tofsensor -->
-    <include file="$(find nlink_parser)/launch/tofsense.launch"/>
-    <param name="port_name" value="/dev/ttyACM0" />
 
     <!-- imu -->
-    <include file="$(find witmotion_ros)/launch/wt901.launch"/>
-    <param name="port" value="/dev/ttyUSB0"/>
+    <include file="$(find realsense_cam)/launch/rs_camera.launch"/>
 
     <!-- sonar -->
     <node name="rosserial" pkg="rosserial_arduino" type="serial_node.py" output="screen">
-        <param name="port" value="/dev/ttyUSB1"/>
-        <param name="baud" value="115200"/>
+        <param name="port" value="/dev/ttyACM0"/>
+        <param name="baud" value="57600"/>
     </node>
 
     <!-- logger -->
     <arg name="logger_start_delay" default="21.0" /> 
     <!-- cpp logger -->
     <node name="logger" pkg="logger" type="backup" launch-prefix="bash -c 'sleep $(arg logger_start_delay); $0 $@' " output="screen">
-        <param name="csv_path" value="/home/ubuntu/data/two_sonar_" type="str"/>
-        <param name="tof_value" value="true" type="bool"/>
+        <param name="csv_path" value="/home/pi/data/two_sonar_" type="str"/>
     </node>
     <!-- if doesn't work use backup-->
     

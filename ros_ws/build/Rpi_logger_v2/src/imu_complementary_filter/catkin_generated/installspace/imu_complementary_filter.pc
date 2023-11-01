@@ -1,4 +1,4 @@
-prefix=/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/install
+prefix=/home/uwr/Desktop/2023_UWR/ros_ws/install
 
 Name: imu_complementary_filter
 Description: Description of imu_complementary_filter

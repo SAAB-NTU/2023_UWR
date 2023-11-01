@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for tf_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodej
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/build
 
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/clean:
-	cd /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/imu_complementary_filter && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/imu_complementary_filter && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/clean
 
 Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/depend:
-	cd /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/Rpi_logger_v2/src/imu_complementary_filter /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/imu_complementary_filter /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2023_UWR/ros_ws/src /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/imu_complementary_filter /home/uwr/Desktop/2023_UWR/ros_ws/build /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/imu_complementary_filter /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Rpi_logger_v2/src/imu_complementary_filter/CMakeFiles/tf_generate_messages_nodejs.dir/depend
 

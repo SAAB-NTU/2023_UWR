@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l"
+  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l"
   "CMakeFiles/grpc_ros_adapter_generate_messages_eus"
 )
 

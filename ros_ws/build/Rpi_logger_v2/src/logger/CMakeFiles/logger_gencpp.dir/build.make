@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for logger_gencpp.
 
@@ -63,10 +63,10 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build: logger_gencpp
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/build
 
 Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/clean:
-	cd /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && $(CMAKE_COMMAND) -P CMakeFiles/logger_gencpp.dir/cmake_clean.cmake
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && $(CMAKE_COMMAND) -P CMakeFiles/logger_gencpp.dir/cmake_clean.cmake
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/clean
 
 Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/depend:
-	cd /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger /home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2023_UWR/ros_ws/src /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger /home/uwr/Desktop/2023_UWR/ros_ws/build /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_gencpp.dir/depend
 

@@ -1,8 +1,8 @@
-prefix=/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/devel
+prefix=/home/uwr/Desktop/2023_UWR/ros_ws/devel
 
 Name: imu_complementary_filter
 Description: Description of imu_complementary_filter
 Version: 1.2.5
-Cflags: -I/home/abubakr/Desktop/2023_UWR_new/2023_UWR/ros_ws/src/Rpi_logger_v2/src/imu_complementary_filter/include
+Cflags: -I/home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/imu_complementary_filter/include
 Libs: -L${prefix}/lib -lcomplementary_filter
 Requires: geometry_msgs message_filters roscpp sensor_msgs std_msgs tf
