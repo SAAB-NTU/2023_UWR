@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for geometry_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build: ge
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 
 grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2023_UWR/ros_ws/src /home/uwr/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter /home/uwr/Desktop/2023_UWR/ros_ws/build /home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter /home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2023_UWR/ros_ws/src /home/saab/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter /home/saab/Desktop/2023_UWR/ros_ws/build /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter /home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc_ros_adapter/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
 

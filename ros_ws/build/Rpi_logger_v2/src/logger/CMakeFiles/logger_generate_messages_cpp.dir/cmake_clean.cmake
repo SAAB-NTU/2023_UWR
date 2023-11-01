@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/include/logger/Motor.h"
+  "/home/saab/Desktop/2023_UWR/ros_ws/devel/include/logger/Motor.h"
   "CMakeFiles/logger_generate_messages_cpp"
 )
 
