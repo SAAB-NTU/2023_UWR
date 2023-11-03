@@ -1,29 +1,21 @@
 # Teleop Keyboard Motion Control
 
-This package is designed to control the movement of the UWR remotely from a notebook or similar, ssh connected to a raspberry pi in the UWR, using keyboard commands with ROS noetic. It is designed to perform simple pitch, roll or yaw 2D movements with the UWR for positioning purposes in a pool. Two packages are used for this motion control. The ROS BCD licensed telelop_twist_keyboard package and the self developed thruster_keyb_ctrl package.
+This package is to control the movement of the UWR remotely through a notebook or similar, ssh connected to a raspberry pi in the UWR, with keyboard commands with ROS noetic. It is designed to execute single surge, sway and yaw 2D-Movements with the UWR for positioning reasons in a Pool. Two packages are used for this motion control. The ROS BCD-licensed telelop_twist_keyboard package and the self developed thruster_keyb_ctrl package.
 
-![Alt text](png/rqt_graph.png)
+![Alt text](rqt_graph.png)
 
 ## Prerequisites
 - [Ubuntu 20.04](https://releases.ubuntu.com/focal/)
 - [ROS Noetic](https://wiki.ros.org/noetic/Installation) (It is recommended to install "desktop-full" version)
 - [Git](https://github.com/git-guides/install-git) with SSH key
-- [Visual Studio Code](https://code.visualstudio.com/download) (optional) 
+- [Visual Studio Code](https://code.visualstudio.com/download) (optional)
 
 ## Getting started
-In order to run the thruster keyboard control, the teleop_twist_keyboard package and the 2023_UWR repo must be installed/cloned.
-
-### UWR
-
-The UWR has eight different thrusters to control movement. Thrusters 1-4 are used for movements in the X-Y plane and thrusters 5-8 for movements in the X-Z and Y-Z planes. For the purposes of this package, only the 2D movements carried out by thrusters 1-4 are relevant. The rest of the thrusters are set to no motion.  The figure below shows the arrangement of the thrusters, including their orientation (clockwise or counterclockwise) and 2D motion information.
-
-![Alt text](png/uwr_thruster_layout.png)
+In order to run the thruster keyboard control the teleop_twist_keyboard package and the 2023_UWR respo have to installed/cloned.
 
 ### teleop_twist_keyboard
 Installation:
-```
-sudo apt-get install ros-noetic-teleop-twist-keyboard
-```
+- sudo apt-get install ros-noetic-teleop-twist-keyboard
 
 Teleop_twist_keyboard is a on ROS Wiki published and BSD-licensed generic keyboard teleop package. It reads keyboard inputs and publishes them in twist_msg format to the /cmd_vel topic. The default values for linear and angular velocity are 1 and 0.5. If necessary custom values can be defined in the rosrun command to start the node. For further information about the code of the package, please consult the [ROS-Wiki-teleop_twist_keyboard](https://wiki.ros.org/action/fullsearch/teleop_twist_keyboard?action=fullsearch&context=180&value=linkto%3A%22teleop_twist_keyboard%22).
 
@@ -31,22 +23,21 @@ Teleop_twist_keyboard is a on ROS Wiki published and BSD-licensed generic keyboa
 
 Installation:
 - Thruster_keyb_ctrl is part of the 2023_UWR respo. Download this repo with:
-```
-git clone git@github.com:SAAB-NTU/2023_UWR.git
-```
-Thruster_keyb_ctrl is a ROS package that translates twist_msgs into pwm signals to control the UWR thruster for 2D motion of pitch, roll and yaw. Running Thruster_keyb_ctrl.py opens and configures the serial port. The PWM transceiver has the following parameters:
+    git clone git@github.com:SAAB-NTU/2023_UWR.git
+
+Thruster_keyb_ctrl is a ROS package, which translates twist_msgs into pwm signals to control the UWR thruster for 2D-movement of surge, sway and yaw. When the Thruster_keyb_ctrl.py is run the serial port is opened and configured. The PWM transceiver has the following parameters:
 - Bauderate: 9600
 - Bytesize: 8
 - Stopbits: 1
 - CRC: None
 
-The thruster_control_class, when instantiated, sets all bit values to be sent from the eight thrusters to zero, the pwm duty cycle of 75%, for no motion. This class receives the twist_msgs in the callback function via the surge, sway and yaw arguments and the self.set_pwm function converts them into bits which are returned via self.pwmsignals in the format:
+The thruster_control_class sets all bit values to be sent of the eight thrusters to zero, the pwm duty cycle of 75%, for no movement when instantiated. This class receives the twist_msgs in the callback function through the arguments surge, sway and yaw and the self.set_pwm function transforms them into bits who are returned through self.pwmsignals in the format: 
 ```
 {"A": self.thruster_1, "B": self.thruster_2, "C": self.thruster_3, "D": self.thruster_4, "E": 0, "F": 0, "G": 0, "H": 0, "R": 0}
 ```
-This dictionary is converted to JSON format and sent to the pwm transceiver board via the serial port using the send_pwm function. Keys 'E' to 'F' control thrusters 5-8 to no motion. The formula used to calculate the PWM duty cycle is shown in the figure below.
+This dictionary is  transformed into JSON format and send to the pwm transceiver board through the serial port by the send_pwm function. The formula which calculates the pwm duty cycle is shown in the picture below.
 
-![Alt text](png/pwm_dutycycle_formula.png)
+![Alt text](pwm_dutycycle_formula.png)
 
 The listener function initializes the node "thruster_keyb_ctrl" and subscribes to the /cmd_vel topic through the callback function and keeps running until the node is shut down.
 
@@ -56,9 +47,6 @@ The listener function initializes the node "thruster_keyb_ctrl" and subscribes t
  ```
  roscore
  cd 2023_UWR/ros_ws
- rm -r devel # Just run during the first time setting up. Deletes devel folder in rs_ws because of device specific symbolic links.
- rm -r build # Just run during the first time setting up. Deletes build folder in rs_ws because of device specific symbolic links.
- catkin_make
  source devel/setup.bash
  roslaunch thruster_keyb_ctrl thruster_keyb_ctrl.launch
  ```

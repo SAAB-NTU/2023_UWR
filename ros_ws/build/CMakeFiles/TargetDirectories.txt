@@ -152,6 +152,13 @@
 /home/saab/Desktop/2023_UWR/ros_ws/build/thruster_ctrl/CMakeFiles/rebuild_cache.dir
 /home/saab/Desktop/2023_UWR/ros_ws/build/thruster_ctrl/CMakeFiles/edit_cache.dir
 /home/saab/Desktop/2023_UWR/ros_ws/build/thruster_ctrl/CMakeFiles/test.dir
+/home/saab/Desktop/2023_UWR/ros_ws/build/thruster_joy_ctrl/CMakeFiles/install/strip.dir
+/home/saab/Desktop/2023_UWR/ros_ws/build/thruster_joy_ctrl/CMakeFiles/install/local.dir
+/home/saab/Desktop/2023_UWR/ros_ws/build/thruster_joy_ctrl/CMakeFiles/install.dir
+/home/saab/Desktop/2023_UWR/ros_ws/build/thruster_joy_ctrl/CMakeFiles/list_install_components.dir
+/home/saab/Desktop/2023_UWR/ros_ws/build/thruster_joy_ctrl/CMakeFiles/rebuild_cache.dir
+/home/saab/Desktop/2023_UWR/ros_ws/build/thruster_joy_ctrl/CMakeFiles/edit_cache.dir
+/home/saab/Desktop/2023_UWR/ros_ws/build/thruster_joy_ctrl/CMakeFiles/test.dir
 /home/saab/Desktop/2023_UWR/ros_ws/build/thruster_keyb_ctrl/CMakeFiles/install/strip.dir
 /home/saab/Desktop/2023_UWR/ros_ws/build/thruster_keyb_ctrl/CMakeFiles/install/local.dir
 /home/saab/Desktop/2023_UWR/ros_ws/build/thruster_keyb_ctrl/CMakeFiles/install.dir

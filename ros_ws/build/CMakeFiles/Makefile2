@@ -63,6 +63,7 @@ all: grpc_ros_adapter/all
 all: Rpi_logger_v2/src/ros1-driver/all
 all: sonar/all
 all: thruster_ctrl/all
+all: thruster_joy_ctrl/all
 all: thruster_keyb_ctrl/all
 all: kalman_filter/all
 all: oculus_ros/all
@@ -88,6 +89,7 @@ preinstall: grpc_ros_adapter/preinstall
 preinstall: Rpi_logger_v2/src/ros1-driver/preinstall
 preinstall: sonar/preinstall
 preinstall: thruster_ctrl/preinstall
+preinstall: thruster_joy_ctrl/preinstall
 preinstall: thruster_keyb_ctrl/preinstall
 preinstall: kalman_filter/preinstall
 preinstall: oculus_ros/preinstall
@@ -118,6 +120,7 @@ clean: grpc_ros_adapter/clean
 clean: Rpi_logger_v2/src/ros1-driver/clean
 clean: sonar/clean
 clean: thruster_ctrl/clean
+clean: thruster_joy_ctrl/clean
 clean: thruster_keyb_ctrl/clean
 clean: kalman_filter/clean
 clean: oculus_ros/clean
@@ -558,6 +561,24 @@ thruster_ctrl/preinstall:
 thruster_ctrl/clean:
 
 .PHONY : thruster_ctrl/clean
+
+#=============================================================================
+# Directory level rules for directory thruster_joy_ctrl
+
+# Recursive "all" directory target.
+thruster_joy_ctrl/all:
+
+.PHONY : thruster_joy_ctrl/all
+
+# Recursive "preinstall" directory target.
+thruster_joy_ctrl/preinstall:
+
+.PHONY : thruster_joy_ctrl/preinstall
+
+# Recursive "clean" directory target.
+thruster_joy_ctrl/clean:
+
+.PHONY : thruster_joy_ctrl/clean
 
 #=============================================================================
 # Directory level rules for directory thruster_keyb_ctrl
