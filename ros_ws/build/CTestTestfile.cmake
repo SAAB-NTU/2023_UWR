@@ -1,22 +1,19 @@
 # CMake generated Testfile for 
-# Source directory: /home/saab/Desktop/2023_UWR/ros_ws/src
-# Build directory: /home/saab/Desktop/2023_UWR/ros_ws/build
+# Source directory: /home/uwr/Desktop/2023_UWR/ros_ws/src
+# Build directory: /home/uwr/Desktop/2023_UWR/ros_ws/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("DBSCAN_detect")
 subdirs("pid_hovering")
-subdirs("realsense_cam")
 subdirs("ublox/ublox")
 subdirs("uuv_sensor_msgs")
 subdirs("grpc_ros_adapter")
-subdirs("Rpi_logger_v2/src/ros1-driver")
 subdirs("sonar")
 subdirs("thruster_ctrl")
 subdirs("thruster_joy_ctrl")
 subdirs("thruster_keyb_ctrl")
-subdirs("kalman_filter")
 subdirs("oculus_ros")
 subdirs("Rpi_logger_v2/src/imu_complementary_filter")
 subdirs("Rpi_logger_v2/src/logger")

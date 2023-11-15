@@ -1,8 +1,8 @@
-# Install script for directory: /home/saab/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter
+# Install script for directory: /home/uwr/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/2023_UWR/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uwr/Desktop/2023_UWR/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,37 +38,37 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc_ros_adapter/cmake" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapter-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc_ros_adapter/cmake" TYPE FILE FILES "/home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapter-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/saab/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/home/saab/anaconda3/bin/python3" -m compileall "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/grpc_ros_adapter")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/uwr/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/grpc_ros_adapter")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/saab/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/grpc_ros_adapter")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/uwr/Desktop/2023_UWR/ros_ws/devel/lib/python3/dist-packages/grpc_ros_adapter")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapter.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapter.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc_ros_adapter/cmake" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapter-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc_ros_adapter/cmake" TYPE FILE FILES "/home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapter-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc_ros_adapter/cmake" TYPE FILE FILES
-    "/home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapterConfig.cmake"
-    "/home/saab/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapterConfig-version.cmake"
+    "/home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapterConfig.cmake"
+    "/home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/catkin_generated/installspace/grpc_ros_adapterConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc_ros_adapter" TYPE FILE FILES "/home/saab/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/grpc_ros_adapter" TYPE FILE FILES "/home/uwr/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter/package.xml")
 endif()
 

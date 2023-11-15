@@ -43,27 +43,27 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for logger_generate_messages_lisp.
 
 # Include the progress variables for this target.
 include Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/progress.make
 
-Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp: /home/saab/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp
+Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp: /home/uwr/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp
 
 
-/home/saab/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/saab/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp: /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg
-/home/saab/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from logger/Motor.msg"
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /home/saab/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg -Ilogger:/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p logger -o /home/saab/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg
+/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp: /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg
+/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from logger/Motor.msg"
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg/Motor.msg -Ilogger:/home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p logger -o /home/uwr/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg
 
 logger_generate_messages_lisp: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp
-logger_generate_messages_lisp: /home/saab/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp
+logger_generate_messages_lisp: /home/uwr/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp
 logger_generate_messages_lisp: Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build.make
 
 .PHONY : logger_generate_messages_lisp
@@ -74,10 +74,10 @@ Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build: log
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/build
 
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/clean:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && $(CMAKE_COMMAND) -P CMakeFiles/logger_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger && $(CMAKE_COMMAND) -P CMakeFiles/logger_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/clean
 
 Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/depend:
-	cd /home/saab/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2023_UWR/ros_ws/src /home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger /home/saab/Desktop/2023_UWR/ros_ws/build /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger /home/saab/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2023_UWR/ros_ws/src /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger /home/uwr/Desktop/2023_UWR/ros_ws/build /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger /home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Rpi_logger_v2/src/logger/CMakeFiles/logger_generate_messages_lisp.dir/depend
 

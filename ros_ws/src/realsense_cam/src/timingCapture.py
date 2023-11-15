@@ -2,7 +2,7 @@
 
 import rospy
 from cv_bridge import CvBridge
-from sensor_msgs.msg import CompressedImage
+from sensor_msgs.msg import CompressedImage,Image
 import cv2
 import time
 from glob import glob
@@ -14,7 +14,8 @@ main_path="/home/sunrise/Desktop/Nov02_exp"
 class timingCapture:
     def __init__(self):
         rospy.init_node("timingCapture", anonymous = True)
-        self.image_sub = rospy.Subscriber("/camera/color/image_raw/compressed", CompressedImage, self.image_callback)
+        #self.image_sub = rospy.Subscriber("/camera/color/image_raw/compressed", CompressedImage, self.image_callback)
+        self.image_sub = rospy.Subscriber("/camera/color/image_raw/", Image, self.image_callback)
         self.image = None
         print("Node has been successfully created!")
     
@@ -23,7 +24,8 @@ class timingCapture:
         
     def timed_saving(self, path = main_path):
         try:
-            cv_image = cv_bridge.compressed_imgmsg_to_cv2(self.image,"bgr8")
+            #cv_image = cv_bridge.compressed_imgmsg_to_cv2(self.image,"bgr8")
+            cv_image = cv_bridge.imgmsg_to_cv2(self.image,"bgr8")
             num=len(glob(path+"/*"))
             cv2.imwrite(path+"/"+f"{num+1:04d}"+".png",cv_image)
             string = f"{num+1:04d}"+".png" + " has been successfully saved"

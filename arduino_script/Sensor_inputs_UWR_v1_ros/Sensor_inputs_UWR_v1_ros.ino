@@ -115,6 +115,7 @@ void initialize()
 
 void loop()
 {
+  //Serial.begin(57600);
   combined_data.header.stamp = nh.now(); //current ros time; reveive & process messages in right sequences
   if(!nh.connected())
   Serial.println("In loop");

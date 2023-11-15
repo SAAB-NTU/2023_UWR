@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"logger\"
 
-CXX_INCLUDES = -I/home/saab/Desktop/2023_UWR/ros_ws/devel/include -I/home/saab/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/include -I/home/saab/Desktop/2023_UWR/ros_ws/src/sonar/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/uwr/Desktop/2023_UWR/ros_ws/devel/include -I/home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/include -I/home/uwr/Desktop/2023_UWR/ros_ws/src/sonar/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 
