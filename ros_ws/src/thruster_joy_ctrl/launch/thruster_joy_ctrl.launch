@@ -1,10 +1,6 @@
 <launch>
-  <!-- Define machines -->
-  <machine name="Notebook" address="192.168.192.130" user="arist" password=" " default="true" />
-  <machine name="UWR-RaspberryPi" address="192.168.254.151" user="SNJL_ROV" password="saabntu" />
-
-  <!-- Start ROS nodes -->
-  <node machine="Notebook" name="joy_node" pkg="joy" type="joy_node.cpp" output="screen"/>
-  <node machine="UWR-RaspberryPi" name="thruster_joy_ctrl" pkg="thruster_joy_ctrl" type="thruster_joy_ctrl.py" output="screen" />
-
+<node name="joy_node" pkg="joy" type="joy_node">
+    <param name="coalesce_interval" value="0.5" />
+    <!-- Other parameters and configurations -->
+</node>
 </launch>

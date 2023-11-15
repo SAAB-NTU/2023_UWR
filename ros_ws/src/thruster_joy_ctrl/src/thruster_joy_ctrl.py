@@ -7,8 +7,8 @@ import time
 from sensor_msgs.msg import Joy
 from joy_control_class import JoyControl
 
-#serial_port = input("Enter serial port (Default is /dev/ttyUSB0): ") or "/dev/ttyUSB0"
-#ser = serial.Serial(serial_port, baudrate=9600, bytesize=8, stopbits=1, write_timeout=0.1)
+serial_port = input("Enter serial port (Default is /dev/ttyUSB0): ") or "/dev/ttyUSB0"
+ser = serial.Serial(serial_port, baudrate=9600, bytesize=8, stopbits=1, write_timeout=0.1)
 
 joy_ctrl = JoyControl()
 
@@ -17,7 +17,7 @@ def send_pwm():
 
     json_pwmsignals = json.dumps(joy_ctrl.pwmsignals)
     try:
-        #ser.write(json_pwmsignals.encode('utf-8'))
+        ser.write(json_pwmsignals.encode('utf-8'))
         return print(f"""PWM sent successfully""")
     
     except serial.SerialException as e:
@@ -61,8 +61,8 @@ if __name__ == '__main__':
         rospy.loginfo(f"")
         listener()
         # Set all thrusters to no movement and reset the thrusters
-        #ser.write(json.dumps({"A": 0, "B": 0, "C": 0,"D": 0,"E": 0,"F": 0,"G": 0,"H": 0,"R": 1}))
-        #ser.close()
+        ser.write(json.dumps({"A": 0, "B": 0, "C": 0,"D": 0,"E": 0,"F": 0,"G": 0,"H": 0,"R": 1}))
+        ser.close()
 
     except rospy.ROSInterruptException:
         pass
