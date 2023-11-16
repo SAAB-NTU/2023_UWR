@@ -1,0 +1,28 @@
+<launch>
+
+
+    <!-- imu >
+    <include file="$(find witmotion_ros)/launch/wt901.launch"/>
+    <param name="port" value="/dev/ttyUSB0"/-->
+    
+    <node pkg="ros1-driver" type="ros1-driver" name="my_ros1_driver_node">
+    <param name="B" value="115200" />
+    <param name="D" value="/dev/ttyUSB0" />
+    <param name="s" value="199.184.151.36" />
+    <param name="m" value="RTK_SNYU_GPS" />
+    <param name="u" value="MHUART01" />
+    <param name="p" value="1P9WTPJKZANK" />
+    </node>
+
+    <!-- sonar -->
+    <arg name="sonar_start_delay" default="2.0" /> 
+    <node name="sonar" pkg="sonar" type="sonar_node" launch-prefix="bash -c 'sleep $(arg sonar_start_delay); $0 $@' ">
+        <param name="sonar_port" value="/dev/ttyUSB1"/>
+        <param name="mode" value="distance"/>
+        <param name="ping_interval" value="250"/>
+    </node>
+    <node name="kalman_filter" pkg="kalman_filter" type="kalman_filter_node" output="screen">
+    <param name="csv_path" value="/home/abubakr/Desktop/all_log_"/>
+    </node>
+
+</launch>
