@@ -137,6 +137,7 @@ ${catkin_INCLUDE_DIRS}
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(${PROJECT_NAME}_node src/sonar_node.cpp src/abstract-link.cpp src/udp-link.cpp src/ping-device-ping1d.cpp src/ping-device.cpp src/ping-time.cpp src/serial-link.cpp)
+add_executable(${PROJECT_NAME}_node_3 src/sonar_node_3.cpp src/abstract-link.cpp src/udp-link.cpp src/ping-device-ping1d.cpp src/ping-device.cpp src/ping-time.cpp src/serial-link.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,6 +151,13 @@ add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catk
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}_node
+  ${catkin_LIBRARIES}
+)
+
+add_dependencies(${PROJECT_NAME}_node_3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+## Specify libraries to link a library or executable target against
+target_link_libraries(${PROJECT_NAME}_node_3
   ${catkin_LIBRARIES}
 )
 

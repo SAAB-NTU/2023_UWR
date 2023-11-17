@@ -467,6 +467,12 @@ complementary_filter_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libtf.so;gen
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
+//Value Computed by CMake
+depth_BINARY_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/build/depth
+
+//Value Computed by CMake
+depth_SOURCE_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/src/depth
+
 //The directory containing a CMake configuration file for diagnostic_msgs.
 diagnostic_msgs_DIR:PATH=/opt/ros/noetic/share/diagnostic_msgs/cmake
 
@@ -553,7 +559,7 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
 //The directory containing a CMake configuration file for iir.
-iir_DIR:PATH=iir_DIR-NOTFOUND
+iir_DIR:PATH=/usr/lib/cmake/iir
 
 //Value Computed by CMake
 imu_complementary_filter_BINARY_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/imu_complementary_filter
@@ -588,6 +594,9 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
+//The directory containing a CMake configuration file for ms5837.
+ms5837_DIR:PATH=ms5837_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for nmea_msgs.
 nmea_msgs_DIR:PATH=/opt/ros/noetic/share/nmea_msgs/cmake
 
@@ -611,6 +620,12 @@ pid_hovering_BINARY_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/build/pid_hover
 
 //Value Computed by CMake
 pid_hovering_SOURCE_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/src/pid_hovering
+
+//Value Computed by CMake
+realsense_cam_BINARY_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/build/realsense_cam
+
+//Value Computed by CMake
+realsense_cam_SOURCE_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/src/realsense_cam
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
@@ -744,8 +759,7 @@ uuid_msgs_DIR:PATH=/opt/ros/noetic/share/uuid_msgs/cmake
 //Value Computed by CMake
 uuv_sensor_msgs_BINARY_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/build/uuv_sensor_msgs
 
-//The directory containing a CMake configuration file for uuv_sensor_msgs.
-uuv_sensor_msgs_DIR:PATH=/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/uuv_sensor_msgs/cmake
+uuv_sensor_msgs_DIR:PATH=
 
 //Value Computed by CMake
 uuv_sensor_msgs_SOURCE_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/src/uuv_sensor_msgs
@@ -911,7 +925,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
