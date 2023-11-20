@@ -574,7 +574,7 @@ kalman_filter_BINARY_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/build/kalman_f
 kalman_filter_SOURCE_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/src/kalman_filter
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
 
 //Value Computed by CMake
 logger_BINARY_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger
@@ -759,7 +759,8 @@ uuid_msgs_DIR:PATH=/opt/ros/noetic/share/uuid_msgs/cmake
 //Value Computed by CMake
 uuv_sensor_msgs_BINARY_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/build/uuv_sensor_msgs
 
-uuv_sensor_msgs_DIR:PATH=
+//The directory containing a CMake configuration file for uuv_sensor_msgs.
+uuv_sensor_msgs_DIR:PATH=/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/uuv_sensor_msgs/cmake
 
 //Value Computed by CMake
 uuv_sensor_msgs_SOURCE_DIR:STATIC=/home/uwr/Desktop/2023_UWR/ros_ws/src/uuv_sensor_msgs
@@ -925,7 +926,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=26
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

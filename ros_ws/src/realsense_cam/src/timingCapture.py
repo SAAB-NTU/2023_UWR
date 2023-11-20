@@ -9,7 +9,7 @@ from glob import glob
 import os
 
 cv_bridge = CvBridge()
-main_path="/home/sunrise/Desktop/Nov02_exp"
+main_path="/home/uwr/Desktop/Nov_21_data/camera"
 
 class timingCapture:
     def __init__(self):
@@ -27,8 +27,8 @@ class timingCapture:
             #cv_image = cv_bridge.compressed_imgmsg_to_cv2(self.image,"bgr8")
             cv_image = cv_bridge.imgmsg_to_cv2(self.image,"bgr8")
             num=len(glob(path+"/*"))
-            cv2.imwrite(path+"/"+f"{num+1:04d}"+".png",cv_image)
-            string = f"{num+1:04d}"+".png" + " has been successfully saved"
+            cv2.imwrite(path+"/"+f"{rospy.Time.now().secs}"+"_"+f"{rospy.Time.now().nsecs}"+".png",cv_image)
+            string = f"{rospy.Time.now().secs}"+"_"+f"{rospy.Time.now().nsecs}"+".png" + " has been successfully saved"
             rospy.loginfo(string)          
         except rospy.ServiceException as e:
             print("Service call failed: %s"%e)
@@ -42,9 +42,10 @@ def testing():
             
             
 if __name__ == "__main__":
-    time_duration = 2
+    time_duration = 1.5
     timing_Capture = timingCapture()
     start_time = rospy.Time.now().secs
+    
     print(start_time)
     while not rospy.is_shutdown():
         if (rospy.Time.now().secs - start_time >= time_duration):

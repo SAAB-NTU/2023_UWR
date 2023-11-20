@@ -32,7 +32,7 @@ def publish_sonar_profile():
 def publish_sonar_distance():
 
     rospy.init_node("single_beam_sonar_node")
-    pub_sonar = rospy.Publisher("sonar", Sonar, queue_size=1)
+    pub_sonar = rospy.Publisher("sonar", ThreeSonarDepth, queue_size=1)
 
     sonar_driver1 = Ping1D()
     sonar_port1 = rospy.get_param("/sonar/sonar_port","/dev/ttyUSB0")
@@ -52,6 +52,8 @@ def publish_sonar_distance():
     sonar_driver3.connect_serial(device_name=sonar_port3)
     sonar_driver3.set_ping_interval(ping_interval) #default is 250ms
 
+    sensor = ms5837.MS5837_30BA()
+
     if not sensor.init():
         print("Depth Sensor could not be initialized")
         
@@ -62,7 +64,7 @@ def publish_sonar_distance():
     
 
 
-    sensor = ms5837.MS5837_30BA()
+    
 
     while not rospy.is_shutdown():
         sonar_msg = ThreeSonarDepth()

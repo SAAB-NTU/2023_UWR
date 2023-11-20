@@ -1,0 +1,10 @@
+<launch>
+
+
+
+
+    <node name="kalman_filter" pkg="kalman_filter" type="kalman_filter_node_6dof" output="screen">
+    <param name="csv_path" value="/home/uwr/Desktop/Nov_21_data/KF/all_log_"/>
+    </node>
+
+</launch>

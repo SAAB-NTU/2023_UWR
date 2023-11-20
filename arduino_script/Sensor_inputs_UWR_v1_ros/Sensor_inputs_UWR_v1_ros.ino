@@ -122,7 +122,7 @@ void loop()
   initialize();
   if (ping1.update()) {
 
-    combined_data.distance_1 =ping1.distance(); 
+    combined_data.distance_1 =ping1.distance()/1000; 
     //NEW
     combined_data.confidence_1 =ping1.confidence();
    
@@ -132,7 +132,7 @@ void loop()
 
     if (ping2.update()) {
  
-    combined_data.distance_2 = ping2.distance(); //NEW
+    combined_data.distance_2 = ping2.distance()/1000; //NEW
     combined_data.confidence_2 = ping2.confidence(); //NEW
     
 
@@ -140,7 +140,7 @@ void loop()
 
     if (ping3.update()) {
 
-    combined_data.distance_3 = ping3.distance(); // NEW
+    combined_data.distance_3 = ping3.distance()/1000; // NEW
     combined_data.confidence_3 = ping3.confidence(); //NEW
     
     }

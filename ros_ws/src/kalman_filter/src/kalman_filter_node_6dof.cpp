@@ -239,9 +239,9 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             {
             ros::Time time = ros::Time::now();
             float distance_x = sonar_filter.MovingAvg(msg->distance_1);
-            //To improve sway precision with two SONARs
-            float distance_y = sonar_filter.MovingAvg(msg->distance_2);
-            float distance_z = sonar_filter.MovingAvg(msg->depth);
+            //Based on IMU position
+            float distance_y = sonar_filter.MovingAvg(msg->depth);
+            float distance_z = sonar_filter.MovingAvg(msg->distance_2);
             if(start == false && msg->confidence_1 == 100.0&& msg->confidence_2 == 100.0&& msg->confidence_3 == 100.0)
             {
                 this->first_sonar_distance_x = distance_x;
