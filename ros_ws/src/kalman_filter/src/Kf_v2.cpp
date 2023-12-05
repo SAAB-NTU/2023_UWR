@@ -149,12 +149,13 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             SonarProcess sonar_filter(3); 
             
 	        bw_filter.setup(samplingrate, cutoff_frequency);
-
+            std::string path_param;
+            ros::param::get("~csv_path",path_param);
             //Create bag
-            bag.open(bag_create_file(), rosbag::bagmode::Write);
+            bag.open(bag_create_file(path_param), rosbag::bagmode::Write);
         };
 
-        void imu_callback(const sensor_msgs::ImuConstPtr& msg)
+        void imu_callback(const sensor_msgs::ImuConstPtr& imu_msg)
         {
             ros::Time time = ros::Time::now();
             try
@@ -162,9 +163,9 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                         
 	           //Raw data
                 
-                float accel_x = msg->linear_acceleration.x;
-                float accel_y = msg->linear_acceleration.y;
-                float accel_z = msg->linear_acceleration.z;
+                float accel_x = imu_msg->linear_acceleration.x;
+                float accel_y = imu_msg->linear_acceleration.y;
+                float accel_z = imu_msg->linear_acceleration.z;
                 
                 //filter accleration data in 3 directions
                 float filtered_accel_x = bw_filter.filter(accel_x); //NEW
@@ -211,12 +212,20 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
 
                         geometry_msgs::Vector3 vector3_msg;
 
-                        vector3_msg.x = imu_msg->filtered_accel_x;
-                        vector3_msg.y = imu_msg->filtered_accel_y;
-                        vector3_msg.z = imu_msg->filtered_accel_z;
+                        vector3_msg.x =filtered_accel_x;
+                        vector3_msg.y = filtered_accel_y;
+                        vector3_msg.z = filtered_accel_z;
 
-                        bag.write("IMU_raw",time,*msg);
-                        bag.write("IMU_filtered",time,*vector3_msg);
+                        geometry_msgs::PoseStamped pose_msg;
+                        pose_msg.header.frame_id = "odom";
+                        pose_msg.header.stamp = time;
+                        pose_msg.pose.position.x = this->x(0);
+                        pose_msg.pose.position.y = this->x(2);
+                        pose_msg.pose.position.z = this->x(4);
+
+                        bag.write("IMU_raw",time,imu_msg);
+                        bag.write("IMU_filtered",time,vector3_msg);
+                        bag.write("Pose",time,pose_msg);
 
                         //Put in predicted pose values
                 	}
@@ -244,6 +253,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 // {
                 ros::Time time = ros::Time::now();
                 int gps_status = static_cast<int>(msg->status.status);
+                /*
                 std::stringstream ss1;
                 std::stringstream ss2;
                 std::stringstream ss3;
@@ -258,6 +268,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 ROS_INFO("gps_lat: %f",msg->latitude);
                 ROS_INFO("GPS status %d",gps_status);
                 csv_writer(ss1.str()+ ",gps,,,,,"+ ss2.str()+","+ss3.str()+","+ss4.str()+"\n");
+                */
                 //}
                 //else
                 //{
@@ -383,56 +394,24 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
 
                 geometry_msgs::PoseStamped pose_msg;
                 pose_msg.header.frame_id = "odom";
-                pose_msg.header.stamp = ros::Time::now();
+                pose_msg.header.stamp = time;
                 pose_msg.pose.position.x = this->x(0);
                 pose_msg.pose.position.y = this->x(2);
                 pose_msg.pose.position.z = this->x(4);
                pub.publish(pose_msg);
+                
+                geometry_msgs::Vector3 vector3_msg;
+
+                vector3_msg.x =distance_x;
+               vector3_msg.y = distance_y;
+                vector3_msg.z = distance_z;
+
+                bag.write("SONAR_raw",time,msg);
+               bag.write("SONAR_filtered",time,vector3_msg);
+                bag.write("Pose",time,pose_msg);
 
                             //ros::Time time = ros::Time::now();
-            std::stringstream ss_time;
             
-            std::stringstream ss_x_KF;
-            std::stringstream ss_x_dist;
-            std::stringstream ss_x_conf;
-
-            std::stringstream ss_y_KF;
-            std::stringstream ss_y_dist;
-            std::stringstream ss_y_conf;
-            
-            std::stringstream depth_z_KF;
-            std::stringstream depth_z_dist;
-            
-            ss_x_KF.precision(15);
-            ss_x_dist.precision(15);
-            ss_x_conf.precision(15);
-            
-            
-            ss_y_KF.precision(15);
-            ss_y_dist.precision(15);
-            ss_y_conf.precision(15);
-            
-            depth_z_KF.precision(15);
-            depth_z_dist.precision(15);
-            ss_x_KF<<this->x(0);
-            ss_x_dist << msg->distance_1;
-            ss_x_conf << msg->confidence_1;
-            
-            
-            //TO put average distance to improve Sway
-            ss_y_KF<<this->x(2);
-            ss_y_dist << msg->distance_2;
-            ss_y_conf << msg->confidence_2;
-            
-            depth_z_KF<<this->x(4);
-            depth_z_dist << msg->depth;
-            
-   	ss_time<< time.sec << "." << std::setw(9) << std::setfill('0') << time.nsec;
-            //ROS_INFO("sonar_time: %s",ss0.str().c_str());
-            //ROS_INFO("tof_tim: %s",ss6.str().c_str());
-            csv_writer(ss_time.str()+","+"sonar_depth" + ","+ss_x_KF.str()+"," + ss_y_KF.str()+"," + depth_z_KF.str()+ ","+ss_x_dist.str()+"," + ss_y_dist.str()+"," + depth_z_dist.str()+"," + ss_x_conf.str()+"," + ss_y_conf.str()+"\n");
-            
-            ss_time << time.sec << "." << std::setw(9) << std::setfill('0') << time.nsec;
 
                /*
                 
@@ -462,26 +441,14 @@ int main(int argc,char* argv[])
 
     ros::init(argc,argv,"kalman_filter_6dof");
     ros::NodeHandle nodeHandle;
-    std::string path_param;
-    if(ros::param::get("~csv_path",path_param))
-    {
-        
-        std::string file_path = csv_create_file(path_param);
-        myfile.open(file_path);
-       	// myfile<<"Hello";
-        myfile << "time,sensor,KF_pose_x,KF_pose_y,KF_pose_z,sonar_distance_x,sonar_distance_y,depth_z,sonar_confidence_x,sonar_confidence_y,accel_x,accel_y,accel_z,gps_long,gps_lat,gps_status\n";
-        ROS_INFO("Got path");
+
         //ros::Subscriber imu_sub = nodeHandle.subscribe("/an_device/Imu",1,imu_callback);
 	//ros::Subscriber sonar_sub = nodeHandle.subscribe("/sonar",1,sonar_callback);
 
      
     DiscreteKalmanFilter dkf; //To try using one filter per DOF
     ros::spin();
-    }
-    else
-    {
-        ROS_INFO("No csv path param!");
-    }
+
  
     return 0; 
 }

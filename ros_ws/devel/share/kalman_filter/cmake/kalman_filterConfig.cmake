@@ -67,14 +67,14 @@ set(kalman_filter_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(kalman_filter_SOURCE_PREFIX /home/uwr/Desktop/2023_UWR/ros_ws/src/kalman_filter)
-  set(kalman_filter_DEVEL_PREFIX /home/uwr/Desktop/2023_UWR/ros_ws/devel)
+  set(kalman_filter_SOURCE_PREFIX /home/abubakr/Desktop/2023_UWR/ros_ws/src/kalman_filter)
+  set(kalman_filter_DEVEL_PREFIX /home/abubakr/Desktop/2023_UWR/ros_ws/devel)
   set(kalman_filter_INSTALL_PREFIX "")
   set(kalman_filter_PREFIX ${kalman_filter_DEVEL_PREFIX})
 else()
   set(kalman_filter_SOURCE_PREFIX "")
   set(kalman_filter_DEVEL_PREFIX "")
-  set(kalman_filter_INSTALL_PREFIX /home/uwr/Desktop/2023_UWR/ros_ws/install)
+  set(kalman_filter_INSTALL_PREFIX /home/abubakr/Desktop/2023_UWR/ros_ws/install)
   set(kalman_filter_PREFIX ${kalman_filter_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(kalman_filter_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/uwr/Desktop/2023_UWR/ros_ws/src/kalman_filter/include " STREQUAL " ")
+if(NOT "/home/abubakr/Desktop/2023_UWR/ros_ws/src/kalman_filter/include " STREQUAL " ")
   set(kalman_filter_INCLUDE_DIRS "")
-  set(_include_dirs "/home/uwr/Desktop/2023_UWR/ros_ws/src/kalman_filter/include")
+  set(_include_dirs "/home/abubakr/Desktop/2023_UWR/ros_ws/src/kalman_filter/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/uwr/Desktop/2023_UWR/ros_ws/src/kalman_filter/include " STREQUAL "
         message(FATAL_ERROR "Project 'kalman_filter' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'kalman_filter' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/uwr/Desktop/2023_UWR/ros_ws/src/kalman_filter/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'kalman_filter' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/abubakr/Desktop/2023_UWR/ros_ws/src/kalman_filter/${idir}'.  ${_report}")
     endif()
     _list_append_unique(kalman_filter_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/uwr/Desktop/2023_UWR/ros_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/abubakr/Desktop/2023_UWR/ros_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/src/logger_node.cpp" "/home/uwr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/src/logger_node.cpp.o"
+  "/home/abubakr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/src/logger_node.cpp" "/home/abubakr/Desktop/2023_UWR/ros_ws/build/Rpi_logger_v2/src/logger/CMakeFiles/logger_node.dir/src/logger_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,9 +17,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/include"
-  "/home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/include"
-  "/home/uwr/Desktop/2023_UWR/ros_ws/src/sonar/include"
+  "/home/abubakr/Desktop/2023_UWR/ros_ws/devel/include"
+  "/home/abubakr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/include"
+  "/home/abubakr/Desktop/2023_UWR/ros_ws/src/sonar/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

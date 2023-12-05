@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp"
+  "/home/abubakr/Desktop/2023_UWR/ros_ws/devel/share/common-lisp/ros/logger/msg/Motor.lisp"
   "CMakeFiles/logger_generate_messages_lisp"
 )
 

@@ -10,17 +10,20 @@ project(kalman_filter)
 find_package(catkin REQUIRED COMPONENTS
  sonar
  roscpp
-  
+  rosbag
   geometry_msgs
-
   rospy
   sensor_msgs
   std_msgs
 )
 
+#If CMAKE cannot find IIR
+list(APPEND CMAKE_PREFIX_PATH "/usr/lib/cmake/iir/")
+find_package(
+iir REQUIRED
+)
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-find_package(iir REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -110,7 +113,7 @@ find_package(iir REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
 #  LIBRARIES kalman_filter
-  CATKIN_DEPENDS geometry_msgs roscpp rospy sensor_msgs std_msgs sonar
+  CATKIN_DEPENDS geometry_msgs roscpp rospy sensor_msgs std_msgs sonar 
 
 #  DEPENDS system_lib
 )
@@ -141,6 +144,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(${PROJECT_NAME}_node src/kalman_filter_node.cpp src/kalman_filter.cpp src/sonar_processing.cpp)
 add_executable(${PROJECT_NAME}_node_6dof src/kalman_filter_node_6dof.cpp src/kalman_filter_6dof.cpp src/sonar_processing.cpp)
+add_executable(${PROJECT_NAME}_v2 src/Kf_v2.cpp src/kalman_filter_6dof.cpp src/sonar_processing.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -157,6 +161,9 @@ add_executable(${PROJECT_NAME}_node_6dof src/kalman_filter_node_6dof.cpp src/kal
 )
 
 target_link_libraries(${PROJECT_NAME}_node_6dof
+   ${catkin_LIBRARIES} iir::iir
+)
+target_link_libraries(${PROJECT_NAME}_v2
    ${catkin_LIBRARIES} iir::iir
 )
 #############

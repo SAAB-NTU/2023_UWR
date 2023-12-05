@@ -1,5 +1,0 @@
-<launch>
-	<include file="$(find kalman_filter)/launch/kalman.launch"/>
-    <node name="kalman_filter" pkg="kalman_filter" type="kalman_filter_node" output="screen"/>
-    <node name="my_rqt_dashboard" pkg="rqt_gui" type="rqt_gui" respawn="false" output="screen" args="--perspective-file $(find kalman_filter)/rqt/kalman.perspective"/>
-</launch>
