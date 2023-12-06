@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abubakr/Desktop/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abubakr/Desktop/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_
 .PHONY : DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/abubakr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/abubakr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abubakr/Desktop/2023_UWR/ros_ws/src /home/abubakr/Desktop/2023_UWR/ros_ws/src/DBSCAN_detect /home/abubakr/Desktop/2023_UWR/ros_ws/build /home/abubakr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect /home/abubakr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2023_UWR/ros_ws/src /home/uwr/Desktop/2023_UWR/ros_ws/src/DBSCAN_detect /home/uwr/Desktop/2023_UWR/ros_ws/build /home/uwr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect /home/uwr/Desktop/2023_UWR/ros_ws/build/DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : DBSCAN_detect/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

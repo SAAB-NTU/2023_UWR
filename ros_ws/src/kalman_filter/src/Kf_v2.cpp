@@ -92,6 +92,8 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
         ros::Publisher pub; //Publisher
         ros::Publisher ground_truth; //Publisher
 
+        double bias_x,bias_y,bias_z;
+
         ros::Subscriber imu_sub,sonar_sub,gps_sub; //subscribers
 
         //Sonar pre-filter (Moving average)
@@ -115,7 +117,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
         double previous_accel_x=0,previous_accel_y=0,previous_accel_z=0; 
         
         //To start filtering
-        bool start = false;
+        bool start = false,bias_taken=false;
    
         rosbag::Bag bag;
         
@@ -160,12 +162,18 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             ros::Time time = ros::Time::now();
             try
             {
-                        
+                if(bias_taken==false)
+                {
+                bias_x = imu_msg->linear_acceleration.x;
+                bias_y = imu_msg->linear_acceleration.y;
+                bias_z = imu_msg->linear_acceleration.z;
+                bias_taken=true;
+                }
 	           //Raw data
                 
-                float accel_x = imu_msg->linear_acceleration.x;
-                float accel_y = imu_msg->linear_acceleration.y;
-                float accel_z = imu_msg->linear_acceleration.z;
+                float accel_x = imu_msg->linear_acceleration.x-bias_x;
+                float accel_y = imu_msg->linear_acceleration.y-bias_y;
+                float accel_z = imu_msg->linear_acceleration.z-bias_z;
                 
                 //filter accleration data in 3 directions
                 float filtered_accel_x = bw_filter.filter(accel_x); //NEW
@@ -216,12 +224,12 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                         vector3_msg.y = filtered_accel_y;
                         vector3_msg.z = filtered_accel_z;
 
-                        geometry_msgs::PoseStamped pose_msg;
-                        pose_msg.header.frame_id = "odom";
-                        pose_msg.header.stamp = time;
-                        pose_msg.pose.position.x = this->x(0);
-                        pose_msg.pose.position.y = this->x(2);
-                        pose_msg.pose.position.z = this->x(4);
+                        geometry_msgs::Vector3 pose_msg;
+                        
+                        
+                        pose_msg.x = this->x(0);
+                        pose_msg.y = this->x(2);
+                        pose_msg.z = this->x(4);
 
                         bag.write("IMU_raw",time,imu_msg);
                         bag.write("IMU_filtered",time,vector3_msg);
@@ -392,12 +400,12 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 this->previous_sonar_time = time.toSec();
                 ROS_INFO("KF pose: %f",this->x(0));
 
-                geometry_msgs::PoseStamped pose_msg;
-                pose_msg.header.frame_id = "odom";
-                pose_msg.header.stamp = time;
-                pose_msg.pose.position.x = this->x(0);
-                pose_msg.pose.position.y = this->x(2);
-                pose_msg.pose.position.z = this->x(4);
+                geometry_msgs::Vector3 pose_msg;
+                
+                
+                pose_msg.x = this->x(0);
+                pose_msg.y = this->x(2);
+                pose_msg.z = this->x(4);
                pub.publish(pose_msg);
                 
                 geometry_msgs::Vector3 vector3_msg;

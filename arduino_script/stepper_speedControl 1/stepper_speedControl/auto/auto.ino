@@ -31,9 +31,9 @@ void motor(int steps,int directions,int delay_time)
     digitalWrite(dirPin, directions);
     for(int i =0;i<steps;i++)
     {
-      digitalWrite(stepPin, HIGH);
-      delayMicroseconds(delay_time);
       digitalWrite(stepPin, LOW);
+      delayMicroseconds(delay_time);
+      digitalWrite(stepPin, HIGH);
       delayMicroseconds(delay_time);
     }
   }

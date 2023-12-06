@@ -1,8 +1,8 @@
-# Install script for directory: /home/abubakr/Desktop/2023_UWR/ros_ws/src/uuv_sensor_msgs
+# Install script for directory: /home/uwr/Desktop/2023_UWR/ros_ws/src/uuv_sensor_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/abubakr/Desktop/2023_UWR/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/uwr/Desktop/2023_UWR/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/abubakr/Desktop/2023_UWR/ros_ws/build/uuv_sensor_msgs/catkin_generated/installspace/uuv_sensor_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/uwr/Desktop/2023_UWR/ros_ws/build/uuv_sensor_msgs/catkin_generated/installspace/uuv_sensor_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uuv_sensor_msgs/cmake" TYPE FILE FILES
-    "/home/abubakr/Desktop/2023_UWR/ros_ws/build/uuv_sensor_msgs/catkin_generated/installspace/uuv_sensor_msgsConfig.cmake"
-    "/home/abubakr/Desktop/2023_UWR/ros_ws/build/uuv_sensor_msgs/catkin_generated/installspace/uuv_sensor_msgsConfig-version.cmake"
+    "/home/uwr/Desktop/2023_UWR/ros_ws/build/uuv_sensor_msgs/catkin_generated/installspace/uuv_sensor_msgsConfig.cmake"
+    "/home/uwr/Desktop/2023_UWR/ros_ws/build/uuv_sensor_msgs/catkin_generated/installspace/uuv_sensor_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uuv_sensor_msgs" TYPE FILE FILES "/home/abubakr/Desktop/2023_UWR/ros_ws/src/uuv_sensor_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/uuv_sensor_msgs" TYPE FILE FILES "/home/uwr/Desktop/2023_UWR/ros_ws/src/uuv_sensor_msgs/package.xml")
 endif()
 
