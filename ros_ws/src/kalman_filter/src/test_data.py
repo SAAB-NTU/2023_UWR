@@ -47,7 +47,7 @@ def sonar_data_publisher(sonar_pub,depth_pub):
 if __name__ == '__main__':
     try:
         rospy.init_node('data_publisher', anonymous=True)
-        imu_pub = rospy.Publisher('/camera/accel/sample', Imu, queue_size=10)
+        imu_pub = rospy.Publisher('/imu/data', Imu, queue_size=10)
         #rospy.init_node('sonar_data_publisher', anonymous=True)
         sonar_pub = rospy.Publisher('/ThreeSonarDepth', ThreeSonarDepth, queue_size=10)
         depth_pub = rospy.Publisher('/depth_msg', Float64, queue_size=10)
