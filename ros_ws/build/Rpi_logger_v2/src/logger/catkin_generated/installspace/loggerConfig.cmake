@@ -67,14 +67,14 @@ set(logger_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(logger_SOURCE_PREFIX /home/abubakr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger)
-  set(logger_DEVEL_PREFIX /home/abubakr/Desktop/2023_UWR/ros_ws/devel)
+  set(logger_SOURCE_PREFIX /home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger)
+  set(logger_DEVEL_PREFIX /home/uwr/Desktop/2023_UWR/ros_ws/devel)
   set(logger_INSTALL_PREFIX "")
   set(logger_PREFIX ${logger_DEVEL_PREFIX})
 else()
   set(logger_SOURCE_PREFIX "")
   set(logger_DEVEL_PREFIX "")
-  set(logger_INSTALL_PREFIX /home/abubakr/Desktop/2023_UWR/ros_ws/install)
+  set(logger_INSTALL_PREFIX /home/uwr/Desktop/2023_UWR/ros_ws/install)
   set(logger_PREFIX ${logger_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/abubakr/Desktop/2023_UWR/ros_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/uwr/Desktop/2023_UWR/ros_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

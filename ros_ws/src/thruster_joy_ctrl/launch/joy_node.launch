@@ -1,6 +1,5 @@
 <launch>
 <node name="joy_node" pkg="joy" type="joy_node">
-    <param name="coalesce_interval" value="0.5" />
-    <!-- Other parameters and configurations -->
+    <param name="coalesce_interval" value="0.2" />
 </node>
 </launch>

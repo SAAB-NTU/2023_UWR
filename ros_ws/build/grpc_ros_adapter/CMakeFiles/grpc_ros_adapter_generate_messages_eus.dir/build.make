@@ -43,25 +43,25 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abubakr/Desktop/2023_UWR/ros_ws/src
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abubakr/Desktop/2023_UWR/ros_ws/build
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2023_UWR/ros_ws/build
 
 # Utility rule file for grpc_ros_adapter_generate_messages_eus.
 
 # Include the progress variables for this target.
 include grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/progress.make
 
-grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus: /home/abubakr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l
+grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus: /home/uwr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l
 
 
-/home/abubakr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/abubakr/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for grpc_ros_adapter"
-	cd /home/abubakr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && ../catkin_generated/env_cached.sh /home/abubakr/miniconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/abubakr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter grpc_ros_adapter std_msgs sensor_msgs
+/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/uwr/Desktop/2023_UWR/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp manifest code for grpc_ros_adapter"
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/uwr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter grpc_ros_adapter std_msgs sensor_msgs
 
 grpc_ros_adapter_generate_messages_eus: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus
-grpc_ros_adapter_generate_messages_eus: /home/abubakr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l
+grpc_ros_adapter_generate_messages_eus: /home/uwr/Desktop/2023_UWR/ros_ws/devel/share/roseus/ros/grpc_ros_adapter/manifest.l
 grpc_ros_adapter_generate_messages_eus: grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build.make
 
 .PHONY : grpc_ros_adapter_generate_messages_eus
@@ -72,10 +72,10 @@ grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build: gr
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/build
 
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/clean:
-	cd /home/abubakr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && $(CMAKE_COMMAND) -P CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter && $(CMAKE_COMMAND) -P CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/clean
 
 grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/depend:
-	cd /home/abubakr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/abubakr/Desktop/2023_UWR/ros_ws/src /home/abubakr/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter /home/abubakr/Desktop/2023_UWR/ros_ws/build /home/abubakr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter /home/abubakr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uwr/Desktop/2023_UWR/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2023_UWR/ros_ws/src /home/uwr/Desktop/2023_UWR/ros_ws/src/grpc_ros_adapter /home/uwr/Desktop/2023_UWR/ros_ws/build /home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter /home/uwr/Desktop/2023_UWR/ros_ws/build/grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : grpc_ros_adapter/CMakeFiles/grpc_ros_adapter_generate_messages_eus.dir/depend
 

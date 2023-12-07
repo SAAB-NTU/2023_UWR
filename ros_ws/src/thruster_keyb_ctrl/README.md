@@ -5,12 +5,14 @@ This package is designed to control the movement of the UWR remotely from a note
 ![Alt text](png/rqt_graph.png)
 
 ## Prerequisites
+
 - [Ubuntu 20.04](https://releases.ubuntu.com/focal/)
 - [ROS Noetic](https://wiki.ros.org/noetic/Installation) (It is recommended to install "desktop-full" version)
 - [Git](https://github.com/git-guides/install-git) with SSH key
 - [Visual Studio Code](https://code.visualstudio.com/download) (optional) 
 
 ## Getting started
+
 In order to run the thruster keyboard control, the teleop_twist_keyboard package and the 2023_UWR repo must be installed/cloned.
 
 ### UWR
@@ -20,6 +22,7 @@ The UWR has eight different thrusters to control movement. Thrusters 1-4 are use
 ![Alt text](png/uwr_thruster_layout.png)
 
 ### teleop_twist_keyboard
+
 Installation:
 ```
 sudo apt-get install ros-noetic-teleop-twist-keyboard
@@ -45,24 +48,61 @@ The thruster_control_class, when instantiated, sets all bit values to be sent fr
 {"A": self.thruster_1, "B": self.thruster_2, "C": self.thruster_3, "D": self.thruster_4, "E": 0, "F": 0, "G": 0, "H": 0, "R": 0}
 ```
 This dictionary is converted to JSON format and sent to the pwm transceiver board via the serial port using the send_pwm function. Keys 'E' to 'F' control thrusters 5-8 to no motion. The formula used to calculate the PWM duty cycle is shown in the figure below.
+```
+$$
+\text{PWM Duty Cycle} = \left( \frac{191 + \text{value}}{256} \right) \times 100\%
+$$
+```
+The formula used in the code to calculate the bits for the duty cycle change is derived from the formula below. It is set up in such a way that the value x transferred by the controller causes a 2.5% increase in the duty cycle. The Teleop node allows the velocity to increase/decrease by a factor of 0.1.
+```
+$$
+\frac{1500}{2000} \times 100\% + x \times 2.5\% = \frac{(191 + y)}{256} \times 100\%
+$$
 
-![Alt text](png/pwm_dutycycle_formula.png)
+$$
+y = 6.4 \times x + 1
+$$
+```
 
 The listener function initializes the node "thruster_keyb_ctrl" and subscribes to the /cmd_vel topic through the callback function and keeps running until the node is shut down.
 
 ## Usage
+
 1. Open a terminal in Ubuntu
-2. Run in terminal:
+2. SSH from notebook into the UWR-Raspberry Pi
  ```
- roscore
- cd 2023_UWR/ros_ws
+ ssh user@rpi-ip
+ ```
+3. Change directory to the ROS workspace
+4. Run in SSH terminal:
+ ```
  rm -r devel # Just run during the first time setting up. Deletes devel folder in rs_ws because of device specific symbolic links.
  rm -r build # Just run during the first time setting up. Deletes build folder in rs_ws because of device specific symbolic links.
  catkin_make
  source devel/setup.bash
- roslaunch thruster_keyb_ctrl thruster_keyb_ctrl.launch
+ export ROS_MASTER_URI=http://rpi-ip:11311/
+ export ROS_IP=rpi-ip
+
  ```
-5. If the node are connected successfully the second terminal output is:
+5. Open a new ssh terminal and run:
+```
+roscore
+ ```
+6. Run in the other ssh  terminal:
+ ```
+ rosrun thruster_keyb_ctrl thruster_keyb_ctrl.py
+ ```
+7. Open a new terminal on the notebook change directory to the ROS workspace and run:
+ ```
+ rm -r devel # Just run during the first time setting up. Deletes devel folder in rs_ws because of device specific symbolic links.
+ rm -r build # Just run during the first time setting up. Deletes build folder in rs_ws because of device specific symbolic links.
+ catkin_make
+ source devel/setup.bash
+ export ROS_MASTER_URI=http://rpi-ip:11311/
+ export ROS_IP=notebookip
+ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+ ```
+8. If the node are connected successfully the ssh terminal output is:
 ```
 Reading from the keyboard  and Publishing to Twist!
 ---------------------------
@@ -90,7 +130,7 @@ CTRL-C to quit
 
 currently:	speed 0.5	turn 1.0 
 ```
-6. Keyboard inputs in second terminal for motion control:
+9. Keyboard inputs in SSH terminal for motion control:
 - Surge (i or ,)
 - Sway (J or L)
 - Yaw (j or l)
@@ -100,4 +140,4 @@ currently:	speed 0.5	turn 1.0
 - Aboard program, disconnect node and stop movement 'Ctrl+C'
 Note: The movements can just be executed individually. All other keys which have no velocity assigned end up in a stop of the UWR.
 
-7. If your are finished with the motion control input 'Ctrl+C' in the terminal and the nodes and master are closed.
+10. If your are finished with the motion control input 'Ctrl+C' in the terminals and the nodes are closed.

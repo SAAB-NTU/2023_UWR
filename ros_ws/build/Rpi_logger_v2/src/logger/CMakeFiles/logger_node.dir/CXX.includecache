@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/abubakr/Desktop/2023_UWR/ros_ws/devel/include/sonar/Sonar.h
+/home/uwr/Desktop/2023_UWR/ros_ws/devel/include/sonar/Sonar.h
 string
 -
 vector
@@ -24,7 +24,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/abubakr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/src/logger_node.cpp
+/home/uwr/Desktop/2023_UWR/ros_ws/src/Rpi_logger_v2/src/logger/src/logger_node.cpp
 ros/ros.h
 -
 string

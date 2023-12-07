@@ -42,7 +42,7 @@ def testing():
             
             
 if __name__ == "__main__":
-    time_duration = 1.5
+    time_duration = 0.5
     timing_Capture = timingCapture()
     start_time = rospy.Time.now().secs
     

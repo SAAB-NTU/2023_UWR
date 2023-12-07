@@ -18,8 +18,7 @@ class ThrusterControl:
                     "R": 0}
         
     # This function sets the bits for the PWM duty cycles that are sent to the PWM transceiver
-    # via the serial port. The duty cycle is increased or decreased by default by 2.5% multiplied by the
-    # factor, surge, sway or yaw.
+    # via the serial port.
     def set_pwm(self, surge, sway, yaw):
 
         # Setting bits for PWM duty cycles for surge movement
@@ -27,29 +26,29 @@ class ThrusterControl:
             self.pwmsignals["A"] = self.pwmsignals["B"] = self.pwmsignals["C"] = self.pwmsignals["D"] = 0
             if surge > 0:
                 self.thruster_1 = self.thruster_2 = 0
-                self.thruster_3 = self.thruster_4 = int((6.4*surge)+1)
+                self.thruster_3 = self.thruster_4 = int((6.4*abs(surge))+1)
             elif surge < 0:
-                self.thruster_1 = self.thruster_2 = int((6.4*surge)+1)
+                self.thruster_1 = self.thruster_2 = int((6.4*abs(surge))+1)
                 self.thruster_3 = self.thruster_4 = 0
 
         # Setting bits for PWM duty cycles for sway movement
         elif sway != 0 and surge == 0 and yaw == 0:
             self.pwmsignals["A"] = self.pwmsignals["B"] = self.pwmsignals["C"] = self.pwmsignals["D"] = 0
             if sway > 0:
-                self.thruster_1 = self.thruster_3 = 0
-                self.thruster_2 = self.thruster_4 = int((6.4*sway)+1)
-            elif sway < 0:
-                self.thruster_1 = self.thruster_3 = int((6.4*sway)+1)
+                self.thruster_1 = self.thruster_3 = int((6.4*abs(sway))+1)
                 self.thruster_2 = self.thruster_4 = 0
+            elif sway < 0:
+                self.thruster_1 = self.thruster_3 = 0
+                self.thruster_2 = self.thruster_4 = int((6.4*abs(sway))+1)
 
         # Setting bits for PWM duty cycles for yaw movement
         elif yaw != 0 and surge == 0 and sway == 0:
             self.pwmsignals["A"] = self.pwmsignals["B"] = self.pwmsignals["C"] = self.pwmsignals["D"] = 0
             if yaw < 0:
                 self.thruster_1 = self.thruster_4 = 0
-                self.thruster_2 = self.thruster_3 = int((6.4*yaw)+1)
+                self.thruster_2 = self.thruster_3 = int((6.4*abs(yaw))+1)
             elif yaw > 0:
-                self.thruster_1 = self.thruster_4 = int((6.4*yaw)+1)
+                self.thruster_1 = self.thruster_4 = int((6.4*abs(yaw))+1)
                 self.thruster_2 = self.thruster_3 = 0
 
         else:

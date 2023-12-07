@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/abubakr/Desktop/2023_UWR/ros_ws/devel/share/gennodejs/ros/logger/msg/Motor.js"
+  "/home/uwr/Desktop/2023_UWR/ros_ws/devel/share/gennodejs/ros/logger/msg/Motor.js"
   "CMakeFiles/logger_generate_messages_nodejs"
 )
 

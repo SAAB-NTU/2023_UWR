@@ -1,4 +1,4 @@
-prefix=/home/abubakr/Desktop/2023_UWR/ros_ws/install
+prefix=/home/uwr/Desktop/2023_UWR/ros_ws/install
 
 Name: DBSCAN_detect
 Description: Description of DBSCAN_detect
