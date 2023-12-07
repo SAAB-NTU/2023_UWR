@@ -14,7 +14,7 @@ time=0
 i=0
 
 paths=sorted(glob("/home/uwr/Desktop/2023_UWR/Analysis/raw_data/Nov_21/KF/*"))
-path=paths[2]
+
 
 def imu_data_publisher(imu_pub,row):
     
@@ -55,7 +55,10 @@ def sonar_data_publisher(sonar_pub,depth_pub,row):
 
 if __name__ == '__main__':
     try:
+
+        
         rospy.init_node('data_publisher', anonymous=True)
+        path=paths[rospy.get_param("~csv_path")]
         imu_pub = rospy.Publisher('/imu/data', Imu, queue_size=10)
         #rospy.init_node('sonar_data_publisher', anonymous=True)
         sonar_pub = rospy.Publisher('/ThreeSonarDepth', ThreeSonarDepth, queue_size=10)

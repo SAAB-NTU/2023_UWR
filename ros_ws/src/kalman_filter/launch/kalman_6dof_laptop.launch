@@ -4,7 +4,7 @@
 
 
     <node name="kalman_filter" pkg="kalman_filter" type="kalman_filter_v2" output="screen">
-    <param name="csv_path" value="/home/abubakr/Desktop/all_log_"/>
+    <param name="csv_path" value="/home/uwr/Desktop/dataset1_"/>
     </node>
 
 </launch>

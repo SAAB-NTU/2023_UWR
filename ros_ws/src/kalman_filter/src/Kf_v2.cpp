@@ -97,13 +97,13 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
         ros::Subscriber imu_sub,sonar_sub,gps_sub; //subscribers
 
         //Sonar pre-filter (Moving average)
-        SonarProcess sonar_filter = SonarProcess(3);
+        SonarProcess sonar_filter_x = SonarProcess(3),sonar_filter_y = SonarProcess(3),sonar_filter_z = SonarProcess(3);
 
         //IMU pre-filter (band-pass butterworth filter)
         const float samplingrate = 1000;
         const double cutoff_frequency=100;
         const int order = 4;
-        Iir::Butterworth::LowPass<4> bw_filter;
+        Iir::Butterworth::LowPass<4> bw_filter1,bw_filter2,bw_filter3;
 
         //Initial times
         double previous_sonar_time=0, previous_state_time=0;
@@ -148,9 +148,11 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
 
             //Initializing filters
 
-            SonarProcess sonar_filter(3); 
+            SonarProcess sonar_filter1(3),sonar_filter2(3),sonar_filter3(3); 
             
-	        bw_filter.setup(samplingrate, cutoff_frequency);
+	        bw_filter1.setup(samplingrate, cutoff_frequency);
+            bw_filter2.setup(samplingrate, cutoff_frequency);
+            bw_filter3.setup(samplingrate, cutoff_frequency);
             std::string path_param;
             ros::param::get("~csv_path",path_param);
             //Create bag
@@ -176,9 +178,9 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 float accel_z = imu_msg->linear_acceleration.z-bias_z;
                 
                 //filter accleration data in 3 directions
-                float filtered_accel_x = bw_filter.filter(accel_x); //NEW
-                float filtered_accel_y = bw_filter.filter(accel_y); //NEW
-                float filtered_accel_z = bw_filter.filter(accel_z); //NEW
+                float filtered_accel_x = bw_filter1.filter(accel_x); //NEW
+                float filtered_accel_y = bw_filter2.filter(accel_y); //NEW
+                float filtered_accel_z = bw_filter3.filter(accel_z); //NEW
                 
              
                 if(start == true)
@@ -295,10 +297,10 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             try
             {
             ros::Time time = ros::Time::now();
-            float distance_x = sonar_filter.MovingAvg(msg->distance_1);
+            float distance_x = sonar_filter_x.MovingAvg(msg->distance_1);
             //Based on IMU position
-            float distance_y = sonar_filter.MovingAvg(msg->depth);
-            float distance_z = sonar_filter.MovingAvg(msg->distance_2);
+            float distance_y = sonar_filter_y.MovingAvg(msg->depth);
+            float distance_z = sonar_filter_z.MovingAvg(msg->distance_2);
 
             if(start == false) //Setting initial distance values
             {   
