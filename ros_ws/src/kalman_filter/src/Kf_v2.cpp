@@ -20,7 +20,7 @@ Upgrades summary:
 #include<sensor_msgs/NavSatFix.h>
 #include <sensor_msgs/NavSatStatus.h>
 
-#include<geometry_msgs/Vector3.h>
+#include<geometry_msgs/Vector3Stamped.h>
 
 #include <eigen3/Eigen/Dense>
 #include <string>
@@ -220,18 +220,19 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                         this->previous_accel_y = filtered_accel_y; 
                         this->previous_accel_z = filtered_accel_z; 
 
-                        geometry_msgs::Vector3 vector3_msg;
+                        geometry_msgs::Vector3Stamped vector3_msg,pose_msg;
+                        vector3_msg.header.stamp=time;
 
-                        vector3_msg.x =filtered_accel_x;
-                        vector3_msg.y = filtered_accel_y;
-                        vector3_msg.z = filtered_accel_z;
+                        vector3_msg.vector.x = filtered_accel_x;
+                        vector3_msg.vector.y = filtered_accel_y;
+                        vector3_msg.vector.z = filtered_accel_z;
 
-                        geometry_msgs::Vector3 pose_msg;
+
+                        pose_msg.header.stamp=time;
                         
-                        
-                        pose_msg.x = this->x(0);
-                        pose_msg.y = this->x(2);
-                        pose_msg.z = this->x(4);
+                        pose_msg.vector.x = this->x(0);
+                        pose_msg.vector.y = this->x(2);
+                        pose_msg.vector.z = this->x(4);
 
                         bag.write("IMU_raw",time,imu_msg);
                         bag.write("IMU_filtered",time,vector3_msg);
@@ -402,22 +403,24 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                 this->previous_sonar_time = time.toSec();
                 ROS_INFO("KF pose: %f",this->x(0));
 
-                geometry_msgs::Vector3 pose_msg;
+                geometry_msgs::Vector3Stamped pose_msg;
                 
                 
-                pose_msg.x = this->x(0);
-                pose_msg.y = this->x(2);
-                pose_msg.z = this->x(4);
+                pose_msg.vector.x = this->x(0);
+                pose_msg.vector.y = this->x(2);
+                pose_msg.vector.z = this->x(4);
+                pose_msg.header.stamp=time;
                pub.publish(pose_msg);
                 
-                geometry_msgs::Vector3 vector3_msg;
-
-                vector3_msg.x =distance_x;
-               vector3_msg.y = distance_y;
-                vector3_msg.z = distance_z;
+                geometry_msgs::Vector3Stamped vector3_msg;
+                vector3_msg.header.stamp=time;
+                vector3_msg.vector.x =distance_x;
+                vector3_msg.vector.y = distance_y;
+                vector3_msg.vector.z = distance_z;
+                
 
                 bag.write("SONAR_raw",time,msg);
-               bag.write("SONAR_filtered",time,vector3_msg);
+                bag.write("SONAR_filtered",time,vector3_msg);
                 bag.write("Pose",time,pose_msg);
 
                             //ros::Time time = ros::Time::now();
