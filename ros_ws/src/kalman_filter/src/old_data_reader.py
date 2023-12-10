@@ -13,7 +13,7 @@ from glob import glob
 time=0
 i=0
 
-paths=sorted(glob("/home/saab/Desktop/2023_UWR/Analysis/raw_data/Nov_21/KF/*"))
+paths=sorted(glob("/home/abubakr/Desktop/2023_UWR/Analysis/raw_data/Nov_21/KF/*"))
 
 
 def imu_data_publisher(imu_pub,row):
@@ -23,6 +23,7 @@ def imu_data_publisher(imu_pub,row):
 
     imu_msg = Imu()
     imu_msg.header.stamp=rospy.Time.from_sec(np.array(row["time"],np.float128))
+    
     imu_msg.linear_acceleration.x = row["sonar_distance_x"]
     imu_msg.linear_acceleration.y = row["sonar_distance_y"]
     imu_msg.linear_acceleration.z = row["depth_z"]
@@ -36,6 +37,7 @@ def sonar_data_publisher(sonar_pub,depth_pub,row):
     
     sonar_msg = ThreeSonarDepth()
     sonar_msg.header.stamp = rospy.Time.from_sec(np.array(row["time"],np.float128))
+    rospy.loginfo(row["time"])
     sonar_msg.distance_1 = row["sonar_distance_x"]
     sonar_msg.confidence_1 = 100.0
     sonar_msg.distance_2 = row["sonar_distance_y"]
@@ -58,7 +60,7 @@ if __name__ == '__main__':
 
         
         rospy.init_node('data_publisher', anonymous=True)
-        path=paths[rospy.get_param("~csv_path")]
+        path=paths[rospy.get_param("~csv_path",3)]
         imu_pub = rospy.Publisher('/imu/data', Imu, queue_size=10)
         #rospy.init_node('sonar_data_publisher', anonymous=True)
         sonar_pub = rospy.Publisher('/ThreeSonarDepth', ThreeSonarDepth, queue_size=10)

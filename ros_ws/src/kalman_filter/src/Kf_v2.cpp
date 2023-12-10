@@ -40,11 +40,11 @@ Upgrades summary:
 
 
 
-        std::string bag_create_file(std::string path_param) 
+        std::string bag_create_file(std::string path_param,ros::Time current_time) 
         {
             //check for file name to use
                 // Get the current time
-    ros::Time current_time = ros::Time::now();
+    
 
     // Extract the date and time components from the current time
     int year = current_time.toBoost().date().year();
@@ -91,7 +91,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
 
         ros::Publisher pub; //Publisher
         ros::Publisher ground_truth; //Publisher
-
+        ros::Time current_time = ros::Time::now();
         double bias_x,bias_y,bias_z;
 
         ros::Subscriber imu_sub,sonar_sub,gps_sub; //subscribers
@@ -156,7 +156,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             std::string path_param;
             ros::param::get("~csv_path",path_param);
             //Create bag
-            bag.open(bag_create_file(path_param), rosbag::bagmode::Write);
+            bag.open(bag_create_file(path_param,current_time), rosbag::bagmode::Write);
         };
 
         void imu_callback(const sensor_msgs::ImuConstPtr& imu_msg)
@@ -221,14 +221,17 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                         this->previous_accel_z = filtered_accel_z; 
 
                         geometry_msgs::Vector3Stamped vector3_msg,pose_msg;
-                        vector3_msg.header.stamp=time;
+                                                // Calculate the time difference in seconds
+                  
+
+                        vector3_msg.header.stamp=imu_msg->header.stamp;
 
                         vector3_msg.vector.x = filtered_accel_x;
                         vector3_msg.vector.y = filtered_accel_y;
                         vector3_msg.vector.z = filtered_accel_z;
+                        
 
-
-                        pose_msg.header.stamp=time;
+                        pose_msg.header.stamp=imu_msg->header.stamp;
                         
                         pose_msg.vector.x = this->x(0);
                         pose_msg.vector.y = this->x(2);
@@ -405,15 +408,17 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
 
                 geometry_msgs::Vector3Stamped pose_msg;
                 
-                
+        
+
+                pose_msg.header.stamp=msg->header.stamp;
                 pose_msg.vector.x = this->x(0);
                 pose_msg.vector.y = this->x(2);
                 pose_msg.vector.z = this->x(4);
-                pose_msg.header.stamp=time;
+                
                pub.publish(pose_msg);
                 
                 geometry_msgs::Vector3Stamped vector3_msg;
-                vector3_msg.header.stamp=time;
+                vector3_msg.header.stamp=msg->header.stamp;
                 vector3_msg.vector.x =distance_x;
                 vector3_msg.vector.y = distance_y;
                 vector3_msg.vector.z = distance_z;
