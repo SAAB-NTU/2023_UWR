@@ -18,7 +18,7 @@ import time
 time=0
 i=0
 
-paths=sorted(glob("/home/*/Desktop/dataset4*.bag"))
+paths=sorted(glob("/home/*/Desktop/dataset6*.bag"))
 
 synchronized_data=[]
 def callback(data1, data2,data3):
