@@ -131,7 +131,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
         {
             
             //IMU messages (accelerometer)
-            imu_sub = nh_.subscribe("/imu/data",1,&DiscreteKalmanFilter::imu_callback,this);
+            imu_sub = nh_.subscribe("/imu/data",10,&DiscreteKalmanFilter::imu_callback,this);
             
             //Sonar messages as one topic
             sonar_sub = nh_.subscribe("/ThreeSonarDepth",1,&DiscreteKalmanFilter::sonar_callback,this);

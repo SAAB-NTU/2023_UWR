@@ -18,7 +18,7 @@ import time
 time=0
 i=0
 
-paths=sorted(glob("/home/*/Desktop/dataset6*.bag"))
+paths=sorted(glob("/home/*/Desktop/dataset3*.bag"))
 
 synchronized_data=[]
 def callback(data1, data2,data3):
@@ -96,8 +96,8 @@ if __name__ == '__main__':
     sub3 = Subscriber(topic3, Imu)  # Adjust the message type according to your topics
     sub4 = Subscriber(topic4, Vector3Stamped)  # Adjust the message type according to your topics
     sub5 = Subscriber(topic5, Vector3Stamped)  # Adjust the message type according to your topics
-    ts = ApproximateTimeSynchronizer([sub1,sub4,sub5], 10, slop=2000)  # 100 is the queue size, adjust as needed
-    ts2 = ApproximateTimeSynchronizer([sub3,sub4], 10, slop=20)  # 100 is the queue size, adjust as needed
+    ts = ApproximateTimeSynchronizer([sub1,sub4,sub5], 1, slop=200)  # 100 is the queue size, adjust as needed
+    ts2 = ApproximateTimeSynchronizer([sub3,sub4], 1, slop=.0002)  # 100 is the queue size, adjust as needed
     # Start rosbag play subprocess
 
     # Open the output rosbag file for writing
