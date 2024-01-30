@@ -16,7 +16,7 @@ def publish_image_from_file():
     bridge = CvBridge()
 
     # Load the image from file (change the file path accordingly)
-    image_path = '/home/uwr/Desktop/123.png'
+    image_path = '/home/uwr/Desktop/00001.png'
     image = cv2.imread(image_path)
 
     # Check if the image was loaded successfully
