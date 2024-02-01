@@ -131,10 +131,10 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
         {
             
             //IMU messages (accelerometer)
-            imu_sub = nh_.subscribe("/imu/data",10,&DiscreteKalmanFilter::imu_callback,this);
+            imu_sub = nh_.subscribe("/IMU_raw",10,&DiscreteKalmanFilter::imu_callback,this);
             
             //Sonar messages as one topic
-            sonar_sub = nh_.subscribe("/ThreeSonarDepth",1,&DiscreteKalmanFilter::sonar_callback,this);
+            sonar_sub = nh_.subscribe("/SONAR_raw",1,&DiscreteKalmanFilter::sonar_callback,this);
             
             //Multiple single Sonar topics
             //sonar_sub = nh_.subscribe("/sonar",1,&DiscreteKalmanFilter::sonar_callback,this);
@@ -301,10 +301,10 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
             try
             {
             ros::Time time = ros::Time::now();
-            float distance_x = sonar_filter_x.MovingAvg(msg->distance_1);
+            float distance_x = sonar_filter_x.MovingAvg(msg->distance_1/1000);
             //Based on IMU position
             float distance_y = sonar_filter_y.MovingAvg(msg->depth);
-            float distance_z = sonar_filter_z.MovingAvg(msg->distance_2);
+            float distance_z = sonar_filter_z.MovingAvg(msg->distance_2/1000);
 
             if(start == false) //Setting initial distance values
             {   
@@ -380,21 +380,21 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                     {
                         this->R(2,2)=20;//Distance is more accurate than velocity
                         this->R(3,3)=10;
-                        measurement_final(2) = this->x(2);  //KF distance taken if too inaccurate
+                        //measurement_final(2) = this->x(2);  //KF distance taken if too inaccurate
                     }
                 }
                  if(v_z>-1 && v_z < 1) //z-axis
                 {
-                    if(measurement_final(5) < 0.5)
+                    if(measurement_final(4) < 0.5)
                     {
                         this->R(4,4)=0.001;//Distance is more accurate than velocity
                         this->R(5,5)=0.01;
                     }
                     else
                     {
-                        this->R(5,5)=20;//Distance is more accurate than velocity
-                        this->R(5,5)=10;
-                        measurement_final(4) = this->x(4);  //KF distance taken if too inaccurate
+                        this->R(5,5)=10;//Distance is more accurate than velocity
+                        this->R(5,5)=20;
+            
                     }
                 }
                 ROS_INFO("here");

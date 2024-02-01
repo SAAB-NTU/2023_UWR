@@ -18,19 +18,16 @@ import time
 time=0
 i=0
 
-paths=sorted(glob("/home/saab/Desktop/dataset*.bag"))
+paths=sorted(glob("/home/*/Desktop/26Jan_FLS_2024_01_26_16_00_47.bag"))
 
 synchronized_data=[]
-def callback(data1, data2,data3):
+def callback(data1, data2,data3,data4):
     # Your synchronization logic here
     # data1 is the message from topic1
     # data2 is the message from topic2
     timestamp = data1.header.stamp
-    rospy.loginfo(data1)
+    #rospy.loginfo(data1)
     # Write the synchronized messages to the new rosbag file
-    output_bag.write('/KF', data1, timestamp)
-    output_bag.write('/IMU', data2, timestamp)
-    output_bag.write('/SONAR', data3, timestamp)
     synchronized_data.append({
         'Timestamp': timestamp,
         'Pose_X': data1.vector.x,
@@ -42,9 +39,39 @@ def callback(data1, data2,data3):
         'IMU_Linear_Acc_X': data2.vector.x,
         'IMU_Linear_Acc_Y': data2.vector.y,
         'IMU_Linear_Acc_Z': data2.vector.z,
+        'FLS_data_x':data4.vector.x,
+        'FLS_data_y':data4.vector.y,
+        'FLS_data_z':data4.vector.z,
     })
     synchronized_df = pd.DataFrame(synchronized_data)
     synchronized_df.to_csv(output_csv_file,index=False)
+
+synchronized_data2=[]
+def callback2(data1, data2):
+    # Your synchronization logic here
+    # data1 is the message from topic1
+    # data2 is the message from topic2
+    timestamp = data1.header.stamp
+    #rospy.loginfo(data1)
+    # Write the synchronized messages to the new rosbag file
+    synchronized_data2.append({
+        'Timestamp': timestamp,
+        'IMU_Raw_x': data1.linear_acceleration.x,
+        'IMU_Raw_y': data1.linear_acceleration.y,
+        'IMU_Raw_z': data1.linear_acceleration.z,
+        'IMU_Linear_Acc_X': data2.vector.x,
+        'IMU_Linear_Acc_Y': data2.vector.y,
+        'IMU_Linear_Acc_Z': data2.vector.z,
+    })
+    '''
+    synchronized_data2.append({
+        'Timestamp': timestamp,
+        'IMU_Raw_x': data1.linear_acceleration.x,
+        'IMU_Raw_y': data1.linear_acceleration.y,
+        'IMU_Raw_z': data1.linear_acceleration.z,
+    })'''
+    synchronized_df2 = pd.DataFrame(synchronized_data2)
+    synchronized_df2.to_csv(output_csv_file2,index=False)
 
 
 if __name__ == '__main__':
@@ -56,34 +83,41 @@ if __name__ == '__main__':
     topic3 = 'IMU_raw'
     topic4 = 'IMU_filtered'
     topic5 = 'SONAR_filtered'
+    topic6='FLS_raw'
+    topic7='FLS_filtered'
 
-    i=0
+
     # Open the rosbag file
     bag_file = paths[i]  # Change to your rosbag file name
     output_bag_file = paths[i].split(".")[0]+'_sync.bag'  # Change to your output rosbag file name
 
     # Create a TimeSynchronizer
     output_csv_file = paths[i].split(".")[0] + '_sync.csv'
-
+    output_csv_file2 = paths[i].split(".")[0] + '_sync_imu.csv'
+    rospy.loginfo(output_csv_file2)
     # Create subscribers for each topic
     sub1 = Subscriber(topic1, Vector3Stamped)  # Adjust the message type according to your topics
     sub2 = Subscriber(topic2, ThreeSonarDepth)  # Adjust the message type according to your topics
     sub3 = Subscriber(topic3, Imu)  # Adjust the message type according to your topics
     sub4 = Subscriber(topic4, Vector3Stamped)  # Adjust the message type according to your topics
     sub5 = Subscriber(topic5, Vector3Stamped)  # Adjust the message type according to your topics
-    ts = ApproximateTimeSynchronizer([sub1,sub4,sub5], 10, slop=2000)  # 100 is the queue size, adjust as needed
+    sub6=Subscriber(topic6,ThreeSonarDepth)
+    sub7=Subscriber(topic7,Vector3Stamped)
+    ts = ApproximateTimeSynchronizer([sub1,sub4,sub5,sub7], 1, slop=15000)  # 100 is the queue size, adjust as needed
+    ts2 = ApproximateTimeSynchronizer([sub3,sub4], 1, slop=.0002)  # 100 is the queue size, adjust as needed
     # Start rosbag play subprocess
 
     # Open the output rosbag file for writing
-    output_bag = rosbag.Bag(output_bag_file, 'w')
+    #output_bag = rosbag.Bag(output_bag_file, 'w')
 
     # Set the callback function
     ts.registerCallback(callback)
+    ts2.registerCallback(callback2)
     
     # Keep the script running
     rospy.spin()
 
     # Close the output rosbag
-    output_bag.close()
+    #output_bag.close()
     rospy.loginfo("Done")
 

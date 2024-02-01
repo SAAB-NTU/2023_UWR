@@ -33,6 +33,21 @@ class KalmanFilter_6dof
        
 };
 
+class KalmanFilter_6dof_FLS
+{
+    public:
+        KalmanFilter_6dof_FLS();
+        Eigen::Matrix<double,6,1> prediction(const Eigen::Matrix<double,3,1>& u, const float& dt);
+        Eigen::Matrix<double,6,1> update(const Eigen::Matrix<double,6,1>& z,Eigen::Matrix<double,6,6>& R,Eigen::Matrix<double,6,6>& H);
+        Eigen::Matrix<double,6,1> residual(const Eigen::Matrix<double,6,1>& z,Eigen::Matrix<double,6,6>& H);
+        Eigen::Matrix<double, 6, 6>  Q,R1,R2;
+    protected:
+        Eigen::Matrix<double, 6, 6> F,P,H1,H2,K;
+        Eigen::Matrix<double, 6, 1> x;
+        Eigen::Matrix<double,6,3> B;
+       
+};
+
 
 
 #endif

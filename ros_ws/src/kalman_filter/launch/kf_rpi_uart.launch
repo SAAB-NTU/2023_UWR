@@ -1,0 +1,17 @@
+<launch>
+
+
+
+
+
+
+    <!-- imu -->
+        <include file="$(find xsens_mti_driver)/launch/xsens_mti_node.launch"/>
+        
+        
+    <arg name="sonar_start_delay" default="2.0" /> 
+    <node name="sonar_3" pkg="sonar" type="sonar_node_3" launch-prefix="bash -c 'sleep $(arg sonar_start_delay); $0 $@' ">
+  <param name="port1" value="/dev/ttyUSB1"/>
+    </node>
+
+</launch>

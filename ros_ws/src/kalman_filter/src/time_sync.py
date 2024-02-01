@@ -18,7 +18,7 @@ import time
 time=0
 i=0
 
-paths=sorted(glob("/home/*/Desktop/dataset3*.bag"))
+paths=sorted(glob("/home/*/Desktop/26Jan_2024_01_26_16_26_18.bag"))
 
 synchronized_data=[]
 def callback(data1, data2,data3):
@@ -81,7 +81,7 @@ if __name__ == '__main__':
     topic4 = 'IMU_filtered'
     topic5 = 'SONAR_filtered'
 
-    i=0
+
     # Open the rosbag file
     bag_file = paths[i]  # Change to your rosbag file name
     output_bag_file = paths[i].split(".")[0]+'_sync.bag'  # Change to your output rosbag file name
