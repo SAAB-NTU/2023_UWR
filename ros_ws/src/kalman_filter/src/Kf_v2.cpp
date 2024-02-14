@@ -364,7 +364,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                         ROS_INFO("condtn2");
                         this->R(0,0)=10;//Distance is more accurate than velocity
                         this->R(1,1)=20;
-                        measurement_final(0) = this->x(0);  //KF distance taken if too inaccurate
+                        //measurement_final(0) = this->x(0);  //KF distance taken if too inaccurate
                         
                     }
                 }
@@ -392,7 +392,7 @@ class DiscreteKalmanFilter:public KalmanFilter_6dof
                     }
                     else
                     {
-                        this->R(5,5)=10;//Distance is more accurate than velocity
+                        this->R(4,4)=10;//Distance is more accurate than velocity
                         this->R(5,5)=20;
             
                     }

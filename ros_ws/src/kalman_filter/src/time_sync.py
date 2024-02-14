@@ -18,7 +18,7 @@ import time
 time=0
 i=0
 
-paths=sorted(glob("/home/uwr/Desktop/14Feb_2024_*.bag"))
+paths=sorted(glob("/home/uwr/Desktop/14Feb_2_2024_*.bag"))
 
 synchronized_data=[]
 def callback(data1, data2,data3):

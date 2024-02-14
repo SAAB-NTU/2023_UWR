@@ -1,7 +1,7 @@
 <launch>
 
     <node name="kalman_filter" pkg="kalman_filter" type="kalman_filter_v2" output="screen">
-    <param name="csv_path" value="/home/uwr/Desktop/14Feb_"/>
+    <param name="csv_path" value="/home/uwr/Desktop/14Feb_2_"/>
     </node>
 
 </launch>
