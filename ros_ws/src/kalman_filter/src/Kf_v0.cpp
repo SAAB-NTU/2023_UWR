@@ -1,5 +1,8 @@
 #include "../include/kalman_filter.h"
 
+//First version - 1 DOF only
+
+
 KalmanFilter::KalmanFilter()
 {
     x << 0,0;
